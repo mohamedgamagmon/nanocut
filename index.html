@@ -828,59 +828,59 @@
                 flex-direction: column;
                 gap: 15px;
             }
-            
+
             .nav-menu {
                 gap: 15px;
             }
-            
+
             .category-nav {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 15px;
             }
-            
+
             .category-brands-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .products-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
-            
+
             .notification-steps {
                 gap: 20px;
             }
-            
+
             .step {
                 min-width: 100px;
             }
-            
+
             .pagination {
                 gap: 5px;
             }
-            
+
             .page-btn {
                 padding: 8px 12px;
                 min-width: 40px;
             }
-            
+
             .product-detail {
                 flex-direction: column;
             }
-            
+
             .product-image-large {
                 min-height: 300px;
             }
-            
+
             .checkout-form {
                 grid-template-columns: 1fr;
             }
-            
+
             .cart-item {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .floating-search-btn {
                 bottom: 20px;
                 right: 20px;
@@ -986,7 +986,7 @@
             <div class="page active" id="homePage">
                 <h1 class="page-title">New Arrivals</h1>
                 <p class="page-subtitle">Latest skin templates added in the last 2 months</p>
-                
+
                 <div class="products-grid" id="newProducts">
                     <!-- New products will be loaded automatically -->
                 </div>
@@ -996,7 +996,7 @@
             <div class="page" id="searchResultsPage">
                 <h1 class="page-title">Search Results</h1>
                 <p class="page-subtitle" id="searchResultsInfo">Found <span id="resultsCount">0</span> results for "<span id="searchQuery"></span>"</p>
-                
+
                 <div class="products-grid" id="searchResults">
                     <!-- Search results will be loaded here -->
                 </div>
@@ -1005,11 +1005,11 @@
             <!-- Cart Page -->
             <div class="page" id="cartPage">
                 <h1 class="page-title">Shopping Cart</h1>
-                
+
                 <div class="cart-items" id="cartItems">
                     <!-- Cart items will be loaded here -->
                 </div>
-                
+
                 <div class="cart-summary">
                     <div class="cart-total">
                         <span>Total:</span>
@@ -1022,16 +1022,33 @@
             <!-- Checkout Page -->
             <div class="page" id="checkoutPage">
                 <h1 class="page-title">Checkout</h1>
-                
+
                 <div class="checkout-form">
-                    <div class="billing-info">
-                        <h3>Delivery Information</h3>
-                        <div class="form-group">
-                            <label for="notes">Notes for Delivery</label>
-                            <textarea id="notes" rows="4" placeholder="Please specify how you would like to receive your files (e.g., email, WhatsApp, etc.)"></textarea>
-                        </div>
+    <div class="billing-info">
+        <h3>Delivery Information</h3>
+        <div class="form-group">
+            <label for="notes">Notes for Delivery</label>
+            <textarea id="notes" rows="4" placeholder="Please specify how you would like to receive your files (e.g., email, WhatsApp, etc.)"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="deliveryMethod">How would you like to receive your files? *</label>
+            <select id="deliveryMethod" required>
+                <option value="">Select delivery method</option>
+                <option value="email">Email (will use your PayPal email)</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="telegram">Telegram</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="contactInfoField" style="display: none;">
+            <label id="contactInfoLabel">Contact Information *</label>
+            <input type="text" id="contactInfo" placeholder="Please provide your contact details">
+        </div>
+    </div> <!-- إغلاق billing-info -->
                     </div>
-                    
+
                     <div class="payment-info">
                         <h3>Payment Method</h3>
                         <div class="cart-summary">
@@ -1046,12 +1063,12 @@
                                 <label for="paypal">PayPal</label>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="paypalEmail">PayPal Email</label>
                             <input type="email" id="paypalEmail" placeholder="example@paypal.com" required>
                         </div>
-                        
+
                         <button class="checkout-btn" onclick="processPayment()">Complete Purchase</button>
                     </div>
                 </div>
@@ -1064,7 +1081,7 @@
                     <h1 class="category-title">Phones</h1>
                     <p>Choose your phone brand</p>
                 </div>
-                
+
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showPhoneBrand('apple')">
                         <div class="category-brand-name">Apple iPhone</div>
@@ -1123,7 +1140,7 @@
                     <h1 class="category-title">iPad & Tablets</h1>
                     <p>Choose your tablet brand</p>
                 </div>
-                
+
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showTabletBrand('apple')">
                         <div class="category-brand-name">Apple iPad</div>
@@ -1166,7 +1183,7 @@
                     <h1 class="category-title">Laptops</h1>
                     <p>Choose your laptop brand</p>
                 </div>
-                
+
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showLaptopBrand('apple')">
                         <div class="category-brand-name">Apple MacBook</div>
@@ -1217,7 +1234,7 @@
                     <h1 class="category-title">AirPods & Earbuds</h1>
                     <p>Choose your earbuds brand</p>
                 </div>
-                
+
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showEarbudsBrand('apple')">
                         <div class="category-brand-name">Apple AirPods</div>
@@ -1260,7 +1277,7 @@
                     <h1 class="category-title">Vape Devices</h1>
                     <p>Choose your vape brand</p>
                 </div>
-                
+
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showVapeBrand('uwell')">
                         <div class="category-brand-name">Uwell</div>
@@ -1303,7 +1320,7 @@
                     <h1 class="category-title">Gaming Devices</h1>
                     <p>Choose your gaming device</p>
                 </div>
-                
+
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showGamingBrand('playstation')">
                         <div class="category-brand-name">PlayStation</div>
@@ -1346,7 +1363,7 @@
                     <h1 class="category-title">Camera Lenses</h1>
                     <p>Choose your camera brand</p>
                 </div>
-                
+
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showCameraBrand('canon')">
                         <div class="category-brand-name">Canon</div>
@@ -1450,7 +1467,7 @@
             <!-- Product Detail Page -->
             <div class="page" id="productDetailPage">
                 <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back to Products</button>
-                
+
                 <div class="product-detail" id="productDetailContent">
                     <!-- Product details will be loaded here -->
                 </div>
@@ -1485,7 +1502,7 @@
     <script>
         // نظام تتبع الصفحات السابقة
         let pageHistory = ['home'];
-        
+
         // نظام السلة
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -1517,7 +1534,7 @@
         // إضافة منتج إلى السلة
         function addToCart(productId, productName, productPrice, productImage) {
             const existingItem = cart.find(item => item.id === productId);
-            
+
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
@@ -1529,10 +1546,10 @@
                     quantity: 1
                 });
             }
-            
+
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartCount();
-            
+
             // عرض تأكيد الإضافة
             alert(`"${productName}" has been added to your cart!`);
         }
@@ -1549,20 +1566,20 @@
         function loadCartPage() {
             const cartItems = document.getElementById('cartItems');
             const cartTotal = document.getElementById('cartTotal');
-            
+
             if (cart.length === 0) {
                 cartItems.innerHTML = '<p>Your cart is empty</p>';
                 cartTotal.textContent = '$0.00';
                 return;
             }
-            
+
             let total = 0;
             cartItems.innerHTML = '';
-            
+
             cart.forEach(item => {
                 const itemTotal = item.price * item.quantity;
                 total += itemTotal;
-                
+
                 const cartItem = document.createElement('div');
                 cartItem.className = 'cart-item';
                 cartItem.innerHTML = `
@@ -1578,7 +1595,7 @@
                 `;
                 cartItems.appendChild(cartItem);
             });
-            
+
             cartTotal.textContent = `$${total.toFixed(2)}`;
         }
 
@@ -1599,10 +1616,10 @@
                 document.getElementById('searchSuggestions').style.display = 'none';
                 return;
             }
-            
+
             const queryLower = query.toLowerCase();
             const allProducts = getAllProducts();
-            
+
             // البحث في جميع المنتجات
             const matchingProducts = allProducts.filter(product => {
                 return product.name.toLowerCase().includes(queryLower) || 
@@ -1610,12 +1627,12 @@
                        product.category.toLowerCase().includes(queryLower) ||
                        product.brand.toLowerCase().includes(queryLower);
             });
-            
+
             // استخراج الكلمات المفتاحية الفريدة
             const keywords = new Set();
             const categories = new Set();
             const brands = new Set();
-            
+
             allProducts.forEach(product => {
                 // استخراج الكلمات المفتاحية من الاسم
                 const words = product.name.toLowerCase().split(' ');
@@ -1624,7 +1641,7 @@
                         keywords.add(word);
                     }
                 });
-                
+
                 // استخراج الفئات والعلامات التجارية
                 if (product.category.toLowerCase().includes(queryLower)) {
                     categories.add(product.category);
@@ -1633,17 +1650,17 @@
                     brands.add(product.brand);
                 }
             });
-            
+
             // عرض الاقتراحات
             const suggestionsContainer = document.getElementById('searchSuggestions');
             let suggestionsHTML = '';
-            
+
             if (matchingProducts.length > 0) {
                 suggestionsHTML += `
                     <div class="suggestion-group">
                         <div class="suggestion-group-title">PRODUCTS</div>
                 `;
-                
+
                 matchingProducts.slice(0, 5).forEach(product => {
                     suggestionsHTML += `
                         <div class="suggestion-item" onclick="selectProductSuggestion('${product.id}')">
@@ -1652,16 +1669,16 @@
                         </div>
                     `;
                 });
-                
+
                 suggestionsHTML += `</div>`;
             }
-            
+
             if (categories.size > 0) {
                 suggestionsHTML += `
                     <div class="suggestion-group">
                         <div class="suggestion-group-title">CATEGORIES</div>
                 `;
-                
+
                 Array.from(categories).slice(0, 3).forEach(category => {
                     suggestionsHTML += `
                         <div class="suggestion-item" onclick="selectCategorySuggestion('${category}')">
@@ -1670,16 +1687,16 @@
                         </div>
                     `;
                 });
-                
+
                 suggestionsHTML += `</div>`;
             }
-            
+
             if (brands.size > 0) {
                 suggestionsHTML += `
                     <div class="suggestion-group">
                         <div class="suggestion-group-title">BRANDS</div>
                 `;
-                
+
                 Array.from(brands).slice(0, 3).forEach(brand => {
                     suggestionsHTML += `
                         <div class="suggestion-item" onclick="selectBrandSuggestion('${brand}')">
@@ -1688,16 +1705,16 @@
                         </div>
                     `;
                 });
-                
+
                 suggestionsHTML += `</div>`;
             }
-            
+
             if (keywords.size > 0) {
                 suggestionsHTML += `
                     <div class="suggestion-group">
                         <div class="suggestion-group-title">SUGGESTIONS</div>
                 `;
-                
+
                 Array.from(keywords).slice(0, 5).forEach(keyword => {
                     suggestionsHTML += `
                         <div class="suggestion-item" onclick="selectKeywordSuggestion('${keyword}')">
@@ -1706,16 +1723,16 @@
                         </div>
                     `;
                 });
-                
+
                 suggestionsHTML += `</div>`;
             }
-            
+
             if (matchingProducts.length === 0 && keywords.size === 0 && categories.size === 0 && brands.size === 0) {
                 suggestionsHTML = `<div class="search-for">Search for "${query}"</div>`;
             } else {
                 suggestionsHTML += `<div class="search-for">Search for "${query}"</div>`;
             }
-            
+
             suggestionsContainer.innerHTML = suggestionsHTML;
             suggestionsContainer.style.display = 'block';
         }
@@ -1724,21 +1741,21 @@
         function selectProductSuggestion(productId) {
             const allProducts = getAllProducts();
             const product = allProducts.find(p => p.id === productId);
-            
+
             if (product) {
                 // إخفاء الاقتراحات
                 document.getElementById('searchSuggestions').style.display = 'none';
-                
+
                 // البحث عن المنتج المحدد فقط
                 const searchResults = allProducts.filter(p => p.id === productId);
-                
+
                 // عرض نتائج البحث
                 document.getElementById('searchQuery').textContent = product.name;
                 document.getElementById('resultsCount').textContent = searchResults.length;
-                
+
                 const searchResultsContainer = document.getElementById('searchResults');
                 searchResultsContainer.innerHTML = '';
-                
+
                 if (searchResults.length === 0) {
                     searchResultsContainer.innerHTML = '<p>No products found matching your search.</p>';
                 } else {
@@ -1757,7 +1774,7 @@
                         searchResultsContainer.appendChild(productCard);
                     });
                 }
-                
+
                 showPage('searchResults');
             }
         }
@@ -1773,18 +1790,18 @@
         function selectBrandSuggestion(brand) {
             document.getElementById('searchBox').value = brand;
             document.getElementById('searchSuggestions').style.display = 'none';
-            
+
             // البحث عن المنتجات التي تنتمي لهذه العلامة التجارية
             const allProducts = getAllProducts();
             const searchResults = allProducts.filter(product => product.brand === brand);
-            
+
             // عرض نتائج البحث
             document.getElementById('searchQuery').textContent = brand;
             document.getElementById('resultsCount').textContent = searchResults.length;
-            
+
             const searchResultsContainer = document.getElementById('searchResults');
             searchResultsContainer.innerHTML = '';
-            
+
             if (searchResults.length === 0) {
                 searchResultsContainer.innerHTML = '<p>No products found for this brand.</p>';
             } else {
@@ -1803,7 +1820,7 @@
                     searchResultsContainer.appendChild(productCard);
                 });
             }
-            
+
             showPage('searchResults');
         }
 
@@ -1825,18 +1842,18 @@
         // نظام البحث الحقيقي
         function performSearch() {
             const searchTerm = document.getElementById('searchBox').value.trim().toLowerCase();
-            
+
             if (searchTerm === '') {
                 alert('Please enter a search term');
                 return;
             }
-            
+
             const allProducts = getAllProducts();
-            
+
             // البحث الحقيقي في جميع المنتجات
             const searchResults = allProducts.filter(product => {
                 const searchTerms = searchTerm.split(' ');
-                
+
                 // البحث في الاسم والوصف والفئة والعلامة التجارية
                 return searchTerms.some(term => 
                     product.name.toLowerCase().includes(term) || 
@@ -1845,14 +1862,14 @@
                     product.brand.toLowerCase().includes(term)
                 );
             });
-            
+
             // عرض نتائج البحث
             document.getElementById('searchQuery').textContent = searchTerm;
             document.getElementById('resultsCount').textContent = searchResults.length;
-            
+
             const searchResultsContainer = document.getElementById('searchResults');
             searchResultsContainer.innerHTML = '';
-            
+
             if (searchResults.length === 0) {
                 searchResultsContainer.innerHTML = '<p>No products found matching your search.</p>';
             } else {
@@ -1871,29 +1888,42 @@
                     searchResultsContainer.appendChild(productCard);
                 });
             }
-            
+
             showPage('searchResults');
         }
 
         // معالجة الدفع
         function processPayment() {
+				// التحقق من طريقة استلام الملفات
+const deliveryMethod = document.getElementById('deliveryMethod').value;
+const contactInfo = document.getElementById('contactInfo').value;
+
+if (!deliveryMethod) {
+    alert('Please select how you would like to receive your files');
+    return;
+}
+
+if (deliveryMethod !== 'email' && (!contactInfo || contactInfo.trim() === '')) {
+    alert('Please provide your contact information for file delivery');
+    return;
+}
             // التحقق من صحة البيانات
             const notes = document.getElementById('notes').value;
             const paypalEmail = document.getElementById('paypalEmail').value;
-            
+
             if (!paypalEmail) {
                 alert('Please enter your PayPal email');
                 return;
             }
-            
+
             // محاكاة عملية الدفع
             alert('Payment processed successfully! Thank you for your purchase.');
-            
+
             // تفريغ السلة
             cart = [];
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartCount();
-            
+
             // العودة للصفحة الرئيسية
             showPage('home');
         }
@@ -1902,16 +1932,16 @@
         function loadNewProducts() {
             const container = document.getElementById('newProducts');
             const products = productsData.newProducts;
-            
+
             // فلتر المنتجات الجديدة (آخر شهرين)
             const twoMonthsAgo = new Date();
             twoMonthsAgo.setMonth(twoMonthsAgo.getMonth() - 2);
-            
+
             const newProducts = products.filter(product => {
                 const productDate = new Date(product.dateAdded);
                 return productDate >= twoMonthsAgo;
             });
-            
+
             if (container && newProducts.length > 0) {
                 setupSimplePagination('newProducts', newProducts, 30);
             } else if (container) {
@@ -1925,16 +1955,16 @@
             if (pageHistory[pageHistory.length - 1] !== pageId) {
                 pageHistory.push(pageId);
             }
-            
+
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
             document.querySelectorAll('.nav-menu a').forEach(link => {
                 link.classList.remove('active');
             });
-            
+
             document.getElementById(pageId + 'Page').classList.add('active');
-            
+
             if (pageId === 'home') {
                 document.querySelector('.nav-menu a').classList.add('active');
                 loadNewProducts();
@@ -1947,12 +1977,12 @@
 
         function showCategory(category) {
             showPage(category);
-            
+
             // تحديث القائمة النشطة
             document.querySelectorAll('.nav-menu a').forEach(link => {
                 link.classList.remove('active');
             });
-            
+
             // العثور على الرابط المناسب في القائمة العلوية
             document.querySelectorAll('.nav-menu a').forEach(link => {
                 if (link.textContent.toLowerCase().includes(category)) {
@@ -1965,11 +1995,11 @@
         function updateCheckoutDisplay() {
             const checkoutTotalElement = document.getElementById('checkoutTotal');
             let total = 0;
-            
+
             cart.forEach(item => {
                 total += item.price * item.quantity;
             });
-            
+
             checkoutTotalElement.textContent = `$${total.toFixed(2)}`;
         }
 
@@ -1989,7 +2019,7 @@
                 realme: 'Realme',
                 honor: 'Honor'
             };
-            
+
             document.getElementById('phoneBrandTitle').textContent = brandNames[brand] || brand;
             loadBrandProducts('phoneBrand', brand, 'phones');
             showPage('phoneBrand');
@@ -2006,7 +2036,7 @@
                 amazon: 'Amazon Fire',
                 google: 'Google Pixel Tab'
             };
-            
+
             document.getElementById('tabletBrandTitle').textContent = brandNames[brand] || brand;
             loadBrandProducts('tabletBrand', brand, 'ipad');
             showPage('tabletBrand');
@@ -2025,7 +2055,7 @@
                 razer: 'Razer',
                 samsung: 'Samsung Galaxy Book'
             };
-            
+
             document.getElementById('laptopBrandTitle').textContent = brandNames[brand] || brand;
             loadBrandProducts('laptopBrand', brand, 'laptop');
             showPage('laptopBrand');
@@ -2042,7 +2072,7 @@
                 anker: 'Anker Soundcore',
                 xiaomi: 'Xiaomi'
             };
-            
+
             document.getElementById('earbudsBrandTitle').textContent = brandNames[brand] || brand;
             loadBrandProducts('earbudsBrand', brand, 'airpods');
             showPage('earbudsBrand');
@@ -2059,7 +2089,7 @@
                 aspire: 'Aspire',
                 lostvape: 'Lost Vape'
             };
-            
+
             document.getElementById('vapeBrandTitle').textContent = brandNames[brand] || brand;
             loadBrandProducts('vapeBrand', brand, 'vape');
             showPage('vapeBrand');
@@ -2076,7 +2106,7 @@
                 '8bitdo': '8BitDo',
                 backbone: 'Backbone'
             };
-            
+
             document.getElementById('gamingBrandTitle').textContent = brandNames[brand] || brand;
             loadBrandProducts('gamingBrand', brand, 'gaming');
             showPage('gamingBrand');
@@ -2093,7 +2123,7 @@
                 sigma: 'Sigma',
                 tamron: 'Tamron'
             };
-            
+
             document.getElementById('cameraBrandTitle').textContent = brandNames[brand] || brand;
             loadBrandProducts('cameraBrand', brand, 'camera');
             showPage('cameraBrand');
@@ -2102,19 +2132,19 @@
         // تحميل منتجات العلامة التجارية
        function loadBrandProducts(brandType, brand, category) {
     const container = document.getElementById(brandType + 'Products');
-    
+
     // البحث عن المنتجات الحقيقية من JSON
     const allProducts = getAllProducts();
     const products = allProducts.filter(product => 
         product.brand === brand && product.category === category
     );
-    
+
     // لو مفيش منتجات، نعرض رسالة
     if (products.length === 0) {
         container.innerHTML = '<p>No products available for this brand yet.</p>';
         return;
     }
-    
+
     setupSimplePagination(brandType + 'Products', products, 30);
 }
 
@@ -2122,10 +2152,10 @@
         function showProductDetail(productId) {
             const allProducts = getAllProducts();
             const product = allProducts.find(p => p.id === productId);
-            
+
             if (product) {
                 const productDetailContent = document.getElementById('productDetailContent');
-                
+
                 productDetailContent.innerHTML = `
                     <div class="product-image-large">
                         <img src="${product.image}" alt="${product.name}">
@@ -2135,7 +2165,7 @@
                         <p class="product-detail-description">${product.fullDescription || product.description}</p>
                         <div class="product-detail-price">${product.price}</div>
                         <div class="product-detail-formats">Formats: <span>${product.formats}</span></div>
-                        
+
                         <div class="product-meta">
                             <div class="product-meta-item">
                                 <div class="product-meta-label">Category:</div>
@@ -2154,11 +2184,11 @@
                                 <div class="product-meta-value">${(product.compatibility || ['Adobe Illustrator', 'CorelDRAW', 'Inkscape']).join(', ')}</div>
                             </div>
                         </div>
-                        
+
                         <button class="add-to-cart" style="margin-top: 20px;" onclick="addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
                     </div>
                 `;
-                
+
                 showPage('productDetail');
             }
         }
@@ -2191,7 +2221,7 @@
                 const startIndex = (page - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 const pageProducts = products.slice(startIndex, endIndex);
-                
+
                 displayProducts(container, pageProducts);
                 createPaginationButtons();
             }
@@ -2273,7 +2303,32 @@
                 performSearch();
             }
         });
+// إدارة ظهور حقل معلومات الاتصال
+document.getElementById('deliveryMethod').addEventListener('change', function() {
+    const contactField = document.getElementById('contactInfoField');
+    const contactLabel = document.getElementById('contactInfoLabel');
+    const contactInput = document.getElementById('contactInfo');
 
+    if (this.value === 'email') {
+        contactField.style.display = 'none';
+        contactInput.removeAttribute('required');
+    } else {
+        contactField.style.display = 'block';
+        contactInput.setAttribute('required', 'required');
+
+        // تحديث النص حسب الطريقة المختارة
+        if (this.value === 'whatsapp') {
+            contactLabel.textContent = 'WhatsApp Number *';
+            contactInput.placeholder = 'Enter your WhatsApp number (e.g., +1234567890)';
+        } else if (this.value === 'telegram') {
+            contactLabel.textContent = 'Telegram Username *';
+            contactInput.placeholder = 'Enter your Telegram username (e.g., @username)';
+        } else {
+            contactLabel.textContent = 'Contact Information *';
+            contactInput.placeholder = 'Please provide your contact details';
+        }
+    }
+});
         // تحميل البيانات عند بدء التشغيل
         document.addEventListener('DOMContentLoaded', async function() {
             updateCartCount();
