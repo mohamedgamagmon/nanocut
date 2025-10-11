@@ -839,6 +839,12 @@
             color: #aaa;
         }
 
+        /* جعل صفحات البحث وتفاصيل المنتج تبدأ من تحت البنر */
+        #searchResultsPage,
+        #productDetailPage {
+            margin-top: 180px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-top {
@@ -2011,13 +2017,6 @@
             } else if (pageId === 'checkout') {
                 updateCheckoutDisplay();
             }
-						    // إخفاء/إظهار البنر حسب الصفحة
-    const banner = document.querySelector('.notification-banner');
-    if (pageId === 'searchResults' || pageId === 'productDetail') {
-        banner.style.display = 'none';
-    } else {
-        banner.style.display = 'block';
-    }
         }
 
         function showCategory(category) {
