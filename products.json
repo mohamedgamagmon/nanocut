@@ -417,30 +417,10 @@
       "category": "laptop",
       "brand": "hp",
       "price": "$19.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=HP+Spectre+x360",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
       "description": "Professional skin template for HP Spectre x360.",
-      "fullDescription": "Complete skin template for HP Spectre x360 convertible laptop.",
-      "features": [
-        "Top lid template",
-        "Palm rest template",
-        "Trackpad template",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "hp",
-        "spectre",
-        "x360",
-        "laptop",
-        "convertible"
-      ]
+      "dateAdded": "2025-10-11"
     },
     {
       "id": "lenovo-thinkpad",
@@ -490,30 +470,10 @@
       "category": "gaming",
       "brand": "xbox",
       "price": "$18.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Xbox+Series+X",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
       "description": "Premium skin template for Xbox Series X.",
-      "fullDescription": "Professional skin template for the Xbox Series X, including console and controller with ventilation cutouts.",
-      "features": [
-        "Console template",
-        "Controller template",
-        "Ventilation cutouts",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "xbox",
-        "series x",
-        "gaming",
-        "console",
-        "microsoft"
-      ]
+      "dateAdded": "2025-10-11"
     },
     {
       "id": "nintendo-switch",
@@ -614,30 +574,10 @@
       "category": "camera",
       "brand": "sony",
       "price": "$12.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Sony+24-70mm",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
       "description": "Professional skin for Sony 24-70mm lens.",
-      "fullDescription": "Professional skin template for the Sony 24-70mm lens, including zoom and focus ring templates with precise measurements.",
-      "features": [
-        "Zoom ring template",
-        "Focus ring template",
-        "Lens body template",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "sony",
-        "24-70mm",
-        "lens",
-        "camera",
-        "zoom"
-      ]
+      "dateAdded": "2025-10-11"
     },
     {
       "id": "nikon-85mm",
