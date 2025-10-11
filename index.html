@@ -2199,14 +2199,17 @@ if (deliveryMethod !== 'email' && (!contactInfo || contactInfo.trim() === '')) {
 
         // Function to go back to previous page
         function goBack() {
-            if (pageHistory.length > 1) {
-                pageHistory.pop(); // إزالة الصفحة الحالية
-                const previousPage = pageHistory[pageHistory.length - 1];
-                showPage(previousPage);
-            } else {
-                showPage('home');
-            }
-        }
+    if (pageHistory.length > 1) {
+        // أزل الصفحة الحالية من التاريخ
+        pageHistory.pop();
+        // روح للصفحة اللي قبلها
+        const prevPage = pageHistory[pageHistory.length - 1];
+        showPage(prevPage);
+    } else {
+        // لو مفيش تاريخ، روح للهوم
+        showPage('home');
+    }
+}
 
         // نظام ترقيم الصفحات البسيط
         function setupSimplePagination(containerId, products, itemsPerPage = 30) {
