@@ -1979,9 +1979,21 @@ if (deliveryMethod !== 'email' && (!contactInfo || contactInfo.trim() === '')) {
             }
         }
 
-function showCategory(category) {
-    showPage(category);
-}
+        function showCategory(category) {
+            showPage(category);
+
+            // تحديث القائمة النشطة
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // العثور على الرابط المناسب في القائمة العلوية
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                if (link.textContent.toLowerCase().includes(category)) {
+                    link.classList.add('active');
+                }
+            });
+        }
 
         // تحديث صفحة الدفع
         function updateCheckoutDisplay() {
@@ -2321,11 +2333,17 @@ document.getElementById('deliveryMethod').addEventListener('change', function() 
         }
     }
 });
-        // تحميل البيانات عند بدء التشغيل
+                // تحميل البيانات عند بدء التشغيل
         document.addEventListener('DOMContentLoaded', async function() {
             updateCartCount();
             await loadProductsData();
             loadNewProducts();
+        });
+
+        // اضف الكود هنا - بعد كل الدوال وقبل نهاية الـ script
+        // تفعيل زر Back في المتصفح
+        window.addEventListener('popstate', function() {
+            goBack();
         });
     </script>
 </body>
