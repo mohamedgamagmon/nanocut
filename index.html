@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanocut - Premium Device Skins</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --pink: #e91e63;
+            --light-pink: #f8bbd9;
+            --white: #ffffff;
+            --dark: #333333;
+            --gray: #f5f5f5;
+            --border: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 2px solid var(--light-pink);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--pink);
+            cursor: pointer;
+        }
+
+        .logo span {
+            color: var(--dark);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--pink);
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--pink);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .header-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-nav {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .category-nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 5px 0;
+            position: relative;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .category-nav a.active {
+            color: var(--pink);
+        }
+
+        .category-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--pink);
+        }
+
+        .create-bundle {
+            background: var(--pink);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .create-bundle:hover {
+            background: #d81b60;
+        }
+
+        /* Search Section */
+        .search-section {
+            background: var(--light-pink);
+            padding: 30px 0;
+            margin: 20px 0;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--pink);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #d81b60;
+        }
+
+        /* Search Suggestions Dropdown */
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .suggestion-group {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .suggestion-group:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-group-title {
+            padding: 5px 20px;
+            font-weight: bold;
+            color: var(--pink);
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .suggestion-item {
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .suggestion-item:hover {
+            background: var(--light-pink);
+        }
+
+        .suggestion-item i {
+            margin-right: 10px;
+            color: var(--pink);
+            width: 16px;
+            text-align: center;
+        }
+
+        .suggestion-text {
+            flex: 1;
+        }
+
+        .search-for {
+            padding: 10px 20px;
+            font-style: italic;
+            color: #666;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Floating Search Button */
+        .floating-search-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--pink);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .floating-search-btn:hover {
+            background: #d81b60;
+            transform: scale(1.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 30px 0;
+            min-height: 70vh;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .page-title {
+            font-size: 28px;
+            color: var(--pink);
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            color: var(--dark);
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        /* Notification Banner */
+        .notification-banner {
+            background: linear-gradient(135deg, var(--pink), #ad1457);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .notification-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .notification-steps {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .step-icon {
+            background: white;
+            color: var(--pink);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 20px;
+        }
+
+        .step-text {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Category Brands Grid */
+        .category-brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .category-brand-card {
+            background: var(--white);
+            border: 2px solid var(--light-pink);
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .category-brand-card:hover {
+            border-color: var(--pink);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .category-brand-name {
+            font-weight: bold;
+            font-size: 22px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .category-brand-models {
+            color: var(--pink);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .product-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            background-color: var(--gray);
+            border-radius: 8px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-formats {
+            font-weight: 600;
+            color: var(--pink);
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--pink);
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            background: var(--pink);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background: #d81b60;
+        }
+
+        /* Category Pages */
+        .category-header {
+            background: linear-gradient(135deg, var(--pink), #ad1457);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .category-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* Product Detail Page */
+        .product-detail {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .product-image-large {
+            flex: 1;
+            background-color: var(--gray);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-image-large img {
+            max-width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-detail-title {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .product-detail-description {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .product-detail-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--pink);
+            margin-bottom: 20px;
+        }
+
+        .product-detail-formats {
+            font-size: 16px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .product-detail-formats span {
+            font-weight: bold;
+            color: var(--pink);
+        }
+
+        .product-meta {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .product-meta-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .product-meta-label {
+            font-weight: bold;
+            width: 120px;
+            color: var(--dark);
+        }
+
+        .product-meta-value {
+            color: #555;
+        }
+
+        .back-button {
+            background: var(--gray);
+            color: var(--dark);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #e0e0e0;
+        }
+
+        /* Cart Page */
+        .cart-items {
+            margin-bottom: 30px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            gap: 20px;
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            background: var(--gray);
+            border-radius: 8px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: var(--pink);
+            font-weight: bold;
+        }
+
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #ff4444;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .cart-summary {
+            background: var(--gray);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .cart-total {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkout-btn {
+            background: var(--pink);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #d81b60;
+        }
+
+        /* Checkout Page */
+        .checkout-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .payment-methods {
+            margin: 20px 0;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            background: var(--gray);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .payment-method input {
+            margin-right: 10px;
+        }
+
+        /* Search Results */
+        .search-results-info {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            background: var(--white);
+            border: 2px solid var(--light-pink);
+            color: var(--dark);
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            min-width: 45px;
+            text-align: center;
+        }
+
+        .page-btn:hover {
+            border-color: var(--pink);
+            color: var(--pink);
+        }
+
+        .page-btn.active {
+            background: var(--pink);
+            border-color: var(--pink);
+            color: white;
+        }
+
+        .page-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .page-info {
+            color: var(--dark);
+            font-weight: 600;
+            margin: 0 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--light-pink);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-pink);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu {
+                gap: 15px;
+            }
+            
+            .category-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .category-brands-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .notification-steps {
+                gap: 20px;
+            }
+            
+            .step {
+                min-width: 100px;
+            }
+            
+            .pagination {
+                gap: 5px;
+            }
+            
+            .page-btn {
+                padding: 8px 12px;
+                min-width: 40px;
+            }
+            
+            .product-detail {
+                flex-direction: column;
+            }
+            
+            .product-image-large {
+                min-height: 300px;
+            }
+            
+            .checkout-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .floating-search-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo" onclick="showPage('home')">nano<span>cut</span></div>
+                <ul class="nav-menu">
+                    <li><a class="active" onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showCategory('phones')">Phones</a></li>
+                    <li><a onclick="showCategory('ipad')">iPad & Tablets</a></li>
+                    <li><a onclick="showCategory('laptop')">Laptops</a></li>
+                    <li><a onclick="showCategory('airpods')">AirPods</a></li>
+                    <li><a onclick="showCategory('vape')">Vape Devices</a></li>
+                    <li><a onclick="showCategory('gaming')">Gaming Devices</a></li>
+                    <li><a onclick="showCategory('camera')">Camera Lenses</a></li>
+                    <li class="cart-icon" onclick="showPage('cart')">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-bottom">
+                <ul class="category-nav">
+                    <li><a onclick="showCategory('airpods')">AirPods</a></li>
+                    <li><a onclick="showCategory('phones')">Phones</a></li>
+                    <li><a onclick="showCategory('ipad')">iPad & Tablets</a></li>
+                    <li><a onclick="showCategory('laptop')">Laptops</a></li>
+                    <li><a onclick="showCategory('vape')">Vape Devices</a></li>
+                    <li><a onclick="showCategory('gaming')">Gaming Devices</a></li>
+                    <li><a onclick="showCategory('camera')">Camera Lenses</a></li>
+                </ul>
+                <div class="create-bundle">Create Bundle</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="search-box" id="searchBox" placeholder="Search for device models, brands, or templates...">
+                <button class="search-btn" onclick="performSearch()">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-suggestions" id="searchSuggestions">
+                    <!-- Suggestions will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Search Button -->
+    <div class="floating-search-btn" onclick="openSearch()">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Notification Banner -->
+            <div class="notification-banner">
+                <div class="notification-title">Choose, Pay, and Get Your Files!</div>
+                <p>Select your design, complete payment, and receive your files instantly</p>
+                <div class="notification-steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <div class="step-text">Choose Design</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="step-text">Secure Payment</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="step-text">Instant Download</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="step-text">Start Working</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Page -->
+            <div class="page active" id="homePage">
+                <h1 class="page-title">New Arrivals</h1>
+                <p class="page-subtitle">Latest skin templates added in the last 2 months</p>
+                
+                <div class="products-grid" id="newProducts">
+                    <!-- New products will be loaded automatically -->
+                </div>
+            </div>
+
+            <!-- Search Results Page -->
+            <div class="page" id="searchResultsPage">
+                <h1 class="page-title">Search Results</h1>
+                <p class="page-subtitle" id="searchResultsInfo">Found <span id="resultsCount">0</span> results for "<span id="searchQuery"></span>"</p>
+                
+                <div class="products-grid" id="searchResults">
+                    <!-- Search results will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Cart Page -->
+            <div class="page" id="cartPage">
+                <h1 class="page-title">Shopping Cart</h1>
+                
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span id="cartTotal">$0.00</span>
+                    </div>
+                    <button class="checkout-btn" onclick="showPage('checkout')">Proceed to Checkout</button>
+                </div>
+            </div>
+
+            <!-- Checkout Page -->
+            <div class="page" id="checkoutPage">
+                <h1 class="page-title">Checkout</h1>
+                
+                <div class="checkout-form">
+                    <div class="billing-info">
+                        <h3>Delivery Information</h3>
+                        <div class="form-group">
+                            <label for="notes">Notes for Delivery</label>
+                            <textarea id="notes" rows="4" placeholder="Please specify how you would like to receive your files (e.g., email, WhatsApp, etc.)"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-info">
+                        <h3>Payment Method</h3>
+                        <div class="cart-summary">
+                            <div class="cart-total">
+                                <span>Total Amount:</span>
+                                <span id="checkoutTotal">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="payment" checked>
+                                <label for="paypal">PayPal</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paypalEmail">PayPal Email</label>
+                            <input type="email" id="paypalEmail" placeholder="example@paypal.com" required>
+                        </div>
+                        
+                        <button class="checkout-btn" onclick="processPayment()">Complete Purchase</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- صفحات الفئات والعلامات التجارية -->
+            <!-- Phones Page -->
+            <div class="page" id="phonesPage">
+                <div class="category-header">
+                    <h1 class="category-title">Phones</h1>
+                    <p>Choose your phone brand</p>
+                </div>
+                
+                <div class="category-brands-grid">
+                    <div class="category-brand-card" onclick="showPhoneBrand('apple')">
+                        <div class="category-brand-name">Apple iPhone</div>
+                        <div class="category-brand-models">iPhone 15, 14, 13 Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('samsung')">
+                        <div class="category-brand-name">Samsung Galaxy</div>
+                        <div class="category-brand-models">S Series, Z Series, A Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('google')">
+                        <div class="category-brand-name">Google Pixel</div>
+                        <div class="category-brand-models">Pixel 8, 7, 6 Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('oneplus')">
+                        <div class="category-brand-name">OnePlus</div>
+                        <div class="category-brand-models">11, Nord Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('xiaomi')">
+                        <div class="category-brand-name">Xiaomi</div>
+                        <div class="category-brand-models">Redmi, Mi, Poco Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('huawei')">
+                        <div class="category-brand-name">Huawei</div>
+                        <div class="category-brand-models">P Series, Mate Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('oppo')">
+                        <div class="category-brand-name">OPPO</div>
+                        <div class="category-brand-models">Find, Reno, A Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('vivo')">
+                        <div class="category-brand-name">Vivo</div>
+                        <div class="category-brand-models">X Series, V Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('motorola')">
+                        <div class="category-brand-name">Motorola</div>
+                        <div class="category-brand-models">Edge, Razr Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('nothing')">
+                        <div class="category-brand-name">Nothing Phone</div>
+                        <div class="category-brand-models">Phone (1), Phone (2)</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('realme')">
+                        <div class="category-brand-name">Realme</div>
+                        <div class="category-brand-models">GT, Number Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showPhoneBrand('honor')">
+                        <div class="category-brand-name">Honor</div>
+                        <div class="category-brand-models">Magic, X Series</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iPad-Tab Page -->
+            <div class="page" id="ipadPage">
+                <div class="category-header">
+                    <h1 class="category-title">iPad & Tablets</h1>
+                    <p>Choose your tablet brand</p>
+                </div>
+                
+                <div class="category-brands-grid">
+                    <div class="category-brand-card" onclick="showTabletBrand('apple')">
+                        <div class="category-brand-name">Apple iPad</div>
+                        <div class="category-brand-models">iPad Pro, Air, Mini Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showTabletBrand('samsung')">
+                        <div class="category-brand-name">Samsung Galaxy Tab</div>
+                        <div class="category-brand-models">S Series, A Series, FE Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showTabletBrand('microsoft')">
+                        <div class="category-brand-name">Microsoft Surface</div>
+                        <div class="category-brand-models">Surface Pro, Go, Duo Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showTabletBrand('lenovo')">
+                        <div class="category-brand-name">Lenovo Tab</div>
+                        <div class="category-brand-models">P Series, M Series, Yoga Tab</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showTabletBrand('huawei')">
+                        <div class="category-brand-name">Huawei MatePad</div>
+                        <div class="category-brand-models">MatePad Pro, SE Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showTabletBrand('xiaomi')">
+                        <div class="category-brand-name">Xiaomi Pad</div>
+                        <div class="category-brand-models">Pad 6, Pad 5 Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showTabletBrand('amazon')">
+                        <div class="category-brand-name">Amazon Fire</div>
+                        <div class="category-brand-models">Fire HD, Fire Max Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showTabletBrand('google')">
+                        <div class="category-brand-name">Google Pixel Tab</div>
+                        <div class="category-brand-models">Pixel Tablet</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laptop Page -->
+            <div class="page" id="laptopPage">
+                <div class="category-header">
+                    <h1 class="category-title">Laptops</h1>
+                    <p>Choose your laptop brand</p>
+                </div>
+                
+                <div class="category-brands-grid">
+                    <div class="category-brand-card" onclick="showLaptopBrand('apple')">
+                        <div class="category-brand-name">Apple MacBook</div>
+                        <div class="category-brand-models">MacBook Pro, Air Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('dell')">
+                        <div class="category-brand-name">Dell</div>
+                        <div class="category-brand-models">XPS, Inspiron, Latitude Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('hp')">
+                        <div class="category-brand-name">HP</div>
+                        <div class="category-brand-models">Spectre, Envy, Pavilion Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('lenovo')">
+                        <div class="category-brand-name">Lenovo</div>
+                        <div class="category-brand-models">ThinkPad, Yoga, IdeaPad Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('asus')">
+                        <div class="category-brand-name">ASUS</div>
+                        <div class="category-brand-models">ZenBook, ROG, VivoBook Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('acer')">
+                        <div class="category-brand-name">Acer</div>
+                        <div class="category-brand-models">Swift, Aspire, Predator Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('microsoft')">
+                        <div class="category-brand-name">Microsoft Surface</div>
+                        <div class="category-brand-models">Surface Laptop, Book Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('msi')">
+                        <div class="category-brand-name">MSI</div>
+                        <div class="category-brand-models">Modern, Prestige, Summit Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('razer')">
+                        <div class="category-brand-name">Razer</div>
+                        <div class="category-brand-models">Blade Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showLaptopBrand('samsung')">
+                        <div class="category-brand-name">Samsung Galaxy Book</div>
+                        <div class="category-brand-models">Galaxy Book Series</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AirPods Page -->
+            <div class="page" id="airpodsPage">
+                <div class="category-header">
+                    <h1 class="category-title">AirPods & Earbuds</h1>
+                    <p>Choose your earbuds brand</p>
+                </div>
+                
+                <div class="category-brands-grid">
+                    <div class="category-brand-card" onclick="showEarbudsBrand('apple')">
+                        <div class="category-brand-name">Apple AirPods</div>
+                        <div class="category-brand-models">AirPods Pro, Max, Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showEarbudsBrand('samsung')">
+                        <div class="category-brand-name">Samsung Galaxy Buds</div>
+                        <div class="category-brand-models">Buds2 Pro, Live, FE Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showEarbudsBrand('sony')">
+                        <div class="category-brand-name">Sony</div>
+                        <div class="category-brand-models">WF, WH Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showEarbudsBrand('bose')">
+                        <div class="category-brand-name">Bose</div>
+                        <div class="category-brand-models">QuietComfort, SoundSport Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showEarbudsBrand('jbl')">
+                        <div class="category-brand-name">JBL</div>
+                        <div class="category-brand-models">Live, Reflect, Tune Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showEarbudsBrand('beats')">
+                        <div class="category-brand-name">Beats</div>
+                        <div class="category-brand-models">Studio Buds, Fit Pro, Powerbeats</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showEarbudsBrand('anker')">
+                        <div class="category-brand-name">Anker Soundcore</div>
+                        <div class="category-brand-models">Liberty, Space Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showEarbudsBrand('xiaomi')">
+                        <div class="category-brand-name">Xiaomi</div>
+                        <div class="category-brand-models">Redmi Buds, Mi True Wireless</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vape Page -->
+            <div class="page" id="vapePage">
+                <div class="category-header">
+                    <h1 class="category-title">Vape Devices</h1>
+                    <p>Choose your vape brand</p>
+                </div>
+                
+                <div class="category-brands-grid">
+                    <div class="category-brand-card" onclick="showVapeBrand('uwell')">
+                        <div class="category-brand-name">Uwell</div>
+                        <div class="category-brand-models">Caliburn, Crown, Valyrian Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showVapeBrand('smok')">
+                        <div class="category-brand-name">SMOK</div>
+                        <div class="category-brand-models">Nord, Novo, RPM Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showVapeBrand('vaporesso')">
+                        <div class="category-brand-name">Vaporesso</div>
+                        <div class="category-brand-models">XROS, Luxe, Target Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showVapeBrand('geekvape')">
+                        <div class="category-brand-name">GeekVape</div>
+                        <div class="category-brand-models">Aegis, L Series, Z Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showVapeBrand('voopoo')">
+                        <div class="category-brand-name">VooPoo</div>
+                        <div class="category-brand-models">Drag, Argus, Vinci Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showVapeBrand('innokin')">
+                        <div class="category-brand-name">Innokin</div>
+                        <div class="category-brand-models">Endura, Klypse, Sensis Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showVapeBrand('aspire')">
+                        <div class="category-brand-name">Aspire</div>
+                        <div class="category-brand-models">Flexus, Zelos, Nautilus Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showVapeBrand('lostvape')">
+                        <div class="category-brand-name">Lost Vape</div>
+                        <div class="category-brand-models">Orion, Ursa, Thelema Series</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gaming Page -->
+            <div class="page" id="gamingPage">
+                <div class="category-header">
+                    <h1 class="category-title">Gaming Devices</h1>
+                    <p>Choose your gaming device</p>
+                </div>
+                
+                <div class="category-brands-grid">
+                    <div class="category-brand-card" onclick="showGamingBrand('playstation')">
+                        <div class="category-brand-name">PlayStation</div>
+                        <div class="category-brand-models">PS5, PS4, DualSense, VR2</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showGamingBrand('xbox')">
+                        <div class="category-brand-name">Xbox</div>
+                        <div class="category-brand-models">Series X|S, One, Elite Controller</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showGamingBrand('nintendo')">
+                        <div class="category-brand-name">Nintendo</div>
+                        <div class="category-brand-models">Switch, Switch Lite, Joy-Con</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showGamingBrand('steam')">
+                        <div class="category-brand-name">Steam Deck</div>
+                        <div class="category-brand-models">Steam Deck, Accessories</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showGamingBrand('razer')">
+                        <div class="category-brand-name">Razer</div>
+                        <div class="category-brand-models">Kishi, Junglecat, Controller</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showGamingBrand('logitech')">
+                        <div class="category-brand-name">Logitech</div>
+                        <div class="category-brand-models">G Series, F710, Controller</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showGamingBrand('8bitdo')">
+                        <div class="category-brand-name">8BitDo</div>
+                        <div class="category-brand-models">Ultimate, Pro2, Lite2 Controller</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showGamingBrand('backbone')">
+                        <div class="category-brand-name">Backbone</div>
+                        <div class="category-brand-models">One, Mobile Gaming Controller</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camera Page -->
+            <div class="page" id="cameraPage">
+                <div class="category-header">
+                    <h1 class="category-title">Camera Lenses</h1>
+                    <p>Choose your camera brand</p>
+                </div>
+                
+                <div class="category-brands-grid">
+                    <div class="category-brand-card" onclick="showCameraBrand('canon')">
+                        <div class="category-brand-name">Canon</div>
+                        <div class="category-brand-models">EF, RF, EF-S Mount Lenses</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showCameraBrand('nikon')">
+                        <div class="category-brand-name">Nikon</div>
+                        <div class="category-brand-models">F, Z Mount Lenses</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showCameraBrand('sony')">
+                        <div class="category-brand-name">Sony</div>
+                        <div class="category-brand-models">E, FE Mount Lenses</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showCameraBrand('fujifilm')">
+                        <div class="category-brand-name">Fujifilm</div>
+                        <div class="category-brand-models">X, GF Mount Lenses</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showCameraBrand('panasonic')">
+                        <div class="category-brand-name">Panasonic</div>
+                        <div class="category-brand-models">L Mount, Micro Four Thirds</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showCameraBrand('olympus')">
+                        <div class="category-brand-name">Olympus</div>
+                        <div class="category-brand-models">Micro Four Thirds Lenses</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showCameraBrand('sigma')">
+                        <div class="category-brand-name">Sigma</div>
+                        <div class="category-brand-models">Art, Contemporary, Sports Series</div>
+                    </div>
+                    <div class="category-brand-card" onclick="showCameraBrand('tamron')">
+                        <div class="category-brand-name">Tamron</div>
+                        <div class="category-brand-models">Di, Di II, Di III Series</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- صفحات العلامات التجارية -->
+            <div class="page" id="phoneBrandPage">
+                <div class="category-header">
+                    <h1 class="category-title" id="phoneBrandTitle">Phone Brand</h1>
+                </div>
+                <div class="products-grid" id="phoneBrandProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <div class="page" id="tabletBrandPage">
+                <div class="category-header">
+                    <h1 class="category-title" id="tabletBrandTitle">Tablet Brand</h1>
+                </div>
+                <div class="products-grid" id="tabletBrandProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <div class="page" id="laptopBrandPage">
+                <div class="category-header">
+                    <h1 class="category-title" id="laptopBrandTitle">Laptop Brand</h1>
+                </div>
+                <div class="products-grid" id="laptopBrandProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <div class="page" id="earbudsBrandPage">
+                <div class="category-header">
+                    <h1 class="category-title" id="earbudsBrandTitle">Earbuds Brand</h1>
+                </div>
+                <div class="products-grid" id="earbudsBrandProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <div class="page" id="vapeBrandPage">
+                <div class="category-header">
+                    <h1 class="category-title" id="vapeBrandTitle">Vape Brand</h1>
+                </div>
+                <div class="products-grid" id="vapeBrandProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <div class="page" id="gamingBrandPage">
+                <div class="category-header">
+                    <h1 class="category-title" id="gamingBrandTitle">Gaming Brand</h1>
+                </div>
+                <div class="products-grid" id="gamingBrandProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <div class="page" id="cameraBrandPage">
+                <div class="category-header">
+                    <h1 class="category-title" id="cameraBrandTitle">Camera Brand</h1>
+                </div>
+                <div class="products-grid" id="cameraBrandProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Product Detail Page -->
+            <div class="page" id="productDetailPage">
+                <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back to Products</button>
+                
+                <div class="product-detail" id="productDetailContent">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">About Nanocut</h3>
+                    <p>Premium device skin templates for professionals and enthusiasts. High-quality cut files for various devices and brands.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> support@nanocut.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9 AM - 6 PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Nanocut. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // نظام تتبع الصفحات السابقة
+        let pageHistory = ['home'];
+        
+        // نظام السلة
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // نظام البيانات الجديد - بدل productsData الكبيرة
+        let productsData = {
+            newProducts: []
+        };
+
+        // دالة لتحميل البيانات من JSON
+        async function loadProductsData() {
+            try {
+                const response = await fetch('products.json');
+                const data = await response.json();
+                productsData.newProducts = data.products;
+                console.log('Products loaded from JSON:', productsData.newProducts.length);
+            } catch (error) {
+                console.log('JSON file not found, using empty data');
+                productsData.newProducts = [];
+            }
+        }
+
+        // تحديث عداد السلة
+        function updateCartCount() {
+            const cartCount = document.getElementById('cartCount');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
+
+        // إضافة منتج إلى السلة
+        function addToCart(productId, productName, productPrice, productImage) {
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: productName,
+                    price: parseFloat(productPrice.replace('$', '')),
+                    image: productImage,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            
+            // عرض تأكيد الإضافة
+            alert(`"${productName}" has been added to your cart!`);
+        }
+
+        // إزالة منتج من السلة
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            loadCartPage();
+        }
+
+        // تحميل صفحة السلة
+        function loadCartPage() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>Your cart is empty</p>';
+                cartTotal.textContent = '$0.00';
+                return;
+            }
+            
+            let total = 0;
+            cartItems.innerHTML = '';
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>
+                    </div>
+                    <div class="cart-item-total">$${itemTotal.toFixed(2)}</div>
+                    <button class="cart-item-remove" onclick="removeFromCart('${item.id}')">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            
+            cartTotal.textContent = `$${total.toFixed(2)}`;
+        }
+
+        // فتح البحث
+        function openSearch() {
+            document.getElementById('searchBox').focus();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // الحصول على جميع المنتجات من JSON
+        function getAllProducts() {
+            return productsData.newProducts;
+        }
+
+        // توليد اقتراحات حقيقية من قاعدة البيانات
+        function generateRealTimeSuggestions(query) {
+            if (!query || query.length < 2) {
+                document.getElementById('searchSuggestions').style.display = 'none';
+                return;
+            }
+            
+            const queryLower = query.toLowerCase();
+            const allProducts = getAllProducts();
+            
+            // البحث في جميع المنتجات
+            const matchingProducts = allProducts.filter(product => {
+                return product.name.toLowerCase().includes(queryLower) || 
+                       product.description.toLowerCase().includes(queryLower) ||
+                       product.category.toLowerCase().includes(queryLower) ||
+                       product.brand.toLowerCase().includes(queryLower);
+            });
+            
+            // استخراج الكلمات المفتاحية الفريدة
+            const keywords = new Set();
+            const categories = new Set();
+            const brands = new Set();
+            
+            allProducts.forEach(product => {
+                // استخراج الكلمات المفتاحية من الاسم
+                const words = product.name.toLowerCase().split(' ');
+                words.forEach(word => {
+                    if (word.includes(queryLower) && word.length > 2) {
+                        keywords.add(word);
+                    }
+                });
+                
+                // استخراج الفئات والعلامات التجارية
+                if (product.category.toLowerCase().includes(queryLower)) {
+                    categories.add(product.category);
+                }
+                if (product.brand.toLowerCase().includes(queryLower)) {
+                    brands.add(product.brand);
+                }
+            });
+            
+            // عرض الاقتراحات
+            const suggestionsContainer = document.getElementById('searchSuggestions');
+            let suggestionsHTML = '';
+            
+            if (matchingProducts.length > 0) {
+                suggestionsHTML += `
+                    <div class="suggestion-group">
+                        <div class="suggestion-group-title">PRODUCTS</div>
+                `;
+                
+                matchingProducts.slice(0, 5).forEach(product => {
+                    suggestionsHTML += `
+                        <div class="suggestion-item" onclick="selectProductSuggestion('${product.id}')">
+                            <i class="fas fa-box"></i>
+                            <div class="suggestion-text">${product.name}</div>
+                        </div>
+                    `;
+                });
+                
+                suggestionsHTML += `</div>`;
+            }
+            
+            if (categories.size > 0) {
+                suggestionsHTML += `
+                    <div class="suggestion-group">
+                        <div class="suggestion-group-title">CATEGORIES</div>
+                `;
+                
+                Array.from(categories).slice(0, 3).forEach(category => {
+                    suggestionsHTML += `
+                        <div class="suggestion-item" onclick="selectCategorySuggestion('${category}')">
+                            <i class="fas fa-folder"></i>
+                            <div class="suggestion-text">${category.charAt(0).toUpperCase() + category.slice(1)}</div>
+                        </div>
+                    `;
+                });
+                
+                suggestionsHTML += `</div>`;
+            }
+            
+            if (brands.size > 0) {
+                suggestionsHTML += `
+                    <div class="suggestion-group">
+                        <div class="suggestion-group-title">BRANDS</div>
+                `;
+                
+                Array.from(brands).slice(0, 3).forEach(brand => {
+                    suggestionsHTML += `
+                        <div class="suggestion-item" onclick="selectBrandSuggestion('${brand}')">
+                            <i class="fas fa-tag"></i>
+                            <div class="suggestion-text">${brand.charAt(0).toUpperCase() + brand.slice(1)}</div>
+                        </div>
+                    `;
+                });
+                
+                suggestionsHTML += `</div>`;
+            }
+            
+            if (keywords.size > 0) {
+                suggestionsHTML += `
+                    <div class="suggestion-group">
+                        <div class="suggestion-group-title">SUGGESTIONS</div>
+                `;
+                
+                Array.from(keywords).slice(0, 5).forEach(keyword => {
+                    suggestionsHTML += `
+                        <div class="suggestion-item" onclick="selectKeywordSuggestion('${keyword}')">
+                            <i class="fas fa-search"></i>
+                            <div class="suggestion-text">${keyword}</div>
+                        </div>
+                    `;
+                });
+                
+                suggestionsHTML += `</div>`;
+            }
+            
+            if (matchingProducts.length === 0 && keywords.size === 0 && categories.size === 0 && brands.size === 0) {
+                suggestionsHTML = `<div class="search-for">Search for "${query}"</div>`;
+            } else {
+                suggestionsHTML += `<div class="search-for">Search for "${query}"</div>`;
+            }
+            
+            suggestionsContainer.innerHTML = suggestionsHTML;
+            suggestionsContainer.style.display = 'block';
+        }
+
+        // اختيار اقتراح منتج
+        function selectProductSuggestion(productId) {
+            const allProducts = getAllProducts();
+            const product = allProducts.find(p => p.id === productId);
+            
+            if (product) {
+                // إخفاء الاقتراحات
+                document.getElementById('searchSuggestions').style.display = 'none';
+                
+                // البحث عن المنتج المحدد فقط
+                const searchResults = allProducts.filter(p => p.id === productId);
+                
+                // عرض نتائج البحث
+                document.getElementById('searchQuery').textContent = product.name;
+                document.getElementById('resultsCount').textContent = searchResults.length;
+                
+                const searchResultsContainer = document.getElementById('searchResults');
+                searchResultsContainer.innerHTML = '';
+                
+                if (searchResults.length === 0) {
+                    searchResultsContainer.innerHTML = '<p>No products found matching your search.</p>';
+                } else {
+                    searchResults.forEach(product => {
+                        const productCard = document.createElement('div');
+                        productCard.className = 'product-card';
+                        productCard.onclick = () => showProductDetail(product.id);
+                        productCard.innerHTML = `
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <h3 class="product-title">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-formats">${product.formats}</div>
+                            <div class="product-price">${product.price}</div>
+                            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                        `;
+                        searchResultsContainer.appendChild(productCard);
+                    });
+                }
+                
+                showPage('searchResults');
+            }
+        }
+
+        // اختيار اقتراح فئة
+        function selectCategorySuggestion(category) {
+            document.getElementById('searchBox').value = category;
+            document.getElementById('searchSuggestions').style.display = 'none';
+            showCategory(category);
+        }
+
+        // اختيار اقتراح علامة تجارية
+        function selectBrandSuggestion(brand) {
+            document.getElementById('searchBox').value = brand;
+            document.getElementById('searchSuggestions').style.display = 'none';
+            
+            // البحث عن المنتجات التي تنتمي لهذه العلامة التجارية
+            const allProducts = getAllProducts();
+            const searchResults = allProducts.filter(product => product.brand === brand);
+            
+            // عرض نتائج البحث
+            document.getElementById('searchQuery').textContent = brand;
+            document.getElementById('resultsCount').textContent = searchResults.length;
+            
+            const searchResultsContainer = document.getElementById('searchResults');
+            searchResultsContainer.innerHTML = '';
+            
+            if (searchResults.length === 0) {
+                searchResultsContainer.innerHTML = '<p>No products found for this brand.</p>';
+            } else {
+                searchResults.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.onclick = () => showProductDetail(product.id);
+                    productCard.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-formats">${product.formats}</div>
+                        <div class="product-price">${product.price}</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                    `;
+                    searchResultsContainer.appendChild(productCard);
+                });
+            }
+            
+            showPage('searchResults');
+        }
+
+        // اختيار اقتراح كلمة مفتاحية
+        function selectKeywordSuggestion(keyword) {
+            document.getElementById('searchBox').value = keyword;
+            document.getElementById('searchSuggestions').style.display = 'none';
+            performSearch();
+        }
+
+        // إخفاء الاقتراحات عند النقر خارجها
+        document.addEventListener('click', function(e) {
+            const searchContainer = document.querySelector('.search-container');
+            if (!searchContainer.contains(e.target)) {
+                document.getElementById('searchSuggestions').style.display = 'none';
+            }
+        });
+
+        // نظام البحث الحقيقي
+        function performSearch() {
+            const searchTerm = document.getElementById('searchBox').value.trim().toLowerCase();
+            
+            if (searchTerm === '') {
+                alert('Please enter a search term');
+                return;
+            }
+            
+            const allProducts = getAllProducts();
+            
+            // البحث الحقيقي في جميع المنتجات
+            const searchResults = allProducts.filter(product => {
+                const searchTerms = searchTerm.split(' ');
+                
+                // البحث في الاسم والوصف والفئة والعلامة التجارية
+                return searchTerms.some(term => 
+                    product.name.toLowerCase().includes(term) || 
+                    product.description.toLowerCase().includes(term) ||
+                    product.category.toLowerCase().includes(term) ||
+                    product.brand.toLowerCase().includes(term)
+                );
+            });
+            
+            // عرض نتائج البحث
+            document.getElementById('searchQuery').textContent = searchTerm;
+            document.getElementById('resultsCount').textContent = searchResults.length;
+            
+            const searchResultsContainer = document.getElementById('searchResults');
+            searchResultsContainer.innerHTML = '';
+            
+            if (searchResults.length === 0) {
+                searchResultsContainer.innerHTML = '<p>No products found matching your search.</p>';
+            } else {
+                searchResults.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.onclick = () => showProductDetail(product.id);
+                    productCard.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-formats">${product.formats}</div>
+                        <div class="product-price">${product.price}</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                    `;
+                    searchResultsContainer.appendChild(productCard);
+                });
+            }
+            
+            showPage('searchResults');
+        }
+
+        // معالجة الدفع
+        function processPayment() {
+            // التحقق من صحة البيانات
+            const notes = document.getElementById('notes').value;
+            const paypalEmail = document.getElementById('paypalEmail').value;
+            
+            if (!paypalEmail) {
+                alert('Please enter your PayPal email');
+                return;
+            }
+            
+            // محاكاة عملية الدفع
+            alert('Payment processed successfully! Thank you for your purchase.');
+            
+            // تفريغ السلة
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            
+            // العودة للصفحة الرئيسية
+            showPage('home');
+        }
+
+        // Load new products from JSON
+        function loadNewProducts() {
+            const container = document.getElementById('newProducts');
+            const products = productsData.newProducts;
+            
+            // فلتر المنتجات الجديدة (آخر شهرين)
+            const twoMonthsAgo = new Date();
+            twoMonthsAgo.setMonth(twoMonthsAgo.getMonth() - 2);
+            
+            const newProducts = products.filter(product => {
+                const productDate = new Date(product.dateAdded);
+                return productDate >= twoMonthsAgo;
+            });
+            
+            if (container && newProducts.length > 0) {
+                setupSimplePagination('newProducts', newProducts, 30);
+            } else if (container) {
+                container.innerHTML = '<p>No new products available.</p>';
+            }
+        }
+
+        // Page navigation
+        function showPage(pageId) {
+            // حفظ الصفحة الحالية في السجل
+            if (pageHistory[pageHistory.length - 1] !== pageId) {
+                pageHistory.push(pageId);
+            }
+            
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.getElementById(pageId + 'Page').classList.add('active');
+            
+            if (pageId === 'home') {
+                document.querySelector('.nav-menu a').classList.add('active');
+                loadNewProducts();
+            } else if (pageId === 'cart') {
+                loadCartPage();
+            } else if (pageId === 'checkout') {
+                updateCheckoutDisplay();
+            }
+        }
+
+        function showCategory(category) {
+            showPage(category);
+            
+            // تحديث القائمة النشطة
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // العثور على الرابط المناسب في القائمة العلوية
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                if (link.textContent.toLowerCase().includes(category)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // تحديث صفحة الدفع
+        function updateCheckoutDisplay() {
+            const checkoutTotalElement = document.getElementById('checkoutTotal');
+            let total = 0;
+            
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+            });
+            
+            checkoutTotalElement.textContent = `$${total.toFixed(2)}`;
+        }
+
+        // وظائف العلامات التجارية الأساسية
+        function showPhoneBrand(brand) {
+            const brandNames = {
+                apple: 'Apple iPhone',
+                samsung: 'Samsung Galaxy',
+                google: 'Google Pixel',
+                oneplus: 'OnePlus',
+                xiaomi: 'Xiaomi',
+                huawei: 'Huawei',
+                oppo: 'OPPO',
+                vivo: 'Vivo',
+                motorola: 'Motorola',
+                nothing: 'Nothing Phone',
+                realme: 'Realme',
+                honor: 'Honor'
+            };
+            
+            document.getElementById('phoneBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('phoneBrand', brand, 'phones');
+            showPage('phoneBrand');
+        }
+
+        function showTabletBrand(brand) {
+            const brandNames = {
+                apple: 'Apple iPad',
+                samsung: 'Samsung Galaxy Tab',
+                microsoft: 'Microsoft Surface',
+                lenovo: 'Lenovo Tab',
+                huawei: 'Huawei MatePad',
+                xiaomi: 'Xiaomi Pad',
+                amazon: 'Amazon Fire',
+                google: 'Google Pixel Tab'
+            };
+            
+            document.getElementById('tabletBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('tabletBrand', brand, 'ipad');
+            showPage('tabletBrand');
+        }
+
+        function showLaptopBrand(brand) {
+            const brandNames = {
+                apple: 'Apple MacBook',
+                dell: 'Dell',
+                hp: 'HP',
+                lenovo: 'Lenovo',
+                asus: 'ASUS',
+                acer: 'Acer',
+                microsoft: 'Microsoft Surface',
+                msi: 'MSI',
+                razer: 'Razer',
+                samsung: 'Samsung Galaxy Book'
+            };
+            
+            document.getElementById('laptopBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('laptopBrand', brand, 'laptop');
+            showPage('laptopBrand');
+        }
+
+        function showEarbudsBrand(brand) {
+            const brandNames = {
+                apple: 'Apple AirPods',
+                samsung: 'Samsung Galaxy Buds',
+                sony: 'Sony',
+                bose: 'Bose',
+                jbl: 'JBL',
+                beats: 'Beats',
+                anker: 'Anker Soundcore',
+                xiaomi: 'Xiaomi'
+            };
+            
+            document.getElementById('earbudsBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('earbudsBrand', brand, 'airpods');
+            showPage('earbudsBrand');
+        }
+
+        function showVapeBrand(brand) {
+            const brandNames = {
+                uwell: 'Uwell',
+                smok: 'SMOK',
+                vaporesso: 'Vaporesso',
+                geekvape: 'GeekVape',
+                voopoo: 'VooPoo',
+                innokin: 'Innokin',
+                aspire: 'Aspire',
+                lostvape: 'Lost Vape'
+            };
+            
+            document.getElementById('vapeBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('vapeBrand', brand, 'vape');
+            showPage('vapeBrand');
+        }
+
+        function showGamingBrand(brand) {
+            const brandNames = {
+                playstation: 'PlayStation',
+                xbox: 'Xbox',
+                nintendo: 'Nintendo',
+                steam: 'Steam Deck',
+                razer: 'Razer',
+                logitech: 'Logitech',
+                '8bitdo': '8BitDo',
+                backbone: 'Backbone'
+            };
+            
+            document.getElementById('gamingBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('gamingBrand', brand, 'gaming');
+            showPage('gamingBrand');
+        }
+
+        function showCameraBrand(brand) {
+            const brandNames = {
+                canon: 'Canon',
+                nikon: 'Nikon',
+                sony: 'Sony',
+                fujifilm: 'Fujifilm',
+                panasonic: 'Panasonic',
+                olympus: 'Olympus',
+                sigma: 'Sigma',
+                tamron: 'Tamron'
+            };
+            
+            document.getElementById('cameraBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('cameraBrand', brand, 'camera');
+            showPage('cameraBrand');
+        }
+
+        // تحميل منتجات العلامة التجارية
+       function loadBrandProducts(brandType, brand, category) {
+    const container = document.getElementById(brandType + 'Products');
+    
+    // البحث عن المنتجات الحقيقية من JSON
+    const allProducts = getAllProducts();
+    const products = allProducts.filter(product => 
+        product.brand === brand && product.category === category
+    );
+    
+    // لو مفيش منتجات، نعرض رسالة
+    if (products.length === 0) {
+        container.innerHTML = '<p>No products available for this brand yet.</p>';
+        return;
+    }
+    
+    setupSimplePagination(brandType + 'Products', products, 30);
+}
+
+        // Function to show product detail
+        function showProductDetail(productId) {
+            const allProducts = getAllProducts();
+            const product = allProducts.find(p => p.id === productId);
+            
+            if (product) {
+                const productDetailContent = document.getElementById('productDetailContent');
+                
+                productDetailContent.innerHTML = `
+                    <div class="product-image-large">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-detail-title">${product.name}</h1>
+                        <p class="product-detail-description">${product.fullDescription || product.description}</p>
+                        <div class="product-detail-price">${product.price}</div>
+                        <div class="product-detail-formats">Formats: <span>${product.formats}</span></div>
+                        
+                        <div class="product-meta">
+                            <div class="product-meta-item">
+                                <div class="product-meta-label">Category:</div>
+                                <div class="product-meta-value">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</div>
+                            </div>
+                            <div class="product-meta-item">
+                                <div class="product-meta-label">Brand:</div>
+                                <div class="product-meta-value">${product.brand.charAt(0).toUpperCase() + product.brand.slice(1)}</div>
+                            </div>
+                            <div class="product-meta-item">
+                                <div class="product-meta-label">Features:</div>
+                                <div class="product-meta-value">${(product.features || ['High quality', 'Precise measurements']).join(', ')}</div>
+                            </div>
+                            <div class="product-meta-item">
+                                <div class="product-meta-label">Compatibility:</div>
+                                <div class="product-meta-value">${(product.compatibility || ['Adobe Illustrator', 'CorelDRAW', 'Inkscape']).join(', ')}</div>
+                            </div>
+                        </div>
+                        
+                        <button class="add-to-cart" style="margin-top: 20px;" onclick="addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                    </div>
+                `;
+                
+                showPage('productDetail');
+            }
+        }
+
+        // Function to go back to previous page
+        function goBack() {
+            if (pageHistory.length > 1) {
+                pageHistory.pop(); // إزالة الصفحة الحالية
+                const previousPage = pageHistory[pageHistory.length - 1];
+                showPage(previousPage);
+            } else {
+                showPage('home');
+            }
+        }
+
+        // نظام ترقيم الصفحات البسيط
+        function setupSimplePagination(containerId, products, itemsPerPage = 30) {
+            const container = document.getElementById(containerId);
+            if (!container || products.length <= itemsPerPage) {
+                // إذا المنتجات أقل من 30، ما تعملش ترقيم
+                displayProducts(container, products);
+                return;
+            }
+
+            let currentPage = 1;
+            const totalPages = Math.ceil(products.length / itemsPerPage);
+
+            function displayPage(page) {
+                currentPage = page;
+                const startIndex = (page - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const pageProducts = products.slice(startIndex, endIndex);
+                
+                displayProducts(container, pageProducts);
+                createPaginationButtons();
+            }
+
+            function displayProducts(container, productsToShow) {
+                container.innerHTML = '';
+                productsToShow.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.onclick = () => showProductDetail(product.id);
+                    productCard.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-formats">${product.formats}</div>
+                        <div class="product-price">${product.price}</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                    `;
+                    container.appendChild(productCard);
+                });
+            }
+
+            function createPaginationButtons() {
+                // مسح اللوحة القديمة
+                const oldPagination = document.getElementById(containerId + 'Pagination');
+                if (oldPagination) {
+                    oldPagination.remove();
+                }
+
+                // إنشاء اللوحة الجديدة
+                const paginationContainer = document.createElement('div');
+                paginationContainer.className = 'pagination';
+                paginationContainer.id = containerId + 'Pagination';
+                paginationContainer.style.marginTop = '20px';
+
+                // زر الصفحة السابقة
+                const prevButton = document.createElement('button');
+                prevButton.className = `page-btn ${currentPage === 1 ? 'disabled' : ''}`;
+                prevButton.innerHTML = '<i class="fas fa-chevron-left"></i> السابق';
+                prevButton.onclick = () => {
+                    if (currentPage > 1) displayPage(currentPage - 1);
+                };
+                paginationContainer.appendChild(prevButton);
+
+                // أرقام الصفحات
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement('button');
+                    pageButton.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                    pageButton.textContent = i;
+                    pageButton.onclick = () => displayPage(i);
+                    paginationContainer.appendChild(pageButton);
+                }
+
+                // زر الصفحة التالية
+                const nextButton = document.createElement('button');
+                nextButton.className = `page-btn ${currentPage === totalPages ? 'disabled' : ''}`;
+                nextButton.innerHTML = 'التالي <i class="fas fa-chevron-right"></i>';
+                nextButton.onclick = () => {
+                    if (currentPage < totalPages) displayPage(currentPage + 1);
+                };
+                paginationContainer.appendChild(nextButton);
+
+                // إضافة اللوحة بعد المنتجات
+                container.parentNode.insertBefore(paginationContainer, container.nextSibling);
+            }
+
+            // بدء العرض بالصفحة الأولى
+            displayPage(1);
+        }
+
+        // إضافة event listeners للبحث
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            generateRealTimeSuggestions(e.target.value);
+        });
+
+        document.getElementById('searchBox').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('searchSuggestions').style.display = 'none';
+                performSearch();
+            }
+        });
+
+        // تحميل البيانات عند بدء التشغيل
+        document.addEventListener('DOMContentLoaded', async function() {
+            updateCartCount();
+            await loadProductsData();
+            loadNewProducts();
+        });
+    </script>
+</body>
+</html>
