@@ -937,9 +937,9 @@
                     <li><a onclick="showCategory('ipad')">iPad & Tablets</a></li>
                     <li><a onclick="showCategory('laptop')">Laptops</a></li>
                     <li><a onclick="showCategory('airpods')">AirPods</a></li>
-                    <li><a onclick="showCategory('vape')">Vape Devices</a></li>
+                    <li><a onclick="showCategory('Lenses')">Lenses</a></li>
                     <li><a onclick="showCategory('gaming')">Gaming Devices</a></li>
-                    <li><a onclick="showCategory('camera')">Camera Lenses</a></li>
+                    <li><a onclick="showCategory('camera')">Camera</a></li>
                     <li class="cart-icon" onclick="showPage('cart')">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count" id="cartCount">0</span>
@@ -952,9 +952,9 @@
                     <li><a onclick="showCategory('phones')">Phones</a></li>
                     <li><a onclick="showCategory('ipad')">iPad & Tablets</a></li>
                     <li><a onclick="showCategory('laptop')">Laptops</a></li>
-                    <li><a onclick="showCategory('vape')">Vape Devices</a></li>
+                    <li><a onclick="showCategory('Lenses')">Lenses</a></li>
                     <li><a onclick="showCategory('gaming')">Gaming Devices</a></li>
-                    <li><a onclick="showCategory('camera')">Camera Lenses</a></li>
+                    <li><a onclick="showCategory('camera')">Camera</a></li>
                 </ul>
                 <div class="create-bundle">Create Bundle</div>
             </div>
@@ -1305,44 +1305,44 @@
                 </div>
             </div>
 
-            <!-- Vape Page -->
-            <div class="page" id="vapePage">
+            <!-- Lenses Page -->
+            <div class="page" id="LensesPage">
                 <div class="category-header">
-                    <h1 class="category-title">Vape Devices</h1>
-                    <p>Choose your vape brand</p>
+                    <h1 class="category-title">Lenses Devices</h1>
+                    <p>Choose your Lenses brand</p>
                 </div>
 
                 <div class="category-brands-grid">
-                    <div class="category-brand-card" onclick="showVapeBrand('uwell')">
+                    <div class="category-brand-card" onclick="showLensesBrand('uwell')">
                         <div class="category-brand-name">Uwell</div>
                         <div class="category-brand-models">Caliburn, Crown, Valyrian Series</div>
                     </div>
-                    <div class="category-brand-card" onclick="showVapeBrand('smok')">
+                    <div class="category-brand-card" onclick="showLensesBrand('smok')">
                         <div class="category-brand-name">SMOK</div>
                         <div class="category-brand-models">Nord, Novo, RPM Series</div>
                     </div>
-                    <div class="category-brand-card" onclick="showVapeBrand('vaporesso')">
+                    <div class="category-brand-card" onclick="showLensesBrand('vaporesso')">
                         <div class="category-brand-name">Vaporesso</div>
                         <div class="category-brand-models">XROS, Luxe, Target Series</div>
                     </div>
-                    <div class="category-brand-card" onclick="showVapeBrand('geekvape')">
-                        <div class="category-brand-name">GeekVape</div>
+                    <div class="category-brand-card" onclick="showLensesBrand('geekLenses')">
+                        <div class="category-brand-name">GeekLenses</div>
                         <div class="category-brand-models">Aegis, L Series, Z Series</div>
                     </div>
-                    <div class="category-brand-card" onclick="showVapeBrand('voopoo')">
+                    <div class="category-brand-card" onclick="showLensesBrand('voopoo')">
                         <div class="category-brand-name">VooPoo</div>
                         <div class="category-brand-models">Drag, Argus, Vinci Series</div>
                     </div>
-                    <div class="category-brand-card" onclick="showVapeBrand('innokin')">
+                    <div class="category-brand-card" onclick="showLensesBrand('innokin')">
                         <div class="category-brand-name">Innokin</div>
                         <div class="category-brand-models">Endura, Klypse, Sensis Series</div>
                     </div>
-                    <div class="category-brand-card" onclick="showVapeBrand('aspire')">
+                    <div class="category-brand-card" onclick="showLensesBrand('aspire')">
                         <div class="category-brand-name">Aspire</div>
                         <div class="category-brand-models">Flexus, Zelos, Nautilus Series</div>
                     </div>
-                    <div class="category-brand-card" onclick="showVapeBrand('lostvape')">
-                        <div class="category-brand-name">Lost Vape</div>
+                    <div class="category-brand-card" onclick="showLensesBrand('lostLenses')">
+                        <div class="category-brand-name">Lost Lenses</div>
                         <div class="category-brand-models">Orion, Ursa, Thelema Series</div>
                     </div>
                 </div>
@@ -1394,7 +1394,7 @@
             <!-- Camera Page -->
             <div class="page" id="cameraPage">
                 <div class="category-header">
-                    <h1 class="category-title">Camera Lenses</h1>
+                    <h1 class="category-title">Camera</h1>
                     <p>Choose your camera brand</p>
                 </div>
 
@@ -1475,14 +1475,14 @@
                 <div class="pagination" id="earbudsBrandPagination"></div>
             </div>
 
-            <div class="page" id="vapeBrandPage">
+            <div class="page" id="LensesBrandPage">
                 <div class="category-header">
-                    <h1 class="category-title" id="vapeBrandTitle">Vape Brand</h1>
+                    <h1 class="category-title" id="LensesBrandTitle">Lenses Brand</h1>
                 </div>
-                <div class="products-grid" id="vapeBrandProducts">
+                <div class="products-grid" id="LensesBrandProducts">
                     <!-- Products will be loaded here -->
                 </div>
-                <div class="pagination" id="vapeBrandPagination"></div>
+                <div class="pagination" id="LensesBrandPagination"></div>
             </div>
 
             <div class="page" id="gamingBrandPage">
@@ -2122,21 +2122,21 @@
             showPage('earbudsBrand');
         }
 
-        function showVapeBrand(brand) {
+        function showLensesBrand(brand) {
             const brandNames = {
                 uwell: 'Uwell',
                 smok: 'SMOK',
                 vaporesso: 'Vaporesso',
-                geekvape: 'GeekVape',
+                geekLenses: 'GeekLenses',
                 voopoo: 'VooPoo',
                 innokin: 'Innokin',
                 aspire: 'Aspire',
-                lostvape: 'Lost Vape'
+                lostLenses: 'Lost Lenses'
             };
 
-            document.getElementById('vapeBrandTitle').textContent = brandNames[brand] || brand;
-            loadBrandProducts('vapeBrand', brand, 'vape');
-            showPage('vapeBrand');
+            document.getElementById('LensesBrandTitle').textContent = brandNames[brand] || brand;
+            loadBrandProducts('LensesBrand', brand, 'Lenses');
+            showPage('LensesBrand');
         }
 
         function showGamingBrand(brand) {
