@@ -67,15 +67,15 @@
       "dateAdded": "2025-10-11"
     },
     {
-      "id": "xiaomi-14",
-      "name": "Xiaomi 14 Skin Template",
+      "id": "REDMI 15C-5G",
+      "name": "REDMI 15C 5G Skin Template",
       "category": "phones",
       "brand": "xiaomi",
-      "price": "$10.00",
+      "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
-      "description": "Premium skin template for Xiaomi 14.",
-      "dateAdded": "2025-10-11"
+      "image": "images/REDMI 15C-5G.jpg",
+      "description": "Premium skin template for REDMI 15C 5G.",
+      "dateAdded": "2025-10-12"
     },
     {
       "id": "huawei-p70",
