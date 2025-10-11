@@ -1956,9 +1956,11 @@ if (deliveryMethod !== 'email' && (!contactInfo || contactInfo.trim() === '')) {
         // Page navigation
         function showPage(pageId) {
             // حفظ الصفحة الحالية في السجل
-            if (pageHistory[pageHistory.length - 1] !== pageId) {
-                pageHistory.push(pageId);
-            }
+        if (pageHistory[pageHistory.length - 1] !== pageId) {
+    pageHistory.push(pageId);
+    // إضافة للـ browser history
+    history.pushState({page: pageId}, '', `#${pageId}`);
+}
 
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
@@ -2200,9 +2202,10 @@ if (deliveryMethod !== 'email' && (!contactInfo || contactInfo.trim() === '')) {
         // Function to go back to previous page
 function goBack() {
     if (pageHistory.length > 1) {
-        pageHistory.pop(); // إزالة الصفحة الحالية
+        pageHistory.pop();
         const previousPage = pageHistory[pageHistory.length - 1];
-        showPage(previousPage);
+        // استخدم history.back() بدل showPage
+        history.back();
     } else {
         showPage('home');
     }
@@ -2342,9 +2345,17 @@ document.getElementById('deliveryMethod').addEventListener('change', function() 
 
         // اضف الكود هنا - بعد كل الدوال وقبل نهاية الـ script
         // تفعيل زر Back في المتصفح
-        window.addEventListener('popstate', function() {
-            goBack();
-        });
+        window.addEventListener('popstate', function(event) {
+    if (event.state && event.state.page) {
+        // إزالة آخر عنصر من pageHistory عشان ما يتكررش
+        pageHistory.pop();
+        showPage(event.state.page);
+    } else {
+        // لو مفيش state، ارجع للهوم
+        pageHistory = ['home'];
+        showPage('home');
+    }
+});
     </script>
 </body>
 </html>
