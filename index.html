@@ -1979,21 +1979,9 @@ if (deliveryMethod !== 'email' && (!contactInfo || contactInfo.trim() === '')) {
             }
         }
 
-        function showCategory(category) {
-            showPage(category);
-
-            // تحديث القائمة النشطة
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.classList.remove('active');
-            });
-
-            // العثور على الرابط المناسب في القائمة العلوية
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                if (link.textContent.toLowerCase().includes(category)) {
-                    link.classList.add('active');
-                }
-            });
-        }
+function showCategory(category) {
+    showPage(category);
+}
 
         // تحديث صفحة الدفع
         function updateCheckoutDisplay() {
@@ -2198,15 +2186,12 @@ if (deliveryMethod !== 'email' && (!contactInfo || contactInfo.trim() === '')) {
         }
 
         // Function to go back to previous page
-        function goBack() {
+function goBack() {
     if (pageHistory.length > 1) {
-        // أزل الصفحة الحالية من التاريخ
-        pageHistory.pop();
-        // روح للصفحة اللي قبلها
-        const prevPage = pageHistory[pageHistory.length - 1];
-        showPage(prevPage);
+        pageHistory.pop(); // إزالة الصفحة الحالية
+        const previousPage = pageHistory[pageHistory.length - 1];
+        showPage(previousPage);
     } else {
-        // لو مفيش تاريخ، روح للهوم
         showPage('home');
     }
 }
