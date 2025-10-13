@@ -6,9 +6,17 @@ let pageHistory = ['home'];
 
 // تحميل البيانات عند بدء التشغيل
 document.addEventListener('DOMContentLoaded', async function() {
-    await loadProductsData();
     updateCartCount();
+    await loadProductsData();
     loadNewProducts();
+    
+    // التعامل مع الـ hash في URL عند تحميل الصفحة
+    const hash = window.location.hash.replace('#', '');
+    if (hash && hash !== 'home') {
+        showPage(hash);
+    } else {
+        showPage('home');
+    }
     
     // إعداد مستمعي الأحداث
     const searchBox = document.getElementById('searchBox');
@@ -16,12 +24,47 @@ document.addEventListener('DOMContentLoaded', async function() {
         searchBox.addEventListener('input', function(e) {
             generateRealTimeSuggestions(e.target.value);
         });
+
+        searchBox.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const suggestionsContainer = document.getElementById('searchSuggestions');
+                if (suggestionsContainer) {
+                    suggestionsContainer.style.display = 'none';
+                }
+                performSearch();
+            }
+        });
     }
 
     const deliveryMethod = document.getElementById('deliveryMethod');
     if (deliveryMethod) {
         deliveryMethod.addEventListener('change', handleDeliveryMethodChange);
     }
+
+    // إخفاء الاقتراحات عند النقر خارجها
+    document.addEventListener('click', function(e) {
+        const searchContainer = document.querySelector('.search-container');
+        const suggestionsContainer = document.getElementById('searchSuggestions');
+        
+        if (searchContainer && suggestionsContainer && !searchContainer.contains(e.target)) {
+            suggestionsContainer.style.display = 'none';
+        }
+    });
+
+    // تفعيل زر Back في المتصفح
+    window.addEventListener('popstate', function(event) {
+        if (event.state && event.state.page) {
+            // إزالة آخر عنصر من pageHistory علشان ما يتكررش
+            if (pageHistory.length > 1) {
+                pageHistory.pop();
+            }
+            showPage(event.state.page);
+        } else {
+            // لو مفيش state، ارجع للهوم
+            pageHistory = ['home'];
+            showPage('home');
+        }
+    });
 });
 
 // تحميل البيانات من JSON
@@ -456,6 +499,8 @@ function showPage(pageId) {
     // حفظ الصفحة الحالية في السجل
     if (pageHistory[pageHistory.length - 1] !== pageId) {
         pageHistory.push(pageId);
+        // إضافة للـ browser history
+        history.pushState({ page: pageId }, '', `#${pageId}`);
     }
 
     document.querySelectorAll('.page').forEach(page => {
@@ -479,6 +524,8 @@ function showPage(pageId) {
     } else if (pageId === 'checkout') {
         updateCheckoutDisplay();
     }
+    
+    currentPage = pageId;
 }
 
 function showCategory(category) {
@@ -764,15 +811,5 @@ function handleDeliveryMethodChange() {
 
 // إظهار الإشعار
 function showNotification(message) {
-    alert(message); // يمكن استبدال هذا بتصميم إشعار أجمل
+    alert(message);
 }
-
-// إخفاء الاقتراحات عند النقر خارجها
-document.addEventListener('click', function(e) {
-    const searchContainer = document.querySelector('.search-container');
-    const suggestionsContainer = document.getElementById('searchSuggestions');
-    
-    if (searchContainer && suggestionsContainer && !searchContainer.contains(e.target)) {
-        suggestionsContainer.style.display = 'none';
-    }
-});
