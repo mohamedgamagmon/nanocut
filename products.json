@@ -611,95 +611,37 @@
       ]
     },
     {
-      "id": "uwell-crown",
-      "name": "Uwell Crown Skin Template",
-      "category": "vape",
-      "brand": "uwell",
+      "id": "Honor Magic 7 PRO",
+      "name": "Honor Magic 7 PRO Skin Template",
+      "category": "phones",
+      "brand": "honor",
       "price": "$6.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Uwell+Crown",
-      "description": "Professional skin template for Uwell Crown vape.",
-      "fullDescription": "Complete skin template for Uwell Crown vape device.",
-      "features": [
-        "Device body template",
-        "Screen cutout",
-        "Button cutouts",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "uwell",
-        "crown",
-        "vape",
-        "device"
-      ]
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7 PRO.jpg",
+      "description": "Premium skin template for Honor Magic 7 PRO.",
+      "dateAdded": "2025-10-15"
     },
     {
-      "id": "voopoo-drag",
-      "name": "Voopoo Drag Skin",
-      "category": "vape",
-      "brand": "voopoo",
+      "id": "Honor Magic 7 PSR",
+      "name": "Honor Magic 7 PSR",
+      "category": "phones",
+      "brand": "honor",
       "price": "$6.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Voopoo+Drag",
-      "description": "Custom skin for Voopoo Drag vape.",
-      "fullDescription": "Custom skin template for the Voopoo Drag vape device, with precise measurements for the screen, buttons, and charging port.",
-      "features": [
-        "Screen cutout",
-        "Button cutouts",
-        "Charging port template",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "voopoo",
-        "drag",
-        "vape",
-        "device"
-      ]
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7 PSR.jpg",
+      "description": "Premium skin template for Honor Magic 7 PSR.",
+      "dateAdded": "2025-10-15"
     },
     {
-      "id": "geekvape-aegis",
-      "name": "GeekVape Aegis Skin",
-      "category": "vape",
-      "brand": "geekvape",
-      "price": "$5.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=GeekVape+Aegis",
-      "description": "Durable skin for GeekVape Aegis.",
-      "fullDescription": "Durable skin template for the GeekVape Aegis vape device, designed to fit the rugged construction with precise cutouts.",
-      "features": [
-        "Rugged design template",
-        "Button cutouts",
-        "Screen cutout",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "geekvape",
-        "aegis",
-        "vape",
-        "device",
-        "rugged"
-      ]
+      "id": "Honor Magic 7",
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15"
     }
   ]
 }
