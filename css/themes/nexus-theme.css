@@ -161,32 +161,188 @@ header {
     color: white;
 }
 
-/* جعل جميع الصور متسقة */
+/* ========== تصاميم الصور الجديدة (مثل موقع alienware) ========== */
+
+/* الصورة في الكروت الرئيسية */
 .product-image {
     width: 100%;
-    height: 200px;
+    height: 300px;  /* غير من 200px لـ 300px */
     object-fit: contain;
     background: var(--card-color);
     border-radius: 8px;
-    padding: 10px;
+    padding: 15px;
+}
+
+/* الصورة الكبيرة في صفحة التفاصيل */
+.product-image-large {
+    flex: 1;
+    background: #000000; /* خلفية سوداء */
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    min-height: 500px;
+    position: relative;
 }
 
 .product-image-large img {
     width: 100%;
-    max-height: 500px;
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
     object-fit: contain;
-    background: var(--card-color);
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 8px;
 }
 
+/* صور السلة */
 .cart-item-image {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
-    background: var(--card-color);
+    background: #000000;
     border-radius: 8px;
-    padding: 5px;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+/* منع حفظ الصور */
+.product-image-large {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.product-image-large img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* حماية إضافية للصور */
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* تحسين صفحة التفاصيل */
+.product-detail {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    align-items: flex-start;
+    min-height: 70vh;
+}
+
+.product-info {
+    flex: 1;
+    padding: 0 0 0 30px;
+}
+
+/* زر Add to Cart في صفحة التفاصيل */
+.add-to-cart-large {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.add-to-cart-large:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-heavy);
+}
+
+/* تحسينات لل features */
+.product-features {
+    margin: 25px 0;
+    padding: 20px;
+    background: var(--surface-color);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.product-features h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.product-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.product-features li:before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.product-features li:last-child {
+    border-bottom: none;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .product-image-large {
+        min-height: 400px;
+        padding: 30px;
+    }
+    
+    .product-info {
+        padding: 0;
+    }
+    
+    .product-image {
+        height: 200px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-image-large {
+        min-height: 350px;
+        padding: 20px;
+    }
+    
+    .product-image-large img {
+        max-height: 400px;
+    }
+    
+    .product-image {
+        height: 180px;
+        padding: 12px;
+    }
 }
 
 /* تحسين عرض الصور في كل الأماكن */
@@ -547,5 +703,75 @@ footer {
     .cart-item-image {
         width: 120px;
         height: 120px;
+    }
+}
+/* زر Add to Cart في صفحة التفاصيل */
+.add-to-cart-large {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.add-to-cart-large:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-heavy);
+}
+
+/* تحسينات لل features */
+.product-features {
+    margin: 25px 0;
+    padding: 20px;
+    background: var(--surface-color);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.product-features h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.product-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.product-features li:before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.product-features li:last-child {
+    border-bottom: none;
+}
+/* تأكد من أن الـ product-info في صفحة التفاصيل مش بيكون فيه مشاكل */
+#productDetailContent .product-info {
+    flex: 1;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    #productDetailContent .product-info {
+        padding: 20px 0 0 0;
     }
 }
