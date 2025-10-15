@@ -469,14 +469,8 @@ function loadNewProducts() {
     const container = document.getElementById('newProducts');
     if (!container) return;
 
-    // فلتر المنتجات الجديدة (آخر شهرين)
-    const twoMonthsAgo = new Date();
-    twoMonthsAgo.setMonth(twoMonthsAgo.getMonth() - 2);
-
-    const newProducts = products.filter(product => {
-        const productDate = new Date(product.dateAdded);
-        return productDate >= twoMonthsAgo;
-    });
+    // فلتر المنتجات الجديدة
+    const newProducts = products.filter(product => product.isNew === true);
 
     if (newProducts.length > 0) {
         container.innerHTML = newProducts.map(product => `
@@ -493,7 +487,6 @@ function loadNewProducts() {
         container.innerHTML = '<p>No new products available.</p>';
     }
 }
-
 // إظهار الصفحات
 function showPage(pageId) {
     // حفظ الصفحة الحالية في السجل
@@ -734,14 +727,27 @@ function showProductDetail(productId) {
     if (!productDetailContent) return;
 
     productDetailContent.innerHTML = `
-        <div class="product-image-large">
-            <img src="${product.image}" alt="${product.name}">
+        <div class="product-image-large" oncontextmenu="return false">
+            <img src="${product.image}" alt="${product.name}" 
+                 onerror="this.src='https://via.placeholder.com/800x600/000000/6c63ff?text=Product+Preview'"
+                 ondragstart="return false">
         </div>
         <div class="product-info">
             <h1 class="product-detail-title">${product.name}</h1>
             <p class="product-detail-description">${product.fullDescription || product.description}</p>
             <div class="product-detail-price">${product.price}</div>
-            <div class="product-detail-formats">Formats: <span>${product.formats}</span></div>
+            <div class="product-detail-formats">
+                <strong>Formats Included:</strong> <span>${product.formats}</span>
+            </div>
+
+            <div class="product-features">
+                <h3>Template Features:</h3>
+                <ul>
+                    ${(product.features || ['High quality vector files', 'Precise measurements', 'Multiple file formats', 'Easy to customize']).map(feature => `
+                        <li>${feature}</li>
+                    `).join('')}
+                </ul>
+            </div>
 
             <div class="product-meta">
                 <div class="product-meta-item">
@@ -753,22 +759,19 @@ function showProductDetail(productId) {
                     <div class="product-meta-value">${product.brand.charAt(0).toUpperCase() + product.brand.slice(1)}</div>
                 </div>
                 <div class="product-meta-item">
-                    <div class="product-meta-label">Features:</div>
-                    <div class="product-meta-value">${(product.features || ['High quality', 'Precise measurements']).join(', ')}</div>
-                </div>
-                <div class="product-meta-item">
                     <div class="product-meta-label">Compatibility:</div>
-                    <div class="product-meta-value">${(product.compatibility || ['Adobe Illustrator', 'CorelDRAW', 'Inkscape']).join(', ')}</div>
+                    <div class="product-meta-value">${(product.compatibility || ['Adobe Illustrator', 'CorelDRAW', 'Inkscape', 'Cricut Design Space']).join(', ')}</div>
                 </div>
             </div>
 
-            <button class="add-to-cart" style="margin-top: 20px;" onclick="addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+            <button class="add-to-cart-large" onclick="addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">
+                <i class="fas fa-shopping-cart"></i> Add to Cart - ${product.price}
+            </button>
         </div>
     `;
 
     showPage('productDetail');
 }
-
 // العودة للصفحة السابقة
 function goBack() {
     if (pageHistory.length > 1) {
