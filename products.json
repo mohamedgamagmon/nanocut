@@ -1,39 +1,6 @@
 {
   "products": [
     {
-      "id": "iphone-17-pro",
-      "name": "iPhone 17 Pro Cut File Template",
-      "category": "phones",
-      "brand": "apple",
-      "price": "$15.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
-      "description": "Professional cut file template for iPhone 17 Pro with precise measurements.",
-      "fullDescription": "This premium template includes precise measurements for the iPhone 17 Pro, with separate layers for camera cutouts, buttons, and ports. Compatible with all major design software.",
-      "features": [
-        "Precise measurements",
-        "Separate layers",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "iphone",
-        "apple",
-        "mobile",
-        "skin",
-        "template",
-        "cut file",
-        "17 pro"
-      ]
-    },
-    {
       "id": "samsung-s26-ultra",
       "name": "Samsung Galaxy S26 Ultra Skin",
       "category": "phones",
@@ -42,7 +9,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/DJI-Neo-Cut-File-Template.jpeg",
       "description": "Premium skin template for Samsung Galaxy S26 Ultra.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "pixel-9-pro",
@@ -53,7 +21,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
       "description": "Complete skin template for Google Pixel 9 Pro.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "oneplus-12",
@@ -64,7 +33,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
       "description": "Professional skin template for OnePlus 12.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "REDMI 15C-5G",
@@ -75,38 +45,20 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/REDMI 15C-5G.jpg",
       "description": "Premium skin template for REDMI 15C 5G.",
-      "dateAdded": "2025-10-12"
+      "dateAdded": "2025-10-12",
+      "isNew": true
     },
     {
       "id": "huawei-p70",
-      "name": "Huawei P70 Skin Template",
+      "name": "Honor Magic 7",
       "category": "phones",
-      "brand": "huawei",
-      "price": "$12.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Huawei+P70",
-      "description": "Professional skin template for Huawei P70.",
-      "fullDescription": "Complete skin template for Huawei P70 with precise camera module and button cutouts.",
-      "features": [
-        "Camera module template",
-        "Button cutouts",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "huawei",
-        "p70",
-        "android",
-        "mobile",
-        "harmonyos"
-      ]
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "oppo-find-x7",
@@ -117,288 +69,128 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
       "description": "Premium skin template for OPPO Find X7.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "vivo-x100",
-      "name": "Vivo X100 Skin Template",
+      "name": "Honor Magic 7",
       "category": "phones",
       "brand": "vivo",
-      "price": "$10.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Vivo+X100",
-      "description": "Professional skin template for Vivo X100.",
-      "fullDescription": "Complete skin template for Vivo X100 with precise cutouts.",
-      "features": [
-        "Camera module template",
-        "Button cutouts",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "vivo",
-        "x100",
-        "android",
-        "mobile"
-      ]
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "motorola-edge-40",
-      "name": "Motorola Edge 40 Skin Template",
+      "name": "Honor Magic 7",
       "category": "phones",
-      "brand": "motorola",
-      "price": "$9.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Motorola+Edge+40",
-      "description": "Professional skin template for Motorola Edge 40.",
-      "fullDescription": "Complete skin template for Motorola Edge 40 with precise measurements.",
-      "features": [
-        "Curved display template",
-        "Button cutouts",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "motorola",
-        "edge 40",
-        "android",
-        "mobile"
-      ]
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "nothing-phone-3",
-      "name": "Nothing Phone 3 Skin Template",
+      "name": "Honor Magic 7",
       "category": "phones",
-      "brand": "nothing",
-      "price": "$12.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Nothing+Phone+3",
-      "description": "Unique skin template for Nothing Phone 3 with glyph interface.",
-      "fullDescription": "Special skin template for Nothing Phone 3 including glyph interface cutouts.",
-      "features": [
-        "Glyph interface template",
-        "Transparent design",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "nothing",
-        "phone 3",
-        "android",
-        "mobile",
-        "glyph"
-      ]
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "airpods-pro-2",
-      "name": "AirPods Pro 2 Skin Template",
-      "category": "airpods",
-      "brand": "apple",
-      "price": "$8.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=AirPods+Pro+2",
-      "description": "Premium skin template for AirPods Pro 2.",
-      "fullDescription": "Complete skin template for AirPods Pro 2, including both earbuds and charging case with precise measurements.",
-      "features": [
-        "Both earbuds included",
-        "Charging case template",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "airpods",
-        "apple",
-        "earbuds",
-        "pro 2",
-        "wireless"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "galaxy-buds2-pro",
-      "name": "Samsung Galaxy Buds2 Pro Skin",
+      "name": "galaxy buds2 pro",
       "category": "airpods",
       "brand": "samsung",
-      "price": "$7.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Galaxy+Buds2+Pro",
-      "description": "Professional skin template for Galaxy Buds2 Pro.",
-      "fullDescription": "Complete skin template for Samsung Galaxy Buds2 Pro, including earbuds and charging case.",
-      "features": [
-        "Earbuds template",
-        "Charging case template",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "samsung",
-        "galaxy",
-        "buds2",
-        "pro",
-        "earbuds"
-      ]
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for galaxy buds2 pro.",
+      "dateAdded": "2025-10-15",
+      "isNew": true
     },
     {
       "id": "sony-wf1000xm5",
-      "name": "Sony WF-1000XM5 Skin Template",
-      "category": "airpods",
-      "brand": "sony",
-      "price": "$9.00",
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
-      "description": "Premium skin template for Sony WF-1000XM5.",
-      "dateAdded": "2025-10-11"
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "bose-quietcomfort",
-      "name": "Bose QuietComfort Earbuds Skin",
-      "category": "airpods",
-      "brand": "bose",
-      "price": "$8.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Bose+QC+Earbuds",
-      "description": "Professional skin template for Bose QuietComfort Earbuds.",
-      "fullDescription": "Complete skin template for Bose QuietComfort Earbuds with charging case.",
-      "features": [
-        "Earbuds template",
-        "Charging case template",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "bose",
-        "quietcomfort",
-        "earbuds",
-        "noise canceling"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "ipad-pro-2024",
-      "name": "iPad Pro 2024 Skin",
-      "category": "ipad",
-      "brand": "apple",
-      "price": "$18.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=iPad+Pro+2024",
-      "description": "Professional skin template for iPad Pro 2024.",
-      "fullDescription": "Complete skin template for the iPad Pro 2024, including front, back, and side templates with camera and button cutouts.",
-      "features": [
-        "Front and back templates",
-        "Side templates",
-        "Camera cutouts",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "ipad",
-        "pro",
-        "apple",
-        "tablet",
-        "2024"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "galaxy-tab-s9",
-      "name": "Samsung Galaxy Tab S9 Skin",
-      "category": "ipad",
-      "brand": "samsung",
-      "price": "$16.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Galaxy+Tab+S9",
-      "description": "Professional skin template for Galaxy Tab S9.",
-      "fullDescription": "Complete skin template for Samsung Galaxy Tab S9 with S-Pen cutouts.",
-      "features": [
-        "Front and back templates",
-        "S-Pen cutout",
-        "Camera cutouts",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "samsung",
-        "galaxy",
-        "tab s9",
-        "tablet",
-        "android"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "macbook-pro-16",
-      "name": "MacBook Pro 16\" Skin",
-      "category": "laptop",
-      "brand": "apple",
-      "price": "$25.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "images/MacBook-Pro-16-inch-2021-A2485.jpg",
-      "description": "Complete skin template for MacBook Pro 16\".",
-      "fullDescription": "Professional skin template for the MacBook Pro 16\", including top case, bottom case, trackpad, and keyboard area templates.",
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "macbook",
-        "pro",
-        "apple",
-        "laptop",
-        "16 inch"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "dell-xps-15",
@@ -409,7 +201,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
       "description": "Professional skin template for Dell XPS 15.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "hp-spectre-x360",
@@ -420,38 +213,20 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
       "description": "Professional skin template for HP Spectre x360.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "lenovo-thinkpad",
-      "name": "Lenovo ThinkPad X1 Skin",
-      "category": "laptop",
-      "brand": "lenovo",
-      "price": "$18.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=ThinkPad+X1",
-      "description": "Professional skin template for Lenovo ThinkPad X1.",
-      "fullDescription": "Complete skin template for Lenovo ThinkPad X1 Carbon.",
-      "features": [
-        "Top lid template",
-        "TrackPoint template",
-        "Keyboard template",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "lenovo",
-        "thinkpad",
-        "x1",
-        "laptop",
-        "business"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "ps5-template",
@@ -462,7 +237,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
       "description": "Comprehensive skin template for PlayStation 5.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "xbox-series-x",
@@ -473,100 +249,44 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
       "description": "Premium skin template for Xbox Series X.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "nintendo-switch",
-      "name": "Nintendo Switch Skin",
-      "category": "gaming",
-      "brand": "nintendo",
-      "price": "$15.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Nintendo+Switch",
-      "description": "Complete skin template for Nintendo Switch.",
-      "fullDescription": "Complete skin template for the Nintendo Switch, including console, Joy-Cons, and dock with precise measurements.",
-      "features": [
-        "Console template",
-        "Joy-Con templates",
-        "Dock template",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "nintendo",
-        "switch",
-        "gaming",
-        "console",
-        "joycon"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "steam-deck",
-      "name": "Steam Deck Skin Template",
-      "category": "gaming",
-      "brand": "steam",
-      "price": "$14.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Steam+Deck",
-      "description": "Professional skin template for Steam Deck.",
-      "fullDescription": "Complete skin template for Steam Deck handheld gaming device.",
-      "features": [
-        "Front template",
-        "Back template",
-        "Button cutouts",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "steam",
-        "deck",
-        "gaming",
-        "handheld",
-        "valve"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": false
     },
     {
       "id": "canon-50mm",
-      "name": "Canon 50mm f/1.8 Skin",
-      "category": "camera",
-      "brand": "canon",
-      "price": "$8.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Canon+50mm",
-      "description": "Protective skin for Canon 50mm f/1.8 lens.",
-      "fullDescription": "Protective skin template for the Canon 50mm f/1.8 lens, with precise measurements for the lens body and focus ring.",
-      "features": [
-        "Lens body template",
-        "Focus ring template",
-        "Brand logo placement",
-        "Multiple file formats"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "canon",
-        "50mm",
-        "lens",
-        "camera",
-        "f1.8"
-      ]
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": true
     },
     {
       "id": "sony-24-70mm",
@@ -577,38 +297,20 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
       "description": "Professional skin for Sony 24-70mm lens.",
-      "dateAdded": "2025-10-11"
+      "dateAdded": "2025-10-11",
+      "isNew": false
     },
     {
       "id": "nikon-85mm",
-      "name": "Nikon 85mm f/1.8 Skin",
+      "name": "Honor Magic 7",
       "category": "camera",
       "brand": "nikon",
-      "price": "$9.00",
-      "formats": "AI-PLT-SVG-CDR-EPS-DXF",
-      "image": "https://via.placeholder.com/300x200?text=Nikon+85mm",
-      "description": "Professional skin for Nikon 85mm f/1.8 lens.",
-      "fullDescription": "Complete skin template for Nikon 85mm f/1.8 portrait lens.",
-      "features": [
-        "Lens body template",
-        "Focus ring template",
-        "Multiple file formats",
-        "Easy to customize"
-      ],
-      "compatibility": [
-        "Adobe Illustrator",
-        "CorelDRAW",
-        "Inkscape",
-        "Cricut Design Space"
-      ],
-      "dateAdded": "2025-10-11",
-      "tags": [
-        "nikon",
-        "85mm",
-        "lens",
-        "camera",
-        "portrait"
-      ]
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-15",
+      "isNew": true
     },
     {
       "id": "Honor Magic 7 PRO",
@@ -619,7 +321,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/Honor Magic 7 PRO.jpg",
       "description": "Premium skin template for Honor Magic 7 PRO.",
-      "dateAdded": "2025-10-15"
+      "dateAdded": "2025-10-15",
+      "isNew": true
     },
     {
       "id": "Honor Magic 7 PSR",
@@ -630,7 +333,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/Honor Magic 7 PSR.jpg",
       "description": "Premium skin template for Honor Magic 7 PSR.",
-      "dateAdded": "2025-10-15"
+      "dateAdded": "2025-10-15",
+      "isNew": true
     },
     {
       "id": "Honor Magic 7",
@@ -641,7 +345,8 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/Honor Magic 7.jpg",
       "description": "Premium skin template for Honor Magic 7.",
-      "dateAdded": "2025-10-15"
+      "dateAdded": "2025-10-15",
+      "isNew": true
     }
   ]
 }
