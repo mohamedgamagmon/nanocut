@@ -125,7 +125,7 @@ function loadCartPage() {
     if (!cartItems) return;
 
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p>Your cart is empty</p>';
+        cartItems.innerHTML = '<p data-lang="cartEmpty">Your cart is empty</p>';
         if (cartTotal) cartTotal.textContent = '$0.00';
         return;
     }
@@ -352,7 +352,9 @@ function selectBrandSuggestion(brand) {
                     <p class="product-description">${product.description}</p>
                     <div class="product-formats">${product.formats}</div>
                     <div class="product-price">${product.price}</div>
-                    <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                    <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">
+    <span data-lang="addToCart">Add to Cart</span>
+</button>
                 `;
                 searchResultsContainer.appendChild(productCard);
             });
@@ -419,7 +421,9 @@ function performSearch() {
                     <p class="product-description">${product.description}</p>
                     <div class="product-formats">${product.formats}</div>
                     <div class="product-price">${product.price}</div>
-                    <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                    <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">
+    <span data-lang="addToCart">Add to Cart</span>
+</button>
                 `;
                 searchResultsContainer.appendChild(productCard);
             });
@@ -429,10 +433,12 @@ function performSearch() {
     showPage('searchResults');
 }
 
-// معالجة الدفع
+// معالجة الدفع - النظام النهائي
 function processPayment() {
     const deliveryMethod = document.getElementById('deliveryMethod');
     const contactInfo = document.getElementById('contactInfo');
+    const notes = document.getElementById('notes');
+    const paypalEmail = document.getElementById('paypalEmail');
 
     if (!deliveryMethod || !deliveryMethod.value) {
         alert('Please select how you would like to receive your files');
@@ -444,22 +450,56 @@ function processPayment() {
         return;
     }
 
-    const notes = document.getElementById('notes');
-    const paypalEmail = document.getElementById('paypalEmail');
-
     if (!paypalEmail || !paypalEmail.value) {
         alert('Please enter your PayPal email');
         return;
     }
 
-    // محاكاة عملية الدفع
-    alert('Payment processed successfully! Thank you for your purchase.');
+    // حساب المبلغ الإجمالي
+    let total = 0;
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+    });
 
-    // تفريغ السلة
+    if (total === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+
+    // إنشاء Order ID
+    const orderId = 'NANO-' + Date.now();
+
+    // إنشاء رابط PayPal.Me - استبدل nanodxb باسمك في PayPal
+    const paypalUsername = "skincut";
+    const paypalLink = `https://paypal.me/${paypalUsername}/${total.toFixed(2)}USD`;
+    
+    // إنشاء ملاحظات للعميل يكتبها في PayPal
+const orderNotes = `
+🛒 ORDER DETAILS 🛒
+Order ID: ${orderId}
+Contact: ${deliveryMethod.value === 'email' ? paypalEmail.value : contactInfo.value}
+Delivery: ${deliveryMethod.value}
+Notes: ${notes.value}
+
+📦 PRODUCTS:
+${cart.map(item => `• ${item.name} x${item.quantity} - $${item.price}`).join('\n')}
+
+💰 TOTAL: $${total.toFixed(2)}
+`;
+    // فتح صفحة الدفع
+    const encodedNotes = encodeURIComponent(orderNotes);
+    const finalPayPalLink = `${paypalLink}?text=${encodedNotes}`;
+    
+    window.open(finalPayPalLink, '_blank');
+    
+    // تفريغ السلة فوراً
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
 
+    // رسالة نجاح
+    alert(`✅ Order #${orderId} Created!\n\nComplete payment in PayPal to receive your files.`);
+    
     // العودة للصفحة الرئيسية
     showPage('home');
 }
@@ -480,7 +520,9 @@ function loadNewProducts() {
                 <p class="product-description">${product.description}</p>
                 <div class="product-formats">${product.formats}</div>
                 <div class="product-price">${product.price}</div>
-                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">
+    <span data-lang="addToCart">Add to Cart</span>
+</button>
             </div>
         `).join('');
     } else {
@@ -713,7 +755,9 @@ function loadBrandProducts(brandType, brand, category) {
             <p class="product-description">${product.description}</p>
             <div class="product-formats">${product.formats}</div>
             <div class="product-price">${product.price}</div>
-            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">Add to Cart</button>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">
+    <span data-lang="addToCart">Add to Cart</span>
+</button>
         </div>
     `).join('');
 }
@@ -726,6 +770,74 @@ function showProductDetail(productId) {
     const productDetailContent = document.getElementById('productDetailContent');
     if (!productDetailContent) return;
 
+    const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+    
+    // الترجمات للمنتج
+    const productTranslations = {
+        en: {
+            formatsIncluded: "Formats Included",
+            templateFeatures: "Template Features",
+            highQuality: "High quality vector files",
+            preciseMeasurements: "Precise measurements",
+            multipleFormats: "Multiple file formats",
+            easyCustomize: "Easy to customize",
+            category: "Category",
+            brand: "Brand",
+            compatibility: "Compatibility",
+            addToCart: "Add to Cart"
+        },
+        ar: {
+            formatsIncluded: "الصيغ المتضمنة",
+            templateFeatures: "مميزات القالب",
+            highQuality: "ملفات متجهة عالية الجودة",
+            preciseMeasurements: "قياسات دقيقة",
+            multipleFormats: "صيغ ملفات متعددة",
+            easyCustomize: "سهل التخصيص",
+            category: "الفئة",
+            brand: "الماركة",
+            compatibility: "التوافق",
+            addToCart: "أضف إلى السلة"
+        },
+        es: {
+            formatsIncluded: "Formatos Incluidos",
+            templateFeatures: "Características de la Plantilla",
+            highQuality: "Archivos vectoriales de alta calidad",
+            preciseMeasurements: "Mediciones precisas",
+            multipleFormats: "Múltiples formatos de archivo",
+            easyCustomize: "Fácil de personalizar",
+            category: "Categoría",
+            brand: "Marca",
+            compatibility: "Compatibilidad",
+            addToCart: "Añadir al Carrito"
+        },
+        fr: {
+            formatsIncluded: "Formats Inclus",
+            templateFeatures: "Caractéristiques du Modèle",
+            highQuality: "Fichiers vectoriels haute qualité",
+            preciseMeasurements: "Mesures précises",
+            multipleFormats: "Multiples formats de fichiers",
+            easyCustomize: "Facile à personnaliser",
+            category: "Catégorie",
+            brand: "Marque",
+            compatibility: "Compatibilité",
+            addToCart: "Ajouter au Panier"
+        },
+        de: {
+            formatsIncluded: "Enthaltene Formate",
+            templateFeatures: "Vorlagenmerkmale",
+            highQuality: "Hochwertige Vektordateien",
+            preciseMeasurements: "Präzise Messungen",
+            multipleFormats: "Mehrere Dateiformate",
+            easyCustomize: "Einfach anzupassen",
+            category: "Kategorie",
+            brand: "Marke",
+            compatibility: "Kompatibilität",
+            addToCart: "In den Warenkorb"
+        }
+    };
+
+    const lang = productTranslations[currentLang] || productTranslations.en;
+
     productDetailContent.innerHTML = `
         <div class="product-image-large" oncontextmenu="return false">
             <img src="${product.image}" alt="${product.name}" 
@@ -737,13 +849,13 @@ function showProductDetail(productId) {
             <p class="product-detail-description">${product.fullDescription || product.description}</p>
             <div class="product-detail-price">${product.price}</div>
             <div class="product-detail-formats">
-                <strong>Formats Included:</strong> <span>${product.formats}</span>
+                <strong>${lang.formatsIncluded}:</strong> <span>${product.formats}</span>
             </div>
 
             <div class="product-features">
-                <h3>Template Features:</h3>
+                <h3>${lang.templateFeatures}:</h3>
                 <ul>
-                    ${(product.features || ['High quality vector files', 'Precise measurements', 'Multiple file formats', 'Easy to customize']).map(feature => `
+                    ${(product.features || [lang.highQuality, lang.preciseMeasurements, lang.multipleFormats, lang.easyCustomize]).map(feature => `
                         <li>${feature}</li>
                     `).join('')}
                 </ul>
@@ -751,22 +863,23 @@ function showProductDetail(productId) {
 
             <div class="product-meta">
                 <div class="product-meta-item">
-                    <div class="product-meta-label">Category:</div>
+                    <div class="product-meta-label">${lang.category}:</div>
                     <div class="product-meta-value">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</div>
                 </div>
                 <div class="product-meta-item">
-                    <div class="product-meta-label">Brand:</div>
+                    <div class="product-meta-label">${lang.brand}:</div>
                     <div class="product-meta-value">${product.brand.charAt(0).toUpperCase() + product.brand.slice(1)}</div>
                 </div>
                 <div class="product-meta-item">
-                    <div class="product-meta-label">Compatibility:</div>
+                    <div class="product-meta-label">${lang.compatibility}:</div>
                     <div class="product-meta-value">${(product.compatibility || ['Adobe Illustrator', 'CorelDRAW', 'Inkscape', 'Cricut Design Space']).join(', ')}</div>
                 </div>
             </div>
 
             <button class="add-to-cart-large" onclick="addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}')">
-                <i class="fas fa-shopping-cart"></i> Add to Cart - ${product.price}
-            </button>
+    <i class="fas fa-shopping-cart"></i> 
+    <span data-lang="addToCart">Add to Cart</span> - ${product.price}
+</button>
         </div>
     `;
 
@@ -811,7 +924,57 @@ function handleDeliveryMethodChange() {
         }
     }
 }
+// تغيير اللغة
+function changeLanguage(lang) {
+    const languageTexts = {
+    en: {
+        home: "Home", phones: "Phones", ipad: "iPad & Tablets", laptop: "Laptops", airpods: "AirPods", Lenses: "Lenses", gaming: "Gaming Devices", camera: "Camera", cart: "Cart", searchPlaceholder: "Search for device models, brands, or templates...", createBundle: "Create Bundle", newArrivals: "New Arrivals", latestTemplates: "Latest skin templates added in the last 2 months", choosePayGet: "Choose, Pay, and Get Your Files!", selectDesign: "Select your design, complete payment, and receive your files instantly", chooseDesign: "Choose Design", securePayment: "Secure Payment", instantDownload: "Instant Download", startWorking: "Start Working", shoppingCart: "Shopping Cart", total: "Total", proceedCheckout: "Proceed to Checkout", cartEmpty: "Your cart is empty", checkout: "Checkout", deliveryInfo: "Delivery Information", notesDelivery: "Notes for Delivery", receiveFiles: "How would you like to receive your files? *", deliveryMethod: "Select delivery method", emailOption: "Email (will use your PayPal email)", whatsappOption: "WhatsApp", telegramOption: "Telegram", otherOption: "Other", contactInfo: "Contact Information *", paymentMethod: "Payment Method", totalAmount: "Total Amount", paypalMethod: "PayPal", paypalEmail: "PayPal Email", completePurchase: "Complete Purchase", chooseBrand: "Choose your brand", choosePhoneBrand: "Choose your phone brand", chooseTabletBrand: "Choose your tablet brand", chooseLaptopBrand: "Choose your laptop brand", chooseEarbudsBrand: "Choose your earbuds brand", chooseLensesBrand: "Choose your Lenses brand", chooseGamingBrand: "Choose your gaming device", chooseCameraBrand: "Choose your camera brand", aboutNanocut: "About Nanocut", aboutDescription: "Premium device skin templates for professionals and enthusiasts. High-quality cut files for various devices and brands.", contactInfo: "Contact Info", supportEmail: "support@nanocut.com", phoneNumber: "+1 (555) 123-4567", whatsappNumber: "+1 (555) 123-4567", workingHours: "Mon - Fri: 9 AM - 6 PM EST", copyright: "© 2024 Nanocut. All rights reserved.", addToCart: "Add to Cart", formatsIncluded: "Formats Included", templateFeatures: "Template Features", highQuality: "High quality vector files", preciseMeasurements: "Precise measurements", multipleFormats: "Multiple file formats", easyCustomize: "Easy to customize", category: "Category", brand: "Brand", compatibility: "Compatibility", adobeIllustrator: "Adobe Illustrator", coreldraw: "CorelDRAW", inkscape: "Inkscape", cricutDesign: "Cricut Design Space", searchResults: "Search Results", foundResults: "Found results for", noResults: "No products found matching your search", suggestionProducts: "PRODUCTS", suggestionCategories: "CATEGORIES", suggestionBrands: "BRANDS", suggestionSuggestions: "SUGGESTIONS",backToProducts: "Back to Products", searchFor: "Search for"
+    },
+    ar: {
+        home: "الرئيسية", phones: "هواتف", ipad: "آيباد وأجهزة لوحية", laptop: "لابتوبات", airpods: "ايربودز", Lenses: "عدسات", gaming: "أجهزة الألعاب", camera: "كاميرات", cart: "عربة التسوق", searchPlaceholder: "ابحث عن موديلات الأجهزة، الماركات، أو القوالب...", createBundle: "إنشاء باقة", newArrivals: "المنتجات الجديدة", latestTemplates: "أحدث قوالب الاسكين المضافة خلال الشهرين الماضيين", choosePayGet: "اختر، ادفع، واحصل على ملفاتك!", selectDesign: "اختر تصميمك، أكمل الدفع، واستلم ملفاتك فوراً", chooseDesign: "اختر التصميم", securePayment: "دفع آمن", instantDownload: "تحميل فوري", startWorking: "ابدأ العمل", shoppingCart: "عربة التسوق", total: "المجموع", proceedCheckout: "إتمام الشراء", cartEmpty: "عربة التسوق فارغة", checkout: "الدفع", deliveryInfo: "معلومات التوصيل", notesDelivery: "ملاحظات للتوصيل", receiveFiles: "كيف تريد استلام ملفاتك؟ *", deliveryMethod: "اختر طريقة التوصيل", emailOption: "بريد إلكتروني (سيستخدم بريد PayPal الخاص بك)", whatsappOption: "واتساب", telegramOption: "تيليجرام", otherOption: "أخرى", contactInfo: "معلومات الاتصال *", paymentMethod: "طريقة الدفع", totalAmount: "المبلغ الإجمالي", paypalMethod: "باي بال", paypalEmail: "بريد باي بال", completePurchase: "إتمام الشراء", chooseBrand: "اختر الماركة", choosePhoneBrand: "اختر ماركة هاتفك", chooseTabletBrand: "اختر ماركة جهازك اللوحي", chooseLaptopBrand: "اختر ماركة لابتوبك", chooseEarbudsBrand: "اختر ماركة السماعات", chooseLensesBrand: "اختر ماركة العدسات", chooseGamingBrand: "اختر جهاز الألعاب", chooseCameraBrand: "اختر ماركة الكاميرا", aboutNanocut: "عن نانوكت", aboutDescription: "قوالب سكين احترافية للأجهزة للمحترفين والهواة. ملفات قص عالية الجودة لأجهزة وماركات متنوعة.", contactInfo: "معلومات الاتصال", supportEmail: "support@nanocut.com", phoneNumber: "+1 (555) 123-4567", whatsappNumber: "+1 (555) 123-4567", workingHours: "الإثنين - الجمعة: 9 ص - 6 م", copyright: "© 2024 نانوكت. جميع الحقوق محفوظة.", addToCart: "أضف إلى السلة", formatsIncluded: "الصيغ المتضمنة", templateFeatures: "مميزات القالب", highQuality: "ملفات متجهة عالية الجودة", preciseMeasurements: "قياسات دقيقة", multipleFormats: "صيغ ملفات متعددة", easyCustomize: "سهل التخصيص", category: "الفئة", brand: "الماركة", compatibility: "التوافق", adobeIllustrator: "أدوبي إليستريتور", coreldraw: "كوريل درو", inkscape: "إنك سكيب", cricutDesign: "كريكت ديزاين سبيس", searchResults: "نتائج البحث", foundResults: "تم العثور على نتيجة لـ", noResults: "لم يتم العثور على منتجات تطابق بحثك", suggestionProducts: "المنتجات", suggestionCategories: "الفئات", suggestionBrands: "الماركات", suggestionSuggestions: "اقتراحات",backToProducts: "العودة للمنتجات", searchFor: "ابحث عن"
+    },
+    es: {
+        home: "Inicio", phones: "Teléfonos", ipad: "iPad y Tabletas", laptop: "Portátiles", airpods: "AirPods", Lenses: "Lentes", gaming: "Dispositivos Gaming", camera: "Cámaras", cart: "Carrito", searchPlaceholder: "Buscar modelos, marcas o plantillas...", createBundle: "Crear Paquete", newArrivals: "Nuevos Productos", latestTemplates: "Plantillas agregadas en los últimos 2 meses", choosePayGet: "¡Elige, Paga y Recibe tus Archivos!", selectDesign: "Selecciona tu diseño, completa el pago y recibe tus archivos al instante", chooseDesign: "Elegir Diseño", securePayment: "Pago Seguro", instantDownload: "Descarga Instantánea", startWorking: "Comenzar a Trabajar", shoppingCart: "Carrito de Compras", total: "Total", proceedCheckout: "Proceder al Pago", cartEmpty: "Tu carrito está vacío", checkout: "Pago", deliveryInfo: "Información de Entrega", notesDelivery: "Notas para la Entrega", receiveFiles: "¿Cómo quieres recibir tus archivos? *", deliveryMethod: "Seleccionar método de entrega", emailOption: "Email (usará su email de PayPal)", whatsappOption: "WhatsApp", telegramOption: "Telegram", otherOption: "Otro", contactInfo: "Información de Contacto *", paymentMethod: "Método de Pago", totalAmount: "Monto Total", paypalMethod: "PayPal", paypalEmail: "Email de PayPal", completePurchase: "Completar Compra", chooseBrand: "Elige tu marca", choosePhoneBrand: "Elige la marca de tu teléfono", chooseTabletBrand: "Elige la marca de tu tableta", chooseLaptopBrand: "Elige la marca de tu portátil", chooseEarbudsBrand: "Elige la marca de tus auriculares", chooseLensesBrand: "Elige la marca de tus lentes", chooseGamingBrand: "Elige tu dispositivo gaming", chooseCameraBrand: "Elige la marca de tu cámara", aboutNanocut: "Acerca de Nanocut", aboutDescription: "Plantillas premium de skins para dispositivos para profesionales y entusiastas. Archivos de corte de alta calidad para varios dispositivos y marcas.", contactInfo: "Información de Contacto", supportEmail: "support@nanocut.com", phoneNumber: "+1 (555) 123-4567", whatsappNumber: "+1 (555) 123-4567", workingHours: "Lun - Vie: 9 AM - 6 PM EST", copyright: "© 2024 Nanocut. Todos los derechos reservados.", addToCart: "Añadir al Carrito", formatsIncluded: "Formatos Incluidos", templateFeatures: "Características de la Plantilla", highQuality: "Archivos vectoriales de alta calidad", preciseMeasurements: "Mediciones precisas", multipleFormats: "Múltiples formatos de archivo", easyCustomize: "Fácil de personalizar", category: "Categoría", brand: "Marca", compatibility: "Compatibilidad", adobeIllustrator: "Adobe Illustrator", coreldraw: "CorelDRAW", inkscape: "Inkscape", cricutDesign: "Cricut Design Space", searchResults: "Resultados de Búsqueda", foundResults: "Se encontraron resultados para", noResults: "No se encontraron productos que coincidan con tu búsqueda", suggestionProducts: "PRODUCTOS", suggestionCategories: "CATEGORÍAS", suggestionBrands: "MARCAS", suggestionSuggestions: "SUGERENCIAS",backToProducts: "Volver a Productos", searchFor: "Buscar"
+    },
+    fr: {
+        home: "Accueil", phones: "Téléphones", ipad: "iPad et Tablettes", laptop: "Ordinateurs", airpods: "AirPods", Lenses: "Objectifs", gaming: "Appareils Gaming", camera: "Caméras", cart: "Panier", searchPlaceholder: "Rechercher modèles, marques ou modèles...", createBundle: "Créer un Pack", newArrivals: "Nouveautés", latestTemplates: "Modèles ajoutés ces 2 derniers mois", choosePayGet: "Choisissez, Payez et Recevez vos Fichiers !", selectDesign: "Sélectionnez votre design, complétez le paiement et recevez vos fichiers instantanément", chooseDesign: "Choisir Design", securePayment: "Paiement Sécurisé", instantDownload: "Téléchargement Instantané", startWorking: "Commencer à Travailler", shoppingCart: "Panier d'Achat", total: "Total", proceedCheckout: "Procéder au Paiement", cartEmpty: "Votre panier est vide", checkout: "Paiement", deliveryInfo: "Informations de Livraison", notesDelivery: "Notes pour la Livraison", receiveFiles: "Comment recevoir vos fichiers ? *", deliveryMethod: "Sélectionner méthode livraison", emailOption: "Email (utilisera votre email PayPal)", whatsappOption: "WhatsApp", telegramOption: "Telegram", otherOption: "Autre", contactInfo: "Informations de Contact *", paymentMethod: "Méthode de Paiement", totalAmount: "Montant Total", paypalMethod: "PayPal", paypalEmail: "Email PayPal", completePurchase: "Finaliser l'Achat", chooseBrand: "Choisissez votre marque", choosePhoneBrand: "Choisissez la marque de votre téléphone", chooseTabletBrand: "Choisissez la marque de votre tablette", chooseLaptopBrand: "Choisissez la marque de votre ordinateur", chooseEarbudsBrand: "Choisissez la marque de vos écouteurs", chooseLensesBrand: "Choisissez la marque de vos objectifs", chooseGamingBrand: "Choisissez votre appareil gaming", chooseCameraBrand: "Choisissez la marque de votre appareil photo", aboutNanocut: "À propos de Nanocut", aboutDescription: "Modèles premium de skins pour appareils pour professionnels et passionnés. Fichiers de découpe haute qualité pour divers appareils et marques.", contactInfo: "Informations de Contact", supportEmail: "support@nanocut.com", phoneNumber: "+1 (555) 123-4567", whatsappNumber: "+1 (555) 123-4567", workingHours: "Lun - Ven: 9h - 18h EST", copyright: "© 2024 Nanocut. Tous droits réservés.", addToCart: "Ajouter au Panier", formatsIncluded: "Formats Inclus", templateFeatures: "Caractéristiques du Modèle", highQuality: "Fichiers vectoriels haute qualité", preciseMeasurements: "Mesures précises", multipleFormats: "Multiples formats de fichiers", easyCustomize: "Facile à personnaliser", category: "Catégorie", brand: "Marque", compatibility: "Compatibilité", adobeIllustrator: "Adobe Illustrator", coreldraw: "CorelDRAW", inkscape: "Inkscape", cricutDesign: "Cricut Design Space", searchResults: "Résultats de Recherche", foundResults: "Résultats trouvés pour", noResults: "Aucun produit trouvé correspondant à votre recherche", suggestionProducts: "PRODUITS", suggestionCategories: "CATÉGORIES", suggestionBrands: "MARQUES", suggestionSuggestions: "SUGGESTIONS",backToProducts: "Retour aux Produits", searchFor: "Rechercher"
+    },
+    de: {
+        home: "Startseite", phones: "Handys", ipad: "iPad & Tablets", laptop: "Laptops", airpods: "AirPods", Lenses: "Objektive", gaming: "Gaming-Geräte", camera: "Kameras", cart: "Warenkorb", searchPlaceholder: "Nach Modellen, Marken oder Vorlagen suchen...", createBundle: "Paket Erstellen", newArrivals: "Neuheiten", latestTemplates: "Neueste Vorlagen der letzten 2 Monate", choosePayGet: "Wählen, Bezahlen und Ihre Dateien Erhalten!", selectDesign: "Wählen Sie Ihr Design, schließen Sie die Zahlung ab und erhalten Sie sofort Ihre Dateien", chooseDesign: "Design Wählen", securePayment: "Sichere Zahlung", instantDownload: "Sofortiger Download", startWorking: "Starten Sie die Arbeit", shoppingCart: "Warenkorb", total: "Gesamtsumme", proceedCheckout: "Zur Kasse", cartEmpty: "Ihr Warenkorb ist leer", checkout: "Kasse", deliveryInfo: "Lieferinformationen", notesDelivery: "Hinweise zur Lieferung", receiveFiles: "Wie möchten Sie Ihre Dateien erhalten? *", deliveryMethod: "Liefermethode auswählen", emailOption: "E-Mail (verwendet Ihre PayPal-E-Mail)", whatsappOption: "WhatsApp", telegramOption: "Telegram", otherOption: "Andere", contactInfo: "Kontaktinformation *", paymentMethod: "Zahlungsmethode", totalAmount: "Gesamtbetrag", paypalMethod: "PayPal", paypalEmail: "PayPal E-Mail", completePurchase: "Kauf Abschließen", chooseBrand: "Wählen Sie Ihre Marke", choosePhoneBrand: "Wählen Sie Ihre Handymarke", chooseTabletBrand: "Wählen Sie Ihre Tablettmarke", chooseLaptopBrand: "Wählen Sie Ihre Laptop-Marke", chooseEarbudsBrand: "Wählen Sie Ihre Kopfhörermarke", chooseLensesBrand: "Wählen Sie Ihre Objektivmarke", chooseGamingBrand: "Wählen Sie Ihr Gaming-Gerät", chooseCameraBrand: "Wählen Sie Ihre Kameramarke", aboutNanocut: "Über Nanocut", aboutDescription: "Premium-Geräte-Skin-Vorlagen für Profis und Enthusiasten. Hochwertige Schneidedateien für verschiedene Geräte und Marken.", contactInfo: "Kontaktinformation", supportEmail: "support@nanocut.com", phoneNumber: "+1 (555) 123-4567", whatsappNumber: "+1 (555) 123-4567", workingHours: "Mo - Fr: 9 - 18 Uhr EST", copyright: "© 2024 Nanocut. Alle Rechte vorbehalten.", addToCart: "In den Warenkorb", formatsIncluded: "Enthaltene Formate", templateFeatures: "Vorlagenmerkmale", highQuality: "Hochwertige Vektordateien", preciseMeasurements: "Präzise Messungen", multipleFormats: "Mehrere Dateiformate", easyCustomize: "Einfach anzupassen", category: "Kategorie", brand: "Marke", compatibility: "Kompatibilität", adobeIllustrator: "Adobe Illustrator", coreldraw: "CorelDRAW", inkscape: "Inkscape", cricutDesign: "Cricut Design Space", searchResults: "Suchergebnisse", foundResults: "Gefundene Ergebnisse für", noResults: "Keine Produkte gefunden, die Ihrer Suche entsprechen", suggestionProducts: "PRODUKTE", suggestionCategories: "KATEGORIEN", suggestionBrands: "MARKEN", suggestionSuggestions: "VORSCHLÄGE",backToProducts: "Zurück zu Produkten", searchFor: "Suchen nach"
+    }
+};
 
+    // تغيير النصوص في الصفحة
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (languageTexts[lang] && languageTexts[lang][key]) {
+            element.textContent = languageTexts[lang][key];
+        }
+    });
+
+    // تغيير placeholder في search box
+    const searchBox = document.getElementById('searchBox');
+    if (searchBox && languageTexts[lang] && languageTexts[lang].searchPlaceholder) {
+        searchBox.placeholder = languageTexts[lang].searchPlaceholder;
+    }
+
+    // حفظ اللغة المختارة
+    localStorage.setItem('selectedLanguage', lang);
+    
+    // رسالة تأكيد
+    const langNames = { en: 'English', ar: 'العربية', es: 'Español', fr: 'Français', de: 'Deutsch' };
+    showNotification(`Language changed to ${langNames[lang]}`);
+}
+
+// تحميل اللغة المحفوظة عند بدء التشغيل
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    const select = document.querySelector('.language-switcher select');
+    if (select) {
+        select.value = savedLang;
+        changeLanguage(savedLang);
+    }
+});
 // إظهار الإشعار
 function showNotification(message) {
     alert(message);
