@@ -37,15 +37,15 @@
       "isNew": false
     },
     {
-      "id": "REDMI 15C-5G",
-      "name": "REDMI 15C 5G Skin Template",
+      "id": "REDMI 15C 5G",
+      "name": "REDMI 15C 5G",
       "category": "phones",
       "brand": "xiaomi",
       "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/REDMI 15C-5G.jpg",
       "description": "Premium skin template for REDMI 15C 5G.",
-      "dateAdded": "2025-10-12",
+      "dateAdded": "2025-10-21",
       "isNew": true
     },
     {
@@ -122,7 +122,7 @@
     },
     {
       "id": "OPPO A3 iNDiA",
-      "name": "OPPO A3 iNDiA Skin Template",
+      "name": "OPPO A3 iNDiA",
       "category": "phones",
       "brand": "oppo",
       "price": "$5.00",
@@ -182,7 +182,7 @@
     },
     {
       "id": "GOOGLE PIXEL 10 PRO FOLD",
-      "name": "GOOGLE PIXEL 10 PRO FOLD Skin Template",
+      "name": "GOOGLE PIXEL 10 PRO FOLD",
       "category": "phones",
       "brand": "google",
       "price": "$6.00",
@@ -217,8 +217,8 @@
       "isNew": false
     },
     {
-      "id": "GOOGLE PIXEL 10 PRO XL",
-      "name": "GOOGLE PIXEL 10 PRO XL Skin Template",
+      "id": "GOOGLE- PIXEL 10 PRO XL",
+      "name": "GOOGLE PIXEL 10 PRO XL",
       "category": "phones",
       "brand": "google",
       "price": "$6.00",
@@ -254,7 +254,7 @@
     },
     {
       "id": "HONOR 200 LITE",
-      "name": "HONOR 200 LITE Skin Template",
+      "name": "HONOR 200 LITE",
       "category": "phones",
       "brand": "honor",
       "price": "$6.00",
@@ -266,7 +266,7 @@
     },
     {
       "id": "Honor 400 Smart 5G",
-      "name": "Honor 400 Smart 5G Skin Template",
+      "name": "Honor 400 Smart 5G",
       "category": "phones",
       "brand": "honor",
       "price": "$6.00",
@@ -278,7 +278,7 @@
     },
     {
       "id": "Honor Magic V5",
-      "name": "Honor Magic V5 Skin Template",
+      "name": "Honor Magic V5",
       "category": "phones",
       "brand": "honor",
       "price": "$6.00",
@@ -302,7 +302,7 @@
     },
     {
       "id": "OPPO A3 ENERGY",
-      "name": "OPPO A3 ENERGY Skin Template",
+      "name": "OPPO A3 ENERGY",
       "category": "phones",
       "brand": "oppo",
       "price": "$5.00",
@@ -314,19 +314,19 @@
     },
     {
       "id": "Honor Magic 7 PRO",
-      "name": "Honor Magic 7 PRO Skin Template",
+      "name": "Honor Magic 7 PRO",
       "category": "phones",
       "brand": "honor",
       "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/Honor Magic 7 PRO.jpg",
       "description": "Premium skin template for Honor Magic 7 PRO.",
-      "dateAdded": "2025-10-15",
+      "dateAdded": "2025-10-21",
       "isNew": true
     },
     {
       "id": "Honor Magic 7 PSR",
-      "name": "Honor Magic 7 PSR Skin Template",
+      "name": "Honor Magic 7 PSR",
       "category": "phones",
       "brand": "honor",
       "price": "$6.00",
@@ -338,7 +338,7 @@
     },
     {
       "id": "Honor Magic 7",
-      "name": "Honor Magic 7 Skin Template",
+      "name": "Honor Magic 7",
       "category": "phones",
       "brand": "honor",
       "price": "$6.00",
