@@ -121,15 +121,15 @@
       "isNew": false
     },
     {
-      "id": "galaxy-buds2-pro",
-      "name": "galaxy buds2 pro",
-      "category": "airpods",
-      "brand": "samsung",
-      "price": "$6.00",
+      "id": "OPPO A3 iNDiA",
+      "name": "OPPO A3 iNDiA",
+      "category": "phones",
+      "brand": "oppo",
+      "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Honor Magic 7.jpg",
-      "description": "Premium skin template for galaxy buds2 pro.",
-      "dateAdded": "2025-10-15",
+      "image": "images/OPPO A3 iNDiA.jpg",
+      "description": "Premium skin template for OPPO A3 iNDiA.",
+      "dateAdded": "2025-10-21",
       "isNew": true
     },
     {
@@ -301,14 +301,14 @@
       "isNew": false
     },
     {
-      "id": "nikon-85mm",
-      "name": "0",
-      "category": "camera",
-      "brand": "nikon",
-      "price": "$6.00",
+      "id": "OPPO A3 ENERGY",
+      "name": "OPPO A3 ENERGY",
+      "category": "phones",
+      "brand": "oppo",
+      "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "",
-      "description": "Premium skin template for Honor Magic 7.",
+      "image": "images/OPPO A3 ENERGY.jpg",
+      "description": "Premium skin template for OPPO A3 ENERGY.",
       "dateAdded": "2025-10-21",
       "isNew": true
     },
