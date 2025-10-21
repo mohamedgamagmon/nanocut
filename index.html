@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanocut - Premium Device Skins</title>
+        <!-- إضافات SEO -->
+    <meta name="description" content="Nanocut - premium device skin templates for phones, laptops, tablets. Download instantly after payment. Professional cut files for Adobe Illustrator, CorelDRAW">
+    <meta name="keywords" content="device skins, phone templates, laptop skins, vector files, Adobe Illustrator, CorelDRAW, cut files, nanocut, skin templates, design files">
+    <meta name="author" content="Nanocut">
+    <!-- روابط السوشيال ميديا -->
+    <meta property="og:title" content="Nanocut - Premium Device Skins">
+    <meta property="og:description" content="Professional device skin templates for phones, laptops, tablets. Instant download after payment.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS الأساسي -->
     <link rel="stylesheet" href="css/core.css">
@@ -17,14 +25,25 @@
             <div class="header-top">
                 <div class="logo" onclick="showPage('home')">nano<span>cut</span></div>
                 <ul class="nav-menu">
-                    <li><a class="active" onclick="showPage('home')">Home</a></li>
-                    <li><a onclick="showCategory('phones')">Phones</a></li>
-                    <li><a onclick="showCategory('ipad')">iPad & Tablets</a></li>
-                    <li><a onclick="showCategory('laptop')">Laptops</a></li>
-                    <li><a onclick="showCategory('airpods')">AirPods</a></li>
-                    <li><a onclick="showCategory('Lenses')">Lenses</a></li>
-                    <li><a onclick="showCategory('gaming')">Gaming Devices</a></li>
-                    <li><a onclick="showCategory('camera')">Camera</a></li>
+                    <li><a class="active" onclick="showPage('home')" data-lang="home">Home</a></li>
+    <li><a onclick="showCategory('phones')" data-lang="phones">Phones</a></li>
+    <li><a onclick="showCategory('ipad')" data-lang="ipad">iPad & Tablets</a></li>
+    <li><a onclick="showCategory('laptop')" data-lang="laptop">Laptops</a></li>
+    <li><a onclick="showCategory('airpods')" data-lang="airpods">AirPods</a></li>
+    <li><a onclick="showCategory('Lenses')" data-lang="Lenses">Lenses</a></li>
+    <li><a onclick="showCategory('gaming')" data-lang="gaming">Gaming Devices</a></li>
+    <li><a onclick="showCategory('camera')" data-lang="camera">Camera</a></li>
+                            
+        <!-- Language Switcher -->
+        <li class="language-switcher">
+            <select onchange="changeLanguage(this.value)" style="background: transparent; border: none; color: inherit; cursor: pointer;">
+                <option value="en">🌐 English</option>
+                <option value="ar">🌐 العربية</option>
+                <option value="es">🌐 Español</option>
+                <option value="fr">🌐 Français</option>
+                <option value="de">🌐 Deutsch</option>
+            </select>
+        </li>
                     <li class="cart-icon" onclick="showPage('cart')">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count" id="cartCount">0</span>
@@ -33,15 +52,15 @@
             </div>
             <div class="header-bottom">
                 <ul class="category-nav">
-                    <li><a onclick="showCategory('airpods')">AirPods</a></li>
-                    <li><a onclick="showCategory('phones')">Phones</a></li>
-                    <li><a onclick="showCategory('ipad')">iPad & Tablets</a></li>
-                    <li><a onclick="showCategory('laptop')">Laptops</a></li>
-                    <li><a onclick="showCategory('Lenses')">Lenses</a></li>
-                    <li><a onclick="showCategory('gaming')">Gaming Devices</a></li>
-                    <li><a onclick="showCategory('camera')">Camera</a></li>
+                    <li><a onclick="showCategory('airpods')" data-lang="airpods">AirPods</a></li>
+        <li><a onclick="showCategory('phones')" data-lang="phones">Phones</a></li>
+        <li><a onclick="showCategory('ipad')" data-lang="ipad">iPad & Tablets</a></li>
+        <li><a onclick="showCategory('laptop')" data-lang="laptop">Laptops</a></li>
+        <li><a onclick="showCategory('Lenses')" data-lang="Lenses">Lenses</a></li>
+        <li><a onclick="showCategory('gaming')" data-lang="gaming">Gaming Devices</a></li>
+        <li><a onclick="showCategory('camera')" data-lang="camera">Camera</a></li>
                 </ul>
-                <div class="create-bundle">Create Bundle</div>
+                <div class="create-bundle" data-lang="createBundle">Create Bundle</div>
             </div>
         </div>
     </header>
@@ -50,7 +69,7 @@
     <section class="search-section">
         <div class="container">
             <div class="search-container">
-                <input type="text" class="search-box" id="searchBox" placeholder="Search for device models, brands, or templates...">
+                <input type="text" class="search-box" id="searchBox" data-lang="searchPlaceholder" placeholder="Search for device models, brands, or templates...">
                 <button class="search-btn" onclick="performSearch()">
                     <i class="fas fa-search"></i>
                 </button>
@@ -71,40 +90,40 @@
         <div class="main-content">
             <!-- Notification Banner -->
             <div class="notification-banner">
-                <div class="notification-title">Choose, Pay, and Get Your Files!</div>
-                <p>Select your design, complete payment, and receive your files instantly</p>
+                <div class="notification-title" data-lang="choosePayGet">Choose, Pay, and Get Your Files!</div>
+    <p data-lang="selectDesign">Select your design, complete payment, and receive your files instantly</p>
                 <div class="notification-steps">
                     <div class="step">
                         <div class="step-icon">
                             <i class="fas fa-mouse-pointer"></i>
                         </div>
-                        <div class="step-text">Choose Design</div>
+                        <div class="step-text" data-lang="chooseDesign">Choose Design</div>
                     </div>
                     <div class="step">
                         <div class="step-icon">
                             <i class="fas fa-credit-card"></i>
                         </div>
-                        <div class="step-text">Secure Payment</div>
+                        <div class="step-text" data-lang="securePayment">Secure Payment</div>
                     </div>
                     <div class="step">
                         <div class="step-icon">
                             <i class="fas fa-download"></i>
                         </div>
-                        <div class="step-text">Instant Download</div>
+                        <div class="step-text" data-lang="instantDownload">Instant Download</div>
                     </div>
                     <div class="step">
                         <div class="step-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
-                        <div class="step-text">Start Working</div>
+                        <div class="step-text" data-lang="startWorking">Start Working</div>
                     </div>
                 </div>
             </div>
 
             <!-- Home Page -->
             <div class="page active" id="homePage">
-                <h1 class="page-title">New Arrivals</h1>
-                <p class="page-subtitle">Latest skin templates added in the last 2 months</p>
+            <h1 class="page-title" data-lang="newArrivals">New Arrivals</h1>
+            <p class="page-subtitle" data-lang="latestTemplates">Latest skin templates added in the last 2 months</p>
 
                 <div class="products-grid" id="newProducts">
                     <!-- New products will be loaded automatically -->
@@ -124,71 +143,75 @@
 
             <!-- Cart Page -->
             <div class="page" id="cartPage">
-                <h1 class="page-title">Shopping Cart</h1>
+                <h1 class="page-title" data-lang="shoppingCart">Shopping Cart</h1>
 
                 <div class="cart-items" id="cartItems">
                     <!-- Cart items will be loaded here -->
                 </div>
 
                 <div class="cart-summary">
-                    <div class="cart-total">
-                        <span>Total:</span>
-                        <span id="cartTotal">$0.00</span>
-                    </div>
-                    <button class="checkout-btn" onclick="showPage('checkout')">Proceed to Checkout</button>
-                </div>
+    <div class="cart-total">
+        <span data-lang="total">Total:</span>
+        <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="checkout-btn" onclick="showPage('checkout')">
+        <span data-lang="proceedCheckout">Proceed to Checkout</span>
+    </button>
+</div>
             </div>
 
             <!-- Checkout Page -->
             <div class="page" id="checkoutPage">
-                <h1 class="page-title">Checkout</h1>
+                <h1 class="page-title" data-lang="checkout">Checkout</h1>
 
                 <div class="checkout-form">
                     <div class="billing-info">
-                        <h3>Delivery Information</h3>
+                        <h3 data-lang="deliveryInfo">Delivery Information</h3>
                         <div class="form-group">
-                            <label for="notes">Notes for Delivery</label>
-                            <textarea id="notes" rows="4" placeholder="Please specify how you would like to receive your files (e.g., email, WhatsApp, etc.)"></textarea>
+                            <label for="notes" data-lang="notesDelivery">Notes for Delivery</label>
+                            <textarea id="notes" rows="4" data-lang="notesDelivery" placeholder="Please specify how you would like to receive your files (e.g., email, WhatsApp, etc.)"></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="deliveryMethod">How would you like to receive your files? *</label>
+                            <label for="deliveryMethod" data-lang="receiveFiles">How would you like to receive your files? *</label>
                             <select id="deliveryMethod" required>
-                                <option value="">Select delivery method</option>
-                                <option value="email">Email (will use your PayPal email)</option>
-                                <option value="whatsapp">WhatsApp</option>
-                                <option value="telegram">Telegram</option>
-                                <option value="other">Other</option>
+                                <option value="" data-lang="deliveryMethod">Select delivery method</option>
+                    <option value="email" data-lang="emailOption">Email (will use your PayPal email)</option>
+                                <option value="whatsapp" data-lang="whatsappOption">WhatsApp</option>
+                    <option value="telegram" data-lang="telegramOption">Telegram</option>
+                    <option value="other" data-lang="otherOption">Other</option>
                             </select>
                         </div>
 
                         <div class="form-group" id="contactInfoField" style="display: none;">
-                            <label id="contactInfoLabel">Contact Information *</label>
-                            <input type="text" id="contactInfo" placeholder="Please provide your contact details">
+                            <label id="contactInfoLabel" data-lang="contactInfo">Contact Information *</label>
+                <input type="text" id="contactInfo" data-lang="contactInfo" placeholder="Please provide your contact details">
                         </div>
                     </div>
 
                     <div class="payment-info">
-                        <h3>Payment Method</h3>
+                        <h3 data-lang="paymentMethod">Payment Method</h3>
                         <div class="cart-summary">
                             <div class="cart-total">
-                                <span>Total Amount:</span>
+                                <span data-lang="totalAmount">Total Amount:</span>
                                 <span id="checkoutTotal">$0.00</span>
                             </div>
                         </div>
                         <div class="payment-methods">
                             <div class="payment-method">
                                 <input type="radio" id="paypal" name="payment" checked>
-                                <label for="paypal">PayPal</label>
+                                <label for="paypal" data-lang="paypalMethod">PayPal</label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="paypalEmail">PayPal Email</label>
+                            <label for="paypalEmail" data-lang="paypalEmail">PayPal Email</label>
                             <input type="email" id="paypalEmail" placeholder="example@paypal.com" required>
                         </div>
 
-                        <button class="checkout-btn" onclick="processPayment()">Complete Purchase</button>
+                        <button class="checkout-btn" onclick="processPayment()">
+    <span data-lang="completePurchase">Complete Purchase</span>
+</button>
                     </div>
                 </div>
             </div>
@@ -196,11 +219,10 @@
             <!-- صفحات الفئات والعلامات التجارية -->
             <!-- Phones Page -->
             <div class="page" id="phonesPage">
-                <div class="category-header">
-                    <h1 class="category-title">Phones</h1>
-                    <p>Choose your phone brand</p>
-                </div>
-
+    <div class="category-header">
+        <h1 class="category-title" data-lang="phones">Phones</h1>
+        <p data-lang="choosePhoneBrand">Choose your phone brand</p>
+    </div>
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showPhoneBrand('apple')">
                         <div class="category-brand-name">Apple iPhone</div>
@@ -255,11 +277,10 @@
 
             <!-- iPad-Tab Page -->
             <div class="page" id="ipadPage">
-                <div class="category-header">
-                    <h1 class="category-title">iPad & Tablets</h1>
-                    <p>Choose your tablet brand</p>
-                </div>
-
+    <div class="category-header">
+        <h1 class="category-title" data-lang="ipad">iPad & Tablets</h1>
+        <p data-lang="chooseTabletBrand">Choose your tablet brand</p>
+    </div>
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showTabletBrand('apple')">
                         <div class="category-brand-name">Apple iPad</div>
@@ -298,11 +319,10 @@
 
             <!-- Laptop Page -->
             <div class="page" id="laptopPage">
-                <div class="category-header">
-                    <h1 class="category-title">Laptops</h1>
-                    <p>Choose your laptop brand</p>
-                </div>
-
+    <div class="category-header">
+        <h1 class="category-title" data-lang="laptop">Laptops</h1>
+        <p data-lang="chooseLaptopBrand">Choose your laptop brand</p>
+    </div>
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showLaptopBrand('apple')">
                         <div class="category-brand-name">Apple MacBook</div>
@@ -349,11 +369,10 @@
 
             <!-- AirPods Page -->
             <div class="page" id="airpodsPage">
-                <div class="category-header">
-                    <h1 class="category-title">AirPods & Earbuds</h1>
-                    <p>Choose your earbuds brand</p>
-                </div>
-
+    <div class="category-header">
+        <h1 class="category-title" data-lang="airpods">AirPods & Earbuds</h1>
+        <p data-lang="chooseEarbudsBrand">Choose your earbuds brand</p>
+    </div>
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showEarbudsBrand('apple')">
                         <div class="category-brand-name">Apple AirPods</div>
@@ -392,11 +411,10 @@
 
             <!-- Lenses Page -->
             <div class="page" id="LensesPage">
-                <div class="category-header">
-                    <h1 class="category-title">Lenses</h1>
-                    <p>Choose your Lenses brand</p>
-                </div>
-
+    <div class="category-header">
+        <h1 class="category-title" data-lang="Lenses">Lenses</h1>
+        <p data-lang="chooseLensesBrand">Choose your Lenses brand</p>
+    </div>
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showLensesBrand('uwell')">
                         <div class="category-brand-name">Uwell</div>
@@ -435,11 +453,10 @@
 
             <!-- Gaming Page -->
             <div class="page" id="gamingPage">
-                <div class="category-header">
-                    <h1 class="category-title">Gaming Devices</h1>
-                    <p>Choose your gaming device</p>
-                </div>
-
+    <div class="category-header">
+        <h1 class="category-title" data-lang="gaming">Gaming Devices</h1>
+        <p data-lang="chooseGamingBrand">Choose your gaming device</p>
+    </div>
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showGamingBrand('playstation')">
                         <div class="category-brand-name">PlayStation</div>
@@ -478,11 +495,10 @@
 
             <!-- Camera Page -->
             <div class="page" id="cameraPage">
-                <div class="category-header">
-                    <h1 class="category-title">Camera</h1>
-                    <p>Choose your camera brand</p>
-                </div>
-
+    <div class="category-header">
+        <h1 class="category-title" data-lang="camera">Camera</h1>
+        <p data-lang="chooseCameraBrand">Choose your camera brand</p>
+    </div>
                 <div class="category-brands-grid">
                     <div class="category-brand-card" onclick="showCameraBrand('canon')">
                         <div class="category-brand-name">Canon</div>
@@ -592,7 +608,10 @@
 
             <!-- Product Detail Page -->
             <div class="page" id="productDetailPage">
-                <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back to Products</button>
+                <button class="back-button" onclick="goBack()">
+    <i class="fas fa-arrow-left"></i> 
+    <span data-lang="backToProducts">Back to Products</span>
+</button>
 
                 <div class="product-detail" id="productDetailContent">
                     <!-- Product details will be loaded here -->
@@ -606,23 +625,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-title">About Nanocut</h3>
-                    <p>Premium device skin templates for professionals and enthusiasts. High-quality cut files for various devices and brands.</p>
+                    <h3 class="footer-title" data-lang="aboutNanocut">About Nanocut</h3>
+                    <p data-lang="aboutDescription">Premium device skin templates for professionals and enthusiasts. High-quality cut files for various devices and brands.</p>
                 </div>
                 <div class="footer-section">
-                    <h3 class="footer-title">Contact Info</h3>
+                    <h3 class="footer-title" data-lang="contactInfo">Contact Info</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> support@nanocut.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fab fa-whatsapp"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-clock"></i> Mon - Fri: 9 AM - 6 PM EST</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2024 Nanocut. All rights reserved.
+                        <li><i class="fas fa-envelope"></i> <span data-lang="supportEmail">support@nanocut.com</span></li>
+                    <li><i class="fas fa-phone"></i> <span data-lang="phoneNumber">+1 (555) 123-4567</span></li>
+                    <li><i class="fab fa-whatsapp"></i> <span data-lang="whatsappNumber">+1 (555) 123-4567</span></li>
+                    <li><i class="fas fa-clock"></i> <span data-lang="workingHours">Mon - Fri: 9 AM - 6 PM EST</span></li>
+                </ul>
             </div>
         </div>
+        <div class="copyright" data-lang="copyright">&copy; 2024 Nanocut. All rights reserved.</div>
+    </div>
     </footer>
 
 <script src="js/core.js"></script>
