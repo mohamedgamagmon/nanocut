@@ -531,6 +531,11 @@ function loadNewProducts() {
 }
 // إظهار الصفحات
 function showPage(pageId) {
+    // تطبيق اللغة على الصفحة الجديدة
+    const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+    setTimeout(() => {
+        changeLanguage(currentLang);
+    }, 50);
     // حفظ الصفحة الحالية في السجل
     if (pageHistory[pageHistory.length - 1] !== pageId) {
         pageHistory.push(pageId);
@@ -962,8 +967,9 @@ function changeLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
     
     // رسالة تأكيد
-    const langNames = { en: 'English', ar: 'العربية', es: 'Español', fr: 'Français', de: 'Deutsch' };
-    showNotification(`Language changed to ${langNames[lang]}`);
+    // إشعار بصري بدل التنبيه
+const langNames = { en: 'English', ar: 'العربية', es: 'Español', fr: 'Français', de: 'Deutsch' };
+console.log(`Language changed to ${langNames[lang]}`); // فقط في الكونسول
 }
 
 // تحميل اللغة المحفوظة عند بدء التشغيل
