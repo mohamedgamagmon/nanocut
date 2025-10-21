@@ -1,40 +1,40 @@
 {
   "products": [
     {
-      "id": "samsung-s26-ultra",
-      "name": "Samsung Galaxy S26 Ultra Skin",
+      "id": "SAMSUNG GALAXY S25 EDGE",
+      "name": "SAMSUNG GALAXY S25 EDGE",
       "category": "phones",
       "brand": "samsung",
-      "price": "$13.00",
+      "price": "$10.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/DJI-Neo-Cut-File-Template.jpeg",
-      "description": "Premium skin template for Samsung Galaxy S26 Ultra.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
+      "image": "images/SAMSUNG GALAXY S25 EDGE.jpg",
+      "description": "Premium skin template for SAMSUNG GALAXY S25 EDGE.",
+      "dateAdded": "2025-10-21",
+      "isNew": true
     },
     {
-      "id": "pixel-9-pro",
-      "name": "Google Pixel 9 Pro Skin",
+      "id": "Google Pixel 9 Pro",
+      "name": "Google Pixel 9 Pro",
       "category": "phones",
       "brand": "google",
-      "price": "$12.00",
+      "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
+      "image": "images/Google Pixel 9 Pro.jpeg",
       "description": "Complete skin template for Google Pixel 9 Pro.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
+      "dateAdded": "2025-10-21",
+      "isNew": true
     },
     {
-      "id": "oneplus-12",
-      "name": "OnePlus 12 Skin Template",
+      "id": "ONEPLUS 12",
+      "name": "ONEPLUS 12",
       "category": "phones",
       "brand": "oneplus",
-      "price": "$11.00",
+      "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
-      "description": "Professional skin template for OnePlus 12.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
+      "image": "images/ONEPLUS 12.jpeg",
+      "description": "Professional skin template for ONEPLUS 12.",
+      "dateAdded": "2025-10-21",
+      "isNew": true
     },
     {
       "id": "REDMI 15C 5G",
@@ -49,40 +49,40 @@
       "isNew": true
     },
     {
-      "id": "huawei-p70",
-      "name": "201",
+      "id": "NOTHING PHONE  3A",
+      "name": "NOTHING PHONE  3A",
       "category": "phones",
-      "brand": "honor",
-      "price": "$6.00",
+      "brand": "nothing",
+      "price": "$10.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "210",
-      "description": "Premium skin template for Honor Magic 7.",
+      "image": "images/NOTHING PHONE  3A.jpg",
+      "description": "Premium skin template for NOTHING PHONE  3A.",
       "dateAdded": "2025-10-21",
-      "isNew": false
+      "isNew": true
     },
     {
-      "id": "oppo-find-x7",
-      "name": "OPPO Find X7 Skin Template",
+      "id": "OPPO FIND X7",
+      "name": "OPPO FIND X7",
       "category": "phones",
       "brand": "oppo",
-      "price": "$11.00",
+      "price": "$10.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
-      "description": "Premium skin template for OPPO Find X7.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
+      "image": "images/OPPO FIND X7.jpeg",
+      "description": "Premium skin template for OPPO FIND X7.",
+      "dateAdded": "2025-10-21",
+      "isNew": true
     },
     {
-      "id": "vivo-x100",
-      "name": "100",
+      "id": "VIVO IQOO 13",
+      "name": "VIVO IQOO 13",
       "category": "phones",
       "brand": "vivo",
-      "price": "$6.00",
+      "price": "$7.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "547",
-      "description": "Premium skin template for Honor Magic 7.",
+      "image": "images/VIVO IQOO 13.jpg",
+      "description": "Premium skin template for VIVO IQOO 13.",
       "dateAdded": "2025-10-21",
-      "isNew": false
+      "isNew": true
     },
     {
       "id": "motorola-edge-40",
@@ -109,16 +109,16 @@
       "isNew": false
     },
     {
-      "id": "airpods-pro-2",
-      "name": "21",
+      "id": "HUAWEI ENJOY 80",
+      "name": "HUAWEI ENJOY 80",
       "category": "phones",
-      "brand": "honor",
+      "brand": "huawei",
       "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "01",
-      "description": "Premium skin template for Honor Magic 7.",
+      "image": "images/HUAWEI ENJOY 80.jpg",
+      "description": "Premium skin template for HUAWEI ENJOY 80.",
       "dateAdded": "2025-10-21",
-      "isNew": false
+      "isNew": true
     },
     {
       "id": "OPPO A3 iNDiA",
@@ -133,16 +133,16 @@
       "isNew": true
     },
     {
-      "id": "sony-wf1000xm5",
-      "name": "21",
+      "id": "Honor 400 PRO",
+      "name": "Honor 400 PRO",
       "category": "phones",
       "brand": "honor",
       "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "01",
-      "description": "Premium skin template for Honor Magic 7.",
+      "image": "images/Honor 400 PRO.jpg",
+      "description": "Premium skin template for Honor 400 PRO.",
       "dateAdded": "2025-10-21",
-      "isNew": false
+      "isNew": true
     },
     {
       "id": "bose-quietcomfort",
@@ -157,28 +157,28 @@
       "isNew": false
     },
     {
-      "id": "ipad-pro-2024",
-      "name": "23",
+      "id": "MOTOROLA MOTO G55 5G",
+      "name": "MOTOROLA MOTO G55 5G",
       "category": "phones",
-      "brand": "honor",
+      "brand": "motorola",
       "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "02",
-      "description": "Premium skin template for Honor Magic 7.",
+      "image": "images/MOTOROLA MOTO G55 5G.jpg",
+      "description": "Premium skin template for MOTOROLA MOTO G55 5G.",
       "dateAdded": "2025-10-21",
-      "isNew": false
+      "isNew": true
     },
     {
-      "id": "galaxy-tab-s9",
-      "name": "32",
+      "id": "REALME 15 PRO",
+      "name": "REALME 15 PRO",
       "category": "phones",
-      "brand": "honor",
-      "price": "$6.00",
+      "brand": "realme",
+      "price": "$7.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "10",
-      "description": "Premium skin template for Honor Magic 7.",
+      "image": "images/REALME 15 PRO.jpg",
+      "description": "Premium skin template for REALME 15 PRO.",
       "dateAdded": "2025-10-21",
-      "isNew": false
+      "isNew": true
     },
     {
       "id": "GOOGLE PIXEL 10 PRO FOLD",
