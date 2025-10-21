@@ -19,7 +19,7 @@
       "brand": "google",
       "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Google Pixel 9 Pro.jpeg",
+      "image": "images/Google Pixel 9 Pro.jpg",
       "description": "Complete skin template for Google Pixel 9 Pro.",
       "dateAdded": "2025-10-21",
       "isNew": true
@@ -31,7 +31,7 @@
       "brand": "oneplus",
       "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/ONEPLUS 12.jpeg",
+      "image": "images/ONEPLUS 12.jpg",
       "description": "Professional skin template for ONEPLUS 12.",
       "dateAdded": "2025-10-21",
       "isNew": true
@@ -67,7 +67,7 @@
       "brand": "oppo",
       "price": "$10.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/OPPO FIND X7.jpeg",
+      "image": "images/OPPO FIND X7.jpg",
       "description": "Premium skin template for OPPO FIND X7.",
       "dateAdded": "2025-10-21",
       "isNew": true
