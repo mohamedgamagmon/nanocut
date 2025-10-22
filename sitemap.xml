@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemap.org/schemas/sitemap/0.9
+        http://www.sitemap.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Home Page - Highest Priority -->
+    <url>
+        <loc>https://nanocut.vercel.app/</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Phone Categories and Brands -->
+    <url>
+        <loc>https://nanocut.vercel.app/phones</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/apple</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/samsung</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/google</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/oneplus</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/xiaomi</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/huawei</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/oppo</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/vivo</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/motorola</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/nothing</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/realme</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/phones/honor</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- iPad & Tablets Categories -->
+    <url>
+        <loc>https://nanocut.vercel.app/ipad</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/apple</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/samsung</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/microsoft</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/lenovo</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/huawei</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/xiaomi</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/amazon</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/ipad/google</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Laptops Categories -->
+    <url>
+        <loc>https://nanocut.vercel.app/laptop</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/apple</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/dell</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/hp</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/lenovo</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/asus</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/acer</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/microsoft</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/msi</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/razer</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/laptop/samsung</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- AirPods & Earbuds Categories -->
+    <url>
+        <loc>https://nanocut.vercel.app/airpods</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/apple</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/samsung</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/sony</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/bose</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/jbl</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/beats</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/anker</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/airpods/xiaomi</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Lenses Categories -->
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/canon</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/fuji</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/minolta</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/nikon</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/olympus</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/panasonic</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/samyang</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/sigma</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/sony</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/tamron</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/tokina</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/viltrox</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/Lenses/zeiss</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Gaming Devices Categories -->
+    <url>
+        <loc>https://nanocut.vercel.app/gaming</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/playstation</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/xbox</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/nintendo</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/steam</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/razer</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/logitech</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/8bitdo</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/gaming/backbone</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Camera Categories -->
+    <url>
+        <loc>https://nanocut.vercel.app/camera</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/canon</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/nikon</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/sony</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/fujifilm</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/panasonic</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/olympus</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/sigma</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/camera/tamron</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Shopping Cart & Checkout -->
+    <url>
+        <loc>https://nanocut.vercel.app/cart</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://nanocut.vercel.app/checkout</loc>
+        <lastmod>2024-10-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
