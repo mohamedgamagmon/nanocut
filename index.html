@@ -1,6 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ==================== -->
+<!-- STRUCTURED DATA SEO -->
+<!-- ==================== -->
+
+<!-- Schema.org for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nanocut.vercel.app/#website",
+      "name": "Nanocut",
+      "url": "https://nanocut.vercel.app/",
+      "description": "Premium device skin templates for phones, laptops, tablets, and gaming devices. High-precision vector cut files for professional designers and businesses.",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "https://nanocut.vercel.app/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nanocut.vercel.app/#organization",
+      "name": "Nanocut",
+      "url": "https://nanocut.vercel.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nanocut.vercel.app/images/logo.png",
+        "width": 200,
+        "height": 60
+      },
+      "description": "Professional device skin templates and vector cut files for Adobe Illustrator and CorelDRAW",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "International"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@nanocut.com",
+        "availableLanguage": ["en", "ar", "es", "fr", "de"]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "Product",
+      "name": "Device Skin Template",
+      "description": "Premium vector templates for device skins including phones, laptops, tablets, gaming devices, cameras, and audio devices",
+      "category": "Design Templates & Digital Products",
+      "offers": {
+        "@type": "AggregateOffer",
+        "offerCount": "1000",
+        "lowPrice": "12.00",
+        "highPrice": "499.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Nanocut"
+        }
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Nanocut"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "File Formats",
+          "value": "AI, EPS, PDF, SVG, DXF"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Software Compatibility",
+          "value": "Adobe Illustrator, CorelDRAW, Cricut, Silhouette"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "License Type",
+          "value": "Commercial Use"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://nanocut.vercel.app/" />
+
+<!-- Open Graph Meta Tags for Social Media -->
+<meta property="og:site_name" content="Nanocut" />
+<meta property="og:url" content="https://nanocut.vercel.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://nanocut.vercel.app/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Nanocut - Premium Device Skin Templates" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ar_SA" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@nanocut" />
+<meta name="twitter:creator" content="@nanocut" />
+<meta name="twitter:title" content="Nanocut - Premium Device Skin Templates" />
+<meta name="twitter:description" content="Professional vector templates for phones, laptops, tablets, and gaming devices. Instant download after payment." />
+<meta name="twitter:image" content="https://nanocut.vercel.app/images/twitter-image.jpg" />
+<meta name="twitter:image:alt" content="Nanocut - Premium Device Skin Templates" />
+
+<!-- Additional Meta Tags for Better SEO -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="theme-color" content="#1a1a1a" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="Nanocut" />
+
+<!-- Preconnect to important domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+<!-- Favicon Links -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanocut - Premium Device Skins</title>
@@ -410,46 +546,66 @@
             </div>
 
             <!-- Lenses Page -->
-            <div class="page" id="LensesPage">
+<div class="page" id="LensesPage">
     <div class="category-header">
         <h1 class="category-title" data-lang="Lenses">Lenses</h1>
         <p data-lang="chooseLensesBrand">Choose your Lenses brand</p>
     </div>
-                <div class="category-brands-grid">
-                    <div class="category-brand-card" onclick="showLensesBrand('uwell')">
-                        <div class="category-brand-name">Uwell</div>
-                        <div class="category-brand-models">Caliburn, Crown, Valyrian Series</div>
-                    </div>
-                    <div class="category-brand-card" onclick="showLensesBrand('smok')">
-                        <div class="category-brand-name">SMOK</div>
-                        <div class="category-brand-models">Nord, Novo, RPM Series</div>
-                    </div>
-                    <div class="category-brand-card" onclick="showLensesBrand('vaporesso')">
-                        <div class="category-brand-name">Vaporesso</div>
-                        <div class="category-brand-models">XROS, Luxe, Target Series</div>
-                    </div>
-                    <div class="category-brand-card" onclick="showLensesBrand('geekLenses')">
-                        <div class="category-brand-name">GeekLenses</div>
-                        <div class="category-brand-models">Aegis, L Series, Z Series</div>
-                    </div>
-                    <div class="category-brand-card" onclick="showLensesBrand('voopoo')">
-                        <div class="category-brand-name">VooPoo</div>
-                        <div class="category-brand-models">Drag, Argus, Vinci Series</div>
-                    </div>
-                    <div class="category-brand-card" onclick="showLensesBrand('innokin')">
-                        <div class="category-brand-name">Innokin</div>
-                        <div class="category-brand-models">Endura, Klypse, Sensis Series</div>
-                    </div>
-                    <div class="category-brand-card" onclick="showLensesBrand('aspire')">
-                        <div class="category-brand-name">Aspire</div>
-                        <div class="category-brand-models">Flexus, Zelos, Nautilus Series</div>
-                    </div>
-                    <div class="category-brand-card" onclick="showLensesBrand('lostLenses')">
-                        <div class="category-brand-name">Lost Lenses</div>
-                        <div class="category-brand-models">Orion, Ursa, Thelema Series</div>
-                    </div>
-                </div>
-            </div>
+    <div class="category-brands-grid">
+        <div class="category-brand-card" onclick="showLensesBrand('canon')">
+            <div class="category-brand-name">Canon</div>
+            <div class="category-brand-models">EF, RF, EF-S Mount Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('fuji')">
+            <div class="category-brand-name">Fuji</div>
+            <div class="category-brand-models">X, GF Mount Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('minolta')">
+            <div class="category-brand-name">Minolta</div>
+            <div class="category-brand-models">A, SR Mount Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('nikon')">
+            <div class="category-brand-name">Nikon</div>
+            <div class="category-brand-models">F, Z Mount Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('olympus')">
+            <div class="category-brand-name">Olympus</div>
+            <div class="category-brand-models">Micro Four Thirds Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('panasonic')">
+            <div class="category-brand-name">Panasonic</div>
+            <div class="category-brand-models">L Mount, Micro Four Thirds</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('samyang')">
+            <div class="category-brand-name">Samyang</div>
+            <div class="category-brand-models">Manual Focus Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('sigma')">
+            <div class="category-brand-name">Sigma</div>
+            <div class="category-brand-models">Art, Contemporary, Sports Series</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('sony')">
+            <div class="category-brand-name">Sony</div>
+            <div class="category-brand-models">E, FE Mount Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('tamron')">
+            <div class="category-brand-name">Tamron</div>
+            <div class="category-brand-models">Di, Di II, Di III Series</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('tokina')">
+            <div class="category-brand-name">Tokina</div>
+            <div class="category-brand-models">AT-X, FíRIN Series</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('viltrox')">
+            <div class="category-brand-name">Viltrox</div>
+            <div class="category-brand-models">AF, Manual Focus Lenses</div>
+        </div>
+        <div class="category-brand-card" onclick="showLensesBrand('zeiss')">
+            <div class="category-brand-name">Zeiss</div>
+            <div class="category-brand-models">Batis, Loxia, Otus Series</div>
+        </div>
+    </div>
+</div>
 
             <!-- Gaming Page -->
             <div class="page" id="gamingPage">
