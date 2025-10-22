@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Allow: /phones/
+Allow: /ipad/
+Allow: /laptop/
+Allow: /airpods/
+Allow: /Lenses/
+Allow: /gaming/
+Allow: /camera/
+Allow: /cart/
+Allow: /checkout/
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /backup/
+
+Crawl-delay: 2
+
+Sitemap: https://nanocut.vercel.app/sitemap.xml
+
+# Preferred domain
+Host: https://nanocut.vercel.app
+
+# Comments for search engines
+# Nanocut - Premium Device Skin Templates
+# Contact: support@nanocut.com
