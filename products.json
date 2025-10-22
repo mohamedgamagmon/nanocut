@@ -85,28 +85,28 @@
       "isNew": true
     },
     {
-      "id": "motorola-edge-40",
-      "name": "112",
+      "id": "OPPO A6 5G PLS120",
+      "name": "OPPO A6 5G PLS120",
       "category": "phones",
-      "brand": "honor",
-      "price": "$6.00",
+      "brand": "oppo",
+      "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "01",
-      "description": "Premium skin template for Honor Magic 7.",
-      "dateAdded": "2025-10-21",
-      "isNew": false
+      "image": "images/OPPO A6 5G PLS120.jpg",
+      "description": "Premium skin template for OPPO A6 5G PLS120.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
     },
     {
-      "id": "nothing-phone-3",
-      "name": "154",
+      "id": "OPPO A6 PRO 4G CPH2799",
+      "name": "OPPO A6 PRO 4G CPH2799",
       "category": "phones",
-      "brand": "honor",
+      "brand": "oppo",
       "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "025",
-      "description": "Premium skin template for Honor Magic 7.",
-      "dateAdded": "2025-10-21",
-      "isNew": false
+      "image": "images/OPPO A6 PRO 4G CPH2799.jpg",
+      "description": "Premium skin template for OPPO A6 PRO 4G CPH2799.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
     },
     {
       "id": "HUAWEI ENJOY 80",
@@ -145,16 +145,16 @@
       "isNew": true
     },
     {
-      "id": "bose-quietcomfort",
-      "name": "201",
+      "id": "OPPO A6 PRO 5G CPH2781",
+      "name": "OPPO A6 PRO 5G CPH2781",
       "category": "phones",
-      "brand": "honor",
+      "brand": "oppo",
       "price": "$6.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "54",
-      "description": "Premium skin template for Honor Magic 7.",
-      "dateAdded": "2025-10-21",
-      "isNew": false
+      "image": "images/OPPO A6 PRO 5G CPH2781.jpg",
+      "description": "Premium skin template for OPPO A6 PRO 5G CPH2781.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
     },
     {
       "id": "MOTOROLA MOTO G55 5G",
@@ -346,6 +346,126 @@
       "image": "images/Honor Magic 7.jpg",
       "description": "Premium skin template for Honor Magic 7.",
       "dateAdded": "2025-10-21",
+      "isNew": true
+    },
+    {
+      "id": "OPPO A6i 5G PKW120",
+      "name": "OPPO A6i 5G PKW120",
+      "category": "phones",
+      "brand": "oppo",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/OPPO A6i 5G PKW120.jpg",
+      "description": "Premium skin template for OPPO A6i 5G PKW120.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "OPPO F31 5G CPH2781",
+      "name": "OPPO F31 5G CPH2781",
+      "category": "phones",
+      "brand": "oppo",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/OPPO F31 5G CPH2781.jpg",
+      "description": "Premium skin template for OPPO F31 5G CPH2781.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy A07",
+      "name": "Samsung Galaxy A07",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy A07.jpg",
+      "description": "Premium skin template for Samsung Galaxy A07.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy A17 4G",
+      "name": "Samsung Galaxy A17 4G",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy A17 4G.jpg",
+      "description": "Premium skin template for Samsung Galaxy A17 4G.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy A17 5G",
+      "name": "Samsung Galaxy A17 5G",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy A17 5G.jpg",
+      "description": "Premium skin template for Samsung Galaxy A17 5G.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "SAMSUNG GALAXY A56",
+      "name": "SAMSUNG GALAXY A56",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/SAMSUNG GALAXY A56.jpg",
+      "description": "Premium skin template for SAMSUNG GALAXY A56.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy F05",
+      "name": "Samsung Galaxy F05",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy F05.jpg",
+      "description": "Premium skin template for Samsung Galaxy F05.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy F07",
+      "name": "Samsung Galaxy F07",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy F07.jpg",
+      "description": "Premium skin template for Samsung Galaxy F07.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy F17",
+      "name": "Samsung Galaxy F17",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy F17.jpg",
+      "description": "Premium skin template for Samsung Galaxy F17.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy M07",
+      "name": "Samsung Galaxy M07",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy M07.jpg",
+      "description": "Premium skin template for Samsung Galaxy M07.",
+      "dateAdded": "2025-10-23",
       "isNew": true
     }
   ]
