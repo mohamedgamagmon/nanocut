@@ -9,7 +9,7 @@
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
       "image": "images/SAMSUNG GALAXY S25 EDGE.jpg",
       "description": "Premium skin template for SAMSUNG GALAXY S25 EDGE.",
-      "dateAdded": "2025-10-21",
+      "dateAdded": "2025-10-23",
       "isNew": true
     },
     {
@@ -22,6 +22,30 @@
       "image": "images/Google Pixel 9 Pro.jpg",
       "description": "Complete skin template for Google Pixel 9 Pro.",
       "dateAdded": "2025-10-21",
+      "isNew": true
+    },
+    {
+      "id": "test-bundle",
+      "name": "TEST BUNDLE OFFER",
+      "category": "bundle",
+      "brand": "nanocut",
+      "price": "$00.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/SAMSUNG GALAXY S25 EDGE.jpg",
+      "description": "TEST BUNDLE -",
+      "dateAdded": "2025-10-24",
+      "isNew": true
+    },
+    {
+      "id": "bundle-special-offer",
+      "name": "Special Bundle Offer",
+      "category": "bundle",
+      "brand": "nanocut",
+      "price": "$00.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/bundle-offer.jpg",
+      "description": "Special bundle offer with multiple templates",
+      "dateAdded": "2025-10-24",
       "isNew": true
     },
     {

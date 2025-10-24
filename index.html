@@ -140,15 +140,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanocut - Premium Device Skins</title>
-        <!-- إضافات SEO -->
-    <meta name="description" content="Nanocut - premium device skin templates for phones, laptops, tablets. Download instantly after payment. Professional cut files for Adobe Illustrator, CorelDRAW">
-    <meta name="keywords" content="device skins, phone templates, laptop skins, vector files, Adobe Illustrator, CorelDRAW, cut files, nanocut, skin templates, design files">
-    <meta name="author" content="Nanocut">
-    <meta name="google-site-verification" content="google2277cbdbb4044f21.html">
-    <!-- روابط السوشيال ميديا -->
-    <meta property="og:title" content="Nanocut - Premium Device Skins">
-    <meta property="og:description" content="Professional device skin templates for phones, laptops, tablets. Instant download after payment.">
-    <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS الأساسي -->
     <link rel="stylesheet" href="css/core.css">
@@ -208,7 +199,7 @@
                 <div class="create-bundle" data-lang="createBundle">Create Bundle</div>
             </div>
         </div>
-    </header>
+                </header>
 
     <!-- Search Section -->
     <section class="search-section">
@@ -264,7 +255,15 @@
                     </div>
                 </div>
             </div>
-
+<!-- Bundle Offers Page -->
+<div class="page" id="bundlePage">
+    <h1 class="page-title" data-lang="bundleOffers">Bundle Offers</h1>
+<p class="page-subtitle" data-lang="bundleDescription">Special packages with multiple templates</p>
+    
+    <div class="products-grid" id="bundleProducts">
+        <!-- هنا هتظهر منتجات الباقات -->
+    </div>
+</div>
             <!-- Home Page -->
             <div class="page active" id="homePage">
             <h1 class="page-title" data-lang="newArrivals">New Arrivals</h1>
@@ -808,21 +807,5 @@
     </footer>
 
 <script src="js/core.js"></script>
-<script>
-// حماية إضافية لمنع حفظ الصور
-document.addEventListener('contextmenu', function(e) {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-    }
-});
-
-document.addEventListener('dragstart', function(e) {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-    }
-});
-</script>
 </body>
 </html>
