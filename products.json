@@ -1,6 +1,90 @@
 {
   "products": [
     {
+      "id": "Samsung Galaxy F17",
+      "name": "Samsung Galaxy F17",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy F17.jpg",
+      "description": "Premium skin template for Samsung Galaxy F17.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "Samsung Galaxy M07",
+      "name": "Samsung Galaxy M07",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy M07.jpg",
+      "description": "Premium skin template for Samsung Galaxy M07.",
+      "dateAdded": "2025-10-23",
+      "isNew": true
+    },
+    {
+      "id": "APPLE IPHONE 17 PRO MAX",
+      "name": "APPLE IPHONE 17 PRO MAX",
+      "category": "phones",
+      "brand": "apple",
+      "price": "$8.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/APPLE IPHONE 17 PRO MAX.jpg",
+      "description": "Premium skin template for APPLE IPHONE 17 PRO MAX.",
+      "dateAdded": "2025-10-25",
+      "isNew": true
+    },
+    {
+      "id": "APPLE IPHONE 17 PRO",
+      "name": "APPLE IPHONE 17 PRO",
+      "category": "phones",
+      "brand": "apple",
+      "price": "$8.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/APPLE IPHONE 17 PRO.jpg",
+      "description": "Premium skin template for APPLE IPHONE 17 PRO.",
+      "dateAdded": "2025-10-25",
+      "isNew": true
+    },
+    {
+      "id": "APPLE IPHONE 17",
+      "name": "APPLE IPHONE 17",
+      "category": "phones",
+      "brand": "apple",
+      "price": "$8.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/APPLE IPHONE 17.jpg",
+      "description": "Premium skin template for APPLE IPHONE 17.",
+      "dateAdded": "2025-10-25",
+      "isNew": true
+    },
+    {
+      "id": "APPLE IPHONE Air",
+      "name": "APPLE IPHONE Air",
+      "category": "phones",
+      "brand": "apple",
+      "price": "$8.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/APPLE IPHONE Air.jpg",
+      "description": "Premium skin template for APPLE IPHONE Air.",
+      "dateAdded": "2025-10-25",
+      "isNew": true
+    },
+    {
+      "id": "SAMSUNG GALAXY Z FOLD 7",
+      "name": "SAMSUNG GALAXY Z FOLD 7",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/SAMSUNG GALAXY Z FOLD 7.jpg",
+      "description": "Premium skin template for SAMSUNG GALAXY Z FOLD 7.",
+      "dateAdded": "2025-10-25",
+      "isNew": true
+    },
+    {
       "id": "SAMSUNG GALAXY S25 EDGE",
       "name": "SAMSUNG GALAXY S25 EDGE",
       "category": "phones",
@@ -13,6 +97,42 @@
       "isNew": true
     },
     {
+      "id": "Honor Magic 7 PRO",
+      "name": "Honor Magic 7 PRO",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7 PRO.jpg",
+      "description": "Premium skin template for Honor Magic 7 PRO.",
+      "dateAdded": "2025-10-21",
+      "isNew": true
+    },
+    {
+      "id": "Honor Magic 7 PSR",
+      "name": "Honor Magic 7 PSR",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7 PSR.jpg",
+      "description": "Premium skin template for Honor Magic 7 PSR.",
+      "dateAdded": "2025-10-21",
+      "isNew": true
+    },
+    {
+      "id": "Honor Magic 7",
+      "name": "Honor Magic 7",
+      "category": "phones",
+      "brand": "honor",
+      "price": "$6.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Honor Magic 7.jpg",
+      "description": "Premium skin template for Honor Magic 7.",
+      "dateAdded": "2025-10-21",
+      "isNew": true
+    },
+    {
       "id": "Google Pixel 9 Pro",
       "name": "Google Pixel 9 Pro",
       "category": "phones",
@@ -22,30 +142,6 @@
       "image": "images/Google Pixel 9 Pro.jpg",
       "description": "Complete skin template for Google Pixel 9 Pro.",
       "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "test-bundle",
-      "name": "TEST BUNDLE OFFER",
-      "category": "bundle",
-      "brand": "nanocut",
-      "price": "$00.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/SAMSUNG GALAXY S25 EDGE.jpg",
-      "description": "TEST BUNDLE -",
-      "dateAdded": "2025-10-24",
-      "isNew": true
-    },
-    {
-      "id": "bundle-special-offer",
-      "name": "Special Bundle Offer",
-      "category": "bundle",
-      "brand": "nanocut",
-      "price": "$00.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/bundle-offer.jpg",
-      "description": "Special bundle offer with multiple templates",
-      "dateAdded": "2025-10-24",
       "isNew": true
     },
     {
@@ -337,42 +433,6 @@
       "isNew": true
     },
     {
-      "id": "Honor Magic 7 PRO",
-      "name": "Honor Magic 7 PRO",
-      "category": "phones",
-      "brand": "honor",
-      "price": "$6.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Honor Magic 7 PRO.jpg",
-      "description": "Premium skin template for Honor Magic 7 PRO.",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "Honor Magic 7 PSR",
-      "name": "Honor Magic 7 PSR",
-      "category": "phones",
-      "brand": "honor",
-      "price": "$6.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Honor Magic 7 PSR.jpg",
-      "description": "Premium skin template for Honor Magic 7 PSR.",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "Honor Magic 7",
-      "name": "Honor Magic 7",
-      "category": "phones",
-      "brand": "honor",
-      "price": "$6.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Honor Magic 7.jpg",
-      "description": "Premium skin template for Honor Magic 7.",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
       "id": "OPPO A6i 5G PKW120",
       "name": "OPPO A6i 5G PKW120",
       "category": "phones",
@@ -466,78 +526,6 @@
       "image": "images/Samsung Galaxy F07.jpg",
       "description": "Premium skin template for Samsung Galaxy F07.",
       "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "Samsung Galaxy F17",
-      "name": "Samsung Galaxy F17",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$6.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy F17.jpg",
-      "description": "Premium skin template for Samsung Galaxy F17.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "Samsung Galaxy M07",
-      "name": "Samsung Galaxy M07",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$6.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy M07.jpg",
-      "description": "Premium skin template for Samsung Galaxy M07.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "APPLE IPHONE 17 PRO MAX",
-      "name": "APPLE IPHONE 17 PRO MAX",
-      "category": "phones",
-      "brand": "apple",
-      "price": "$8.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/APPLE IPHONE 17 PRO MAX.jpg",
-      "description": "Premium skin template for APPLE IPHONE 17 PRO MAX.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "APPLE IPHONE 17 PRO",
-      "name": "APPLE IPHONE 17 PRO",
-      "category": "phones",
-      "brand": "apple",
-      "price": "$8.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/APPLE IPHONE 17 PRO.jpg",
-      "description": "Premium skin template for APPLE IPHONE 17 PRO.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "APPLE IPHONE 17",
-      "name": "APPLE IPHONE 17",
-      "category": "phones",
-      "brand": "apple",
-      "price": "$8.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/APPLE IPHONE 17.jpg",
-      "description": "Premium skin template for APPLE IPHONE 17.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "APPLE IPHONE Air",
-      "name": "APPLE IPHONE Air",
-      "category": "phones",
-      "brand": "apple",
-      "price": "$8.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/APPLE IPHONE Air.jpg",
-      "description": "Premium skin template for APPLE IPHONE Air.",
-      "dateAdded": "2025-10-25",
       "isNew": true
     },
     {
@@ -673,15 +661,27 @@
       "isNew": true
     },
     {
-      "id": "SAMSUNG GALAXY Z FOLD 7",
-      "name": "SAMSUNG GALAXY Z FOLD 7",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
+      "id": "test-bundle",
+      "name": "TEST BUNDLE OFFER",
+      "category": "bundle",
+      "brand": "nanocut",
+      "price": "$00.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/SAMSUNG GALAXY Z FOLD 7.jpg",
-      "description": "Premium skin template for SAMSUNG GALAXY Z FOLD 7.",
-      "dateAdded": "2025-10-25",
+      "image": "images/SAMSUNG GALAXY S25 EDGE.jpg",
+      "description": "TEST BUNDLE -",
+      "dateAdded": "2025-10-24",
+      "isNew": true
+    },
+    {
+      "id": "bundle-special-offer",
+      "name": "Special Bundle Offer",
+      "category": "bundle",
+      "brand": "nanocut",
+      "price": "$00.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/bundle-offer.jpg",
+      "description": "Special bundle offer with multiple templates",
+      "dateAdded": "2025-10-24",
       "isNew": true
     }
   ]
