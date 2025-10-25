@@ -1,28 +1,17 @@
 {
   "products": [
     {
-      "id": "Samsung Galaxy F17",
-      "name": "Samsung Galaxy F17",
+      "id": "APPLE IPHONE Air",
+      "name": "APPLE IPHONE Air",
       "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
+      "brand": "apple",
+      "price": "$8.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy F17.jpg",
-      "description": "Premium skin template for Samsung Galaxy F17.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "Samsung Galaxy M07",
-      "name": "Samsung Galaxy M07",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy M07.jpg",
-      "description": "Premium skin template for Samsung Galaxy M07.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
+      "image": "images/APPLE IPHONE Air.jpg",
+      "description": "Premium skin template for APPLE IPHONE Air.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 1
     },
     {
       "id": "APPLE IPHONE 17 PRO MAX",
@@ -34,19 +23,8 @@
       "image": "images/APPLE IPHONE 17 PRO MAX.jpg",
       "description": "Premium skin template for APPLE IPHONE 17 PRO MAX.",
       "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "APPLE IPHONE 17 PRO",
-      "name": "APPLE IPHONE 17 PRO",
-      "category": "phones",
-      "brand": "apple",
-      "price": "$8.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/APPLE IPHONE 17 PRO.jpg",
-      "description": "Premium skin template for APPLE IPHONE 17 PRO.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 2
     },
     {
       "id": "APPLE IPHONE 17",
@@ -58,31 +36,21 @@
       "image": "images/APPLE IPHONE 17.jpg",
       "description": "Premium skin template for APPLE IPHONE 17.",
       "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 3
     },
     {
-      "id": "APPLE IPHONE Air",
-      "name": "APPLE IPHONE Air",
+      "id": "APPLE IPHONE 17 PRO",
+      "name": "APPLE IPHONE 17 PRO",
       "category": "phones",
       "brand": "apple",
       "price": "$8.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/APPLE IPHONE Air.jpg",
-      "description": "Premium skin template for APPLE IPHONE Air.",
+      "image": "images/APPLE IPHONE 17 PRO.jpg",
+      "description": "Premium skin template for APPLE IPHONE 17 PRO.",
       "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "SAMSUNG GALAXY Z FOLD 7",
-      "name": "SAMSUNG GALAXY Z FOLD 7",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/SAMSUNG GALAXY Z FOLD 7.jpg",
-      "description": "Premium skin template for SAMSUNG GALAXY Z FOLD 7.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 4
     },
     {
       "id": "SAMSUNG GALAXY S25 EDGE",
@@ -94,7 +62,47 @@
       "image": "images/SAMSUNG GALAXY S25 EDGE.jpg",
       "description": "Premium skin template for SAMSUNG GALAXY S25 EDGE.",
       "dateAdded": "2025-10-23",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 5
+    },
+    {
+      "id": "Samsung Galaxy F17",
+      "name": "Samsung Galaxy F17",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy F17.jpg",
+      "description": "Premium skin template for Samsung Galaxy F17.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 6
+    },
+    {
+      "id": "Samsung Galaxy M07",
+      "name": "Samsung Galaxy M07",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy M07.jpg",
+      "description": "Premium skin template for Samsung Galaxy M07.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 7
+    },
+    {
+      "id": "SAMSUNG GALAXY Z FOLD 7",
+      "name": "SAMSUNG GALAXY Z FOLD 7",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/SAMSUNG GALAXY Z FOLD 7.jpg",
+      "description": "Premium skin template for SAMSUNG GALAXY Z FOLD 7.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 8
     },
     {
       "id": "Honor Magic 7 PRO",
@@ -106,7 +114,8 @@
       "image": "images/Honor Magic 7 PRO.jpg",
       "description": "Premium skin template for Honor Magic 7 PRO.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 9
     },
     {
       "id": "Honor Magic 7 PSR",
@@ -118,7 +127,8 @@
       "image": "images/Honor Magic 7 PSR.jpg",
       "description": "Premium skin template for Honor Magic 7 PSR.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 10
     },
     {
       "id": "Honor Magic 7",
@@ -130,7 +140,8 @@
       "image": "images/Honor Magic 7.jpg",
       "description": "Premium skin template for Honor Magic 7.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 11
     },
     {
       "id": "Google Pixel 9 Pro",
@@ -142,7 +153,8 @@
       "image": "images/Google Pixel 9 Pro.jpg",
       "description": "Complete skin template for Google Pixel 9 Pro.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 12
     },
     {
       "id": "ONEPLUS 12",
@@ -154,7 +166,8 @@
       "image": "images/ONEPLUS 12.jpg",
       "description": "Professional skin template for ONEPLUS 12.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 13
     },
     {
       "id": "REDMI 15C 5G",
@@ -166,7 +179,8 @@
       "image": "images/REDMI 15C-5G.jpg",
       "description": "Premium skin template for REDMI 15C 5G.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 14
     },
     {
       "id": "NOTHING PHONE  3A",
@@ -178,7 +192,8 @@
       "image": "images/NOTHING PHONE  3A.jpg",
       "description": "Premium skin template for NOTHING PHONE  3A.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 15
     },
     {
       "id": "OPPO FIND X7",
@@ -190,7 +205,8 @@
       "image": "images/OPPO FIND X7.jpg",
       "description": "Premium skin template for OPPO FIND X7.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 16
     },
     {
       "id": "VIVO IQOO 13",
@@ -202,7 +218,8 @@
       "image": "images/VIVO IQOO 13.jpg",
       "description": "Premium skin template for VIVO IQOO 13.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 17
     },
     {
       "id": "OPPO A6 5G PLS120",
@@ -214,7 +231,8 @@
       "image": "images/OPPO A6 5G PLS120.jpg",
       "description": "Premium skin template for OPPO A6 5G PLS120.",
       "dateAdded": "2025-10-23",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 18
     },
     {
       "id": "OPPO A6 PRO 4G CPH2799",
@@ -226,7 +244,8 @@
       "image": "images/OPPO A6 PRO 4G CPH2799.jpg",
       "description": "Premium skin template for OPPO A6 PRO 4G CPH2799.",
       "dateAdded": "2025-10-23",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 19
     },
     {
       "id": "HUAWEI ENJOY 80",
@@ -238,7 +257,8 @@
       "image": "images/HUAWEI ENJOY 80.jpg",
       "description": "Premium skin template for HUAWEI ENJOY 80.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 20
     },
     {
       "id": "OPPO A3 iNDiA",
@@ -250,7 +270,8 @@
       "image": "images/OPPO A3 iNDiA.jpg",
       "description": "Premium skin template for OPPO A3 iNDiA.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 21
     },
     {
       "id": "Honor 400 PRO",
@@ -262,7 +283,8 @@
       "image": "images/Honor 400 PRO.jpg",
       "description": "Premium skin template for Honor 400 PRO.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 22
     },
     {
       "id": "OPPO A6 PRO 5G CPH2781",
@@ -274,7 +296,8 @@
       "image": "images/OPPO A6 PRO 5G CPH2781.jpg",
       "description": "Premium skin template for OPPO A6 PRO 5G CPH2781.",
       "dateAdded": "2025-10-23",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 23
     },
     {
       "id": "MOTOROLA MOTO G55 5G",
@@ -286,7 +309,8 @@
       "image": "images/MOTOROLA MOTO G55 5G.jpg",
       "description": "Premium skin template for MOTOROLA MOTO G55 5G.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 24
     },
     {
       "id": "REALME 15 PRO",
@@ -298,7 +322,8 @@
       "image": "images/REALME 15 PRO.jpg",
       "description": "Premium skin template for REALME 15 PRO.",
       "dateAdded": "2025-10-21",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 25
     },
     {
       "id": "GOOGLE PIXEL 10 PRO FOLD",
@@ -310,199 +335,8 @@
       "image": "images/GOOGLE PIXEL 10 PRO FOLD.jpg",
       "description": "Premium skin template for GOOGLE PIXEL 10 PRO FOLD.",
       "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "dell-xps-15",
-      "name": "Dell XPS 15 Skin Template",
-      "category": "laptop",
-      "brand": "dell",
-      "price": "$10.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
-      "description": "Professional skin template for Dell XPS 15.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
-    },
-    {
-      "id": "hp-spectre-x360",
-      "name": "HP Spectre x360 Skin Template",
-      "category": "laptop",
-      "brand": "hp",
-      "price": "$10.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
-      "description": "Professional skin template for HP Spectre x360.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
-    },
-    {
-      "id": "GOOGLE- PIXEL 10 PRO XL",
-      "name": "GOOGLE PIXEL 10 PRO XL",
-      "category": "phones",
-      "brand": "google",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/GOOGLE PIXEL 10 PRO XL.jpg",
-      "description": "Premium skin template for GOOGLE PIXEL 10 PRO XL.",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "ps5-template",
-      "name": "PlayStation 5 Skin Template",
-      "category": "gaming",
-      "brand": "playstation",
-      "price": "$10.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
-      "description": "Comprehensive skin template for PlayStation 5.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
-    },
-    {
-      "id": "xbox-series-x",
-      "name": "Xbox Series X Skin",
-      "category": "gaming",
-      "brand": "xbox",
-      "price": "$10.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
-      "description": "Premium skin template for Xbox Series X.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
-    },
-    {
-      "id": "HONOR 200 LITE",
-      "name": "HONOR 200 LITE",
-      "category": "phones",
-      "brand": "honor",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/HONOR 200 LITE.jpg",
-      "description": "Premium skin template for HONOR 200 LITE.",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "Honor 400 Smart 5G",
-      "name": "Honor 400 Smart 5G",
-      "category": "phones",
-      "brand": "honor",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Honor 400 Smart 5G.jpg",
-      "description": "Premium skin template for Honor 400 Smart 5G.",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "Honor Magic V5",
-      "name": "Honor Magic V5",
-      "category": "phones",
-      "brand": "honor",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Honor Magic V5.jpg",
-      "description": "Premium skin template for Honor Magic V5",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "sony-24-70mm",
-      "name": "Sony 24-70mm Skin",
-      "category": "camera",
-      "brand": "sony",
-      "price": "$12.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
-      "description": "Professional skin for Sony 24-70mm lens.",
-      "dateAdded": "2025-10-11",
-      "isNew": false
-    },
-    {
-      "id": "OPPO A3 ENERGY",
-      "name": "OPPO A3 ENERGY",
-      "category": "phones",
-      "brand": "oppo",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/OPPO A3 ENERGY.jpg",
-      "description": "Premium skin template for OPPO A3 ENERGY.",
-      "dateAdded": "2025-10-21",
-      "isNew": true
-    },
-    {
-      "id": "OPPO A6i 5G PKW120",
-      "name": "OPPO A6i 5G PKW120",
-      "category": "phones",
-      "brand": "oppo",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/OPPO A6i 5G PKW120.jpg",
-      "description": "Premium skin template for OPPO A6i 5G PKW120.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "OPPO F31 5G CPH2781",
-      "name": "OPPO F31 5G CPH2781",
-      "category": "phones",
-      "brand": "oppo",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/OPPO F31 5G CPH2781.jpg",
-      "description": "Premium skin template for OPPO F31 5G CPH2781.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "Samsung Galaxy A07",
-      "name": "Samsung Galaxy A07",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy A07.jpg",
-      "description": "Premium skin template for Samsung Galaxy A07.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "Samsung Galaxy A17 4G",
-      "name": "Samsung Galaxy A17 4G",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy A17 4G.jpg",
-      "description": "Premium skin template for Samsung Galaxy A17 4G.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "Samsung Galaxy A17 5G",
-      "name": "Samsung Galaxy A17 5G",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy A17 5G.jpg",
-      "description": "Premium skin template for Samsung Galaxy A17 5G.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
-    },
-    {
-      "id": "SAMSUNG GALAXY A56",
-      "name": "SAMSUNG GALAXY A56",
-      "category": "phones",
-      "brand": "samsung",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/SAMSUNG GALAXY A56.jpg",
-      "description": "Premium skin template for SAMSUNG GALAXY A56.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 26
     },
     {
       "id": "Samsung Galaxy F05",
@@ -514,19 +348,21 @@
       "image": "images/Samsung Galaxy F05.jpg",
       "description": "Premium skin template for Samsung Galaxy F05.",
       "dateAdded": "2025-10-23",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 27
     },
     {
-      "id": "Samsung Galaxy F07",
-      "name": "Samsung Galaxy F07",
+      "id": "GOOGLE- PIXEL 10 PRO XL",
+      "name": "GOOGLE PIXEL 10 PRO XL",
       "category": "phones",
-      "brand": "samsung",
+      "brand": "google",
       "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Samsung Galaxy F07.jpg",
-      "description": "Premium skin template for Samsung Galaxy F07.",
-      "dateAdded": "2025-10-23",
-      "isNew": true
+      "image": "images/GOOGLE PIXEL 10 PRO XL.jpg",
+      "description": "Premium skin template for GOOGLE PIXEL 10 PRO XL.",
+      "dateAdded": "2025-10-21",
+      "isNew": true,
+      "displayOrder": 28
     },
     {
       "id": "Google Pixel 9 Pro Fold",
@@ -538,7 +374,8 @@
       "image": "images/Google Pixel 9 Pro Fold.jpg",
       "description": "Premium skin template for Google Pixel 9 Pro Fold.",
       "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 29
     },
     {
       "id": "Google Pixel 9 Pro XL",
@@ -550,79 +387,47 @@
       "image": "images/Google Pixel 9 Pro XL.jpg",
       "description": "Premium skin template for Google Pixel 9 Pro XL.",
       "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 30
     },
     {
-      "id": "Google Pixel 9",
-      "name": "Google Pixel 9",
+      "id": "HONOR 200 LITE",
+      "name": "HONOR 200 LITE",
       "category": "phones",
-      "brand": "google",
+      "brand": "honor",
       "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/Google Pixel 9.jpg",
-      "description": "Premium skin template for Google Pixel 9.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
+      "image": "images/HONOR 200 LITE.jpg",
+      "description": "Premium skin template for HONOR 200 LITE.",
+      "dateAdded": "2025-10-21",
+      "isNew": true,
+      "displayOrder": 31
     },
     {
-      "id": "ONEPLUS 11",
-      "name": "ONEPLUS 11",
+      "id": "Honor 400 Smart 5G",
+      "name": "Honor 400 Smart 5G",
       "category": "phones",
-      "brand": "oneplus",
+      "brand": "honor",
       "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/ONEPLUS 11.jpg",
-      "description": "Premium skin template for ONEPLUS 11.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
+      "image": "images/Honor 400 Smart 5G.jpg",
+      "description": "Premium skin template for Honor 400 Smart 5G.",
+      "dateAdded": "2025-10-21",
+      "isNew": true,
+      "displayOrder": 32
     },
     {
-      "id": "ONEPLUS 11R",
-      "name": "ONEPLUS 11R",
+      "id": "Honor Magic V5",
+      "name": "Honor Magic V5",
       "category": "phones",
-      "brand": "oneplus",
+      "brand": "honor",
       "price": "$5.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/ONEPLUS 11R.jpg",
-      "description": "Premium skin template for ONEPLUS 11R.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "OnePlus 13S",
-      "name": "OnePlus 13S",
-      "category": "phones",
-      "brand": "oneplus",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/OnePlus 13S.jpg",
-      "description": "Premium skin template for OnePlus 13S.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "OnePlus 13T",
-      "name": "OnePlus 13T",
-      "category": "phones",
-      "brand": "oneplus",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/OnePlus 13T.jpg",
-      "description": "Premium skin template for OnePlus 13T.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
-    },
-    {
-      "id": "ONEPLUS ACE 3 PRO",
-      "name": "ONEPLUS ACE 3 PRO",
-      "category": "phones",
-      "brand": "oneplus",
-      "price": "$5.00",
-      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/ONEPLUS ACE 3 PRO.jpg",
-      "description": "Premium skin template for ONEPLUS ACE 3 PRO.",
-      "dateAdded": "2025-10-25",
-      "isNew": true
+      "image": "images/Honor Magic V5.jpg",
+      "description": "Premium skin template for Honor Magic V5",
+      "dateAdded": "2025-10-21",
+      "isNew": true,
+      "displayOrder": 33
     },
     {
       "id": "ONEPLUS ACE 5 PRO",
@@ -634,7 +439,125 @@
       "image": "images/ONEPLUS ACE 5 PRO.jpg",
       "description": "Premium skin template for ONEPLUS ACE 5 PRO.",
       "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 34
+    },
+    {
+      "id": "OPPO A3 ENERGY",
+      "name": "OPPO A3 ENERGY",
+      "category": "phones",
+      "brand": "oppo",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/OPPO A3 ENERGY.jpg",
+      "description": "Premium skin template for OPPO A3 ENERGY.",
+      "dateAdded": "2025-10-21",
+      "isNew": true,
+      "displayOrder": 35
+    },
+    {
+      "id": "OPPO A6i 5G PKW120",
+      "name": "OPPO A6i 5G PKW120",
+      "category": "phones",
+      "brand": "oppo",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/OPPO A6i 5G PKW120.jpg",
+      "description": "Premium skin template for OPPO A6i 5G PKW120.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 36
+    },
+    {
+      "id": "OPPO F31 5G CPH2781",
+      "name": "OPPO F31 5G CPH2781",
+      "category": "phones",
+      "brand": "oppo",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/OPPO F31 5G CPH2781.jpg",
+      "description": "Premium skin template for OPPO F31 5G CPH2781.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 37
+    },
+    {
+      "id": "Samsung Galaxy A07",
+      "name": "Samsung Galaxy A07",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy A07.jpg",
+      "description": "Premium skin template for Samsung Galaxy A07.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 38
+    },
+    {
+      "id": "Samsung Galaxy A17 4G",
+      "name": "Samsung Galaxy A17 4G",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy A17 4G.jpg",
+      "description": "Premium skin template for Samsung Galaxy A17 4G.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 39
+    },
+    {
+      "id": "Samsung Galaxy A17 5G",
+      "name": "Samsung Galaxy A17 5G",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy A17 5G.jpg",
+      "description": "Premium skin template for Samsung Galaxy A17 5G.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 40
+    },
+    {
+      "id": "SAMSUNG GALAXY A56",
+      "name": "SAMSUNG GALAXY A56",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/SAMSUNG GALAXY A56.jpg",
+      "description": "Premium skin template for SAMSUNG GALAXY A56.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 41
+    },
+    {
+      "id": "ONEPLUS ACE 3 PRO",
+      "name": "ONEPLUS ACE 3 PRO",
+      "category": "phones",
+      "brand": "oneplus",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/ONEPLUS ACE 3 PRO.jpg",
+      "description": "Premium skin template for ONEPLUS ACE 3 PRO.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 42
+    },
+    {
+      "id": "Samsung Galaxy F07",
+      "name": "Samsung Galaxy F07",
+      "category": "phones",
+      "brand": "samsung",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Samsung Galaxy F07.jpg",
+      "description": "Premium skin template for Samsung Galaxy F07.",
+      "dateAdded": "2025-10-23",
+      "isNew": true,
+      "displayOrder": 43
     },
     {
       "id": "SAMSUNG GALAXY F34",
@@ -646,7 +569,8 @@
       "image": "images/SAMSUNG GALAXY F34.jpg",
       "description": "Premium skin template for SAMSUNG GALAXY F34.",
       "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 44
     },
     {
       "id": "SAMSUNG GALAXY F36",
@@ -658,7 +582,138 @@
       "image": "images/SAMSUNG GALAXY F36.jpg",
       "description": "Premium skin template for SAMSUNG GALAXY F36.",
       "dateAdded": "2025-10-25",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 45
+    },
+    {
+      "id": "Google Pixel 9",
+      "name": "Google Pixel 9",
+      "category": "phones",
+      "brand": "google",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Google Pixel 9.jpg",
+      "description": "Premium skin template for Google Pixel 9.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 46
+    },
+    {
+      "id": "ONEPLUS 11",
+      "name": "ONEPLUS 11",
+      "category": "phones",
+      "brand": "oneplus",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/ONEPLUS 11.jpg",
+      "description": "Premium skin template for ONEPLUS 11.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 47
+    },
+    {
+      "id": "ONEPLUS 11R",
+      "name": "ONEPLUS 11R",
+      "category": "phones",
+      "brand": "oneplus",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/ONEPLUS 11R.jpg",
+      "description": "Premium skin template for ONEPLUS 11R.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 48
+    },
+    {
+      "id": "OnePlus 13S",
+      "name": "OnePlus 13S",
+      "category": "phones",
+      "brand": "oneplus",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/OnePlus 13S.jpg",
+      "description": "Premium skin template for OnePlus 13S.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 49
+    },
+    {
+      "id": "OnePlus 13T",
+      "name": "OnePlus 13T",
+      "category": "phones",
+      "brand": "oneplus",
+      "price": "$5.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/OnePlus 13T.jpg",
+      "description": "Premium skin template for OnePlus 13T.",
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 50
+    },
+    {
+      "id": "hp-spectre-x360",
+      "name": "HP Spectre x360 Skin Template",
+      "category": "laptop",
+      "brand": "hp",
+      "price": "$10.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
+      "description": "Professional skin template for HP Spectre x360.",
+      "dateAdded": "2025-10-11",
+      "isNew": false,
+      "displayOrder": 51
+    },
+    {
+      "id": "xbox-series-x",
+      "name": "Xbox Series X Skin",
+      "category": "gaming",
+      "brand": "xbox",
+      "price": "$10.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
+      "description": "Premium skin template for Xbox Series X.",
+      "dateAdded": "2025-10-11",
+      "isNew": false,
+      "displayOrder": 52
+    },
+    {
+      "id": "ps5-template",
+      "name": "PlayStation 5 Skin Template",
+      "category": "gaming",
+      "brand": "playstation",
+      "price": "$10.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
+      "description": "Comprehensive skin template for PlayStation 5.",
+      "dateAdded": "2025-10-11",
+      "isNew": false,
+      "displayOrder": 53
+    },
+    {
+      "id": "sony-24-70mm",
+      "name": "Sony 24-70mm Skin",
+      "category": "camera",
+      "brand": "sony",
+      "price": "$12.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/Sony-FE-PZ-28-135mm-F4-G-OSS-Cut-File-Template.jpeg",
+      "description": "Professional skin for Sony 24-70mm lens.",
+      "dateAdded": "2025-10-25",
+      "isNew": false,
+      "displayOrder": 54
+    },
+    {
+      "id": "dell-xps-15",
+      "name": "Dell XPS 15 Skin Template",
+      "category": "laptop",
+      "brand": "dell",
+      "price": "$10.00",
+      "formats": "AI-CDR-DXF-SVG-PDF-PLT",
+      "image": "images/iPhone-17-Pro-Max-Cut-File-Template.jpeg",
+      "description": "Professional skin template for Dell XPS 15.",
+      "dateAdded": "2025-10-25",
+      "isNew": false,
+      "displayOrder": 55
     },
     {
       "id": "test-bundle",
@@ -667,10 +722,11 @@
       "brand": "nanocut",
       "price": "$00.00",
       "formats": "AI-CDR-DXF-SVG-PDF-PLT",
-      "image": "images/SAMSUNG GALAXY S25 EDGE.jpg",
+      "image": "images/",
       "description": "TEST BUNDLE -",
-      "dateAdded": "2025-10-24",
-      "isNew": true
+      "dateAdded": "2025-10-25",
+      "isNew": true,
+      "displayOrder": 56
     },
     {
       "id": "bundle-special-offer",
@@ -682,7 +738,8 @@
       "image": "images/bundle-offer.jpg",
       "description": "Special bundle offer with multiple templates",
       "dateAdded": "2025-10-24",
-      "isNew": true
+      "isNew": true,
+      "displayOrder": 57
     }
   ]
 }
