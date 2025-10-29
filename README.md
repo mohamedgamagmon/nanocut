@@ -1,6 +1,6 @@
 # Nanocut - Premium Device Skin Templates 🎨
 
-![Nanocut Banner](./images/banner.jpg)
+![Nanocut Banner](./images/other/banner.jpg)
 
 **🌍 Live Website: [https://nanocut.vercel.app/](https://nanocut.vercel.app/)**
 
